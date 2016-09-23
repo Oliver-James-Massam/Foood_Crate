@@ -4,8 +4,17 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Food Crate</title>
+    <link href="../Styling/MasterStyling.css" rel="stylesheet" />
+    <div class ="NavibTop">
+        <ul>
+            <li><a href="../Pages/Home.aspx">Home</a></li>
+            <li><a href="../Pages/Information.aspx">Information</a></li>
+        </ul>
+
+    </div>
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
