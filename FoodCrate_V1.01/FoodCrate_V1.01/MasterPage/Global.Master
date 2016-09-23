@@ -6,10 +6,16 @@
 <head runat="server">
     <title>Food Crate</title>
     <link href="../Styling/MasterStyling.css" rel="stylesheet" />
+    <div id="Wrapper">
+     <div id="Banner">
+      <img src="../Images/Razzberries%20Banner.jpg" />
+     </div> 
+    </div>
     <div class ="NavibTop">
         <ul>
-            <li><a href="../Pages/Home.aspx">Home</a></li>
+            <li><a class="Home" href="../Pages/Home.aspx">Food Crate</a></li>
             <li><a href="../Pages/Information.aspx">Information</a></li>
+            <li><a href="">
         </ul>
 
     </div>
