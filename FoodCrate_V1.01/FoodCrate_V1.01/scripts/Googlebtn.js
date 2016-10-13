@@ -6,12 +6,12 @@
         console.log(error);
     }
 
-    function renderButton() {
-        gapi.signin2.render('btnGoogle', {
+    function renderButton() { // acoorfing to google how to obtain user details
+        gapi.signin2.render('gglbtn', {
             'scope': 'profile email',
-            'width': 200,
+            'width': 120,
             'height': 35,
-            'longtitle': true,
+            'longtitle': false,
             'theme': 'light',
             'onsuccess': onSuccess,
             'onfailure': onFailure
