@@ -9,7 +9,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script src="../scripts/Googlebtn.js"></script>
-    <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw">
+    <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
@@ -37,15 +37,14 @@
 
     <header class="header-fixed">
 	    <div class="header-limiter">
-
 		    <h1><a href="#">Food<span>Crate</span></a></h1>
-            <a><div id="g-signin2"></div></a>
 		    <nav>
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
-			    <a href="#">Pricing</a>
+			    <a href="#">CheckOut</a> 
+                <a><div id="gglbtn"></div></a>
 		    </nav>
-
+            
 	    </div>
 
     </header>
