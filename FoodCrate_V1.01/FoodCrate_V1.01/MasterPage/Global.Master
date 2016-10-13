@@ -9,17 +9,17 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script src="../scripts/Googlebtn.js"></script>
-    <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw"/>
+    <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
 	    $(document).ready(function(){
-		    var headscrl = 150;
-		    var win = $(window);
-            var body = $('body');
+		    var showHeaderAt = 150;
+		    var win = $(window),
+				    body = $('body');
 		    if(win.width() > 600){
 			    win.on('scroll', function(e){
-			        if (win.scrollTop() > headscrl) {
+				    if(win.scrollTop() > showHeaderAt) {
 					    body.addClass('fixed');
 				    }
 				    else {
@@ -44,8 +44,9 @@
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
 			    <a href="#">Pricing</a>
+                <a><div id="btnGoogle"></div></a>
 		    </nav>
-            <a><div id="btnGoogle"></div></a>
+
 	    </div>
 
     </header>
