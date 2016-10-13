@@ -9,9 +9,9 @@
     function renderButton() {
         gapi.signin2.render('btnGoogle', {
             'scope': 'profile email',
-            'width': 100,
-            'height': 30,
-            'longtitle': false,
+            'width': 200,
+            'height': 35,
+            'longtitle': true,
             'theme': 'light',
             'onsuccess': onSuccess,
             'onfailure': onFailure
