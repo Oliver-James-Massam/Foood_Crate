@@ -44,6 +44,7 @@
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
 			    <a href="#">Pricing</a>
+                <a><div id="btnGoogle"></div></a>
 		    </nav>
 
 	    </div>
