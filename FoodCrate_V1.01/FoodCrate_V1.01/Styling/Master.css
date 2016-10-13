@@ -1,7 +1,8 @@
-﻿.header-fixed .header-limiter nav a  .g-signin2{
+﻿.header-fixed .header-limiter a #btnGoogle{
     float:left;
-    padding: 0px 0px;
-    margin: 0px 10px;
+    padding: 0px 0%;
+    padding-top:2px;
+    margin: 0px 0px;
 }
 
 .header-fixed {
@@ -12,7 +13,6 @@
 	color: #ffffff;
 	box-sizing: border-box;
 	top:-100px;
-
 	-webkit-transition:top 0.3s;
 	transition:top 0.3s;
 }
@@ -39,6 +39,8 @@
 	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	margin: 0;
+    padding-right: 41%;
+    padding-top:10px;
 }
 
 .header-fixed .header-limiter h1 span {
@@ -49,6 +51,7 @@
 
 .header-fixed .header-limiter a {
 	color:green;
+
 	text-decoration: none;
 }
 
@@ -56,11 +59,13 @@
 	font:16px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: left;
+    padding-right:5%;
 }
 
 .header-fixed .header-limiter nav a{
 	display: inline-block;
 	padding: 0 15px;
+    padding-top:10px;
 	text-decoration:none;
 	color: #ffffff;
 	opacity: 0.9;
@@ -133,12 +138,7 @@ body.fixed .header-fixed .header-limiter nav {
 		display: none;
 	}
 
-    .header-fixed .header-limiter #g-signin2 {
-        float: left;
-        padding: 0px 0px;
-        margin: 0px 0px;
-        height: 20px;
-    }
+
 }
 
 /*
