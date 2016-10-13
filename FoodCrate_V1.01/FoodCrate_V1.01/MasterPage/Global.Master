@@ -39,12 +39,11 @@
 	    <div class="header-limiter">
 
 		    <h1><a href="#">Food<span>Crate</span></a></h1>
-            
+            <a><div id="g-signin2"></div></a>
 		    <nav>
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
 			    <a href="#">Pricing</a>
-                <a><div id="btnGoogle"></div></a>
 		    </nav>
 
 	    </div>

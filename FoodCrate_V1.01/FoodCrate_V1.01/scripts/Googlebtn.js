@@ -7,7 +7,7 @@
     }
 
     function renderButton() {
-        gapi.signin2.render('btnGoogle', {
+        gapi.signin2.render('g-signin2', {
             'scope': 'profile email',
             'width': 100,
             'height': 30,
@@ -17,5 +17,3 @@
             'onfailure': onFailure
         });
     }
-
-    onload.renderButton();
