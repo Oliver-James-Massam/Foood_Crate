@@ -72,13 +72,13 @@
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3>Social Media Logins:</h3>
                         	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-2" href="SocialMediaLogins/FbLog.aspx">
+	                        	<a class="btn btn-link-2" href="../Pages/FbLog.aspx">
 	                        		<i class="fa fa-facebook"></i> Facebook
 	                        	</a>
-	                        	<a class="btn btn-link-2" href="SocialMediaLogins/GooglePLog.asp">
+	                        	<a class="btn btn-link-2" href="../Pages/GooglePLog.asp">
 	                        		<i class="fa fa-twitter"></i> Twitter
 	                        	</a>
-	                        	<a class="btn btn-link-2" href="SocialMediaLogins/TwitterLog.asp">
+	                        	<a class="btn btn-link-2" href="../Pages/TwitterLog.asp">
 	                        		<i class="fa fa-google-plus"></i> Google Plus
 	                        	</a>
                         	</div>

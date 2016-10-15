@@ -96,9 +96,9 @@
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Pages\SocialMediaLogins\FbLog.aspx" />
-    <Content Include="Pages\SocialMediaLogins\GooglePLog.aspx" />
-    <Content Include="Pages\SocialMediaLogins\TwitterLog.aspx" />
+    <Content Include="Pages\FbLog.aspx" />
+    <Content Include="Pages\GooglePLog.aspx" />
+    <Content Include="Pages\TwitterLog.aspx" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
@@ -169,25 +169,25 @@
     <Compile Include="Pages\Information.aspx.designer.cs">
       <DependentUpon>Information.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\FbLog.aspx.cs">
+    <Compile Include="Pages\FbLog.aspx.cs">
       <DependentUpon>FbLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\FbLog.aspx.designer.cs">
+    <Compile Include="Pages\FbLog.aspx.designer.cs">
       <DependentUpon>FbLog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\GooglePLog.aspx.cs">
+    <Compile Include="Pages\GooglePLog.aspx.cs">
       <DependentUpon>GooglePLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\GooglePLog.aspx.designer.cs">
+    <Compile Include="Pages\GooglePLog.aspx.designer.cs">
       <DependentUpon>GooglePLog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\TwitterLog.aspx.cs">
+    <Compile Include="Pages\TwitterLog.aspx.cs">
       <DependentUpon>TwitterLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SocialMediaLogins\TwitterLog.aspx.designer.cs">
+    <Compile Include="Pages\TwitterLog.aspx.designer.cs">
       <DependentUpon>TwitterLog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

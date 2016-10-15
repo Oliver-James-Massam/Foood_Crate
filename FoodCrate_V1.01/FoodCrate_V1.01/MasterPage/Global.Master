@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Food Crate</title>
     <link href="../Styling/Master.css" rel="stylesheet" />
+    <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
     <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -36,14 +37,13 @@
 		    <nav>
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
-			    <a href="#">CheckOut</a> 
+			    <a href="#">CheckOut <label> </label> </a> 
                 <a href="../Pages/Login.aspx">Login</a>
 		    </nav>
-            
 	    </div>
 
     </header>
-
+    
     <!-- You need this element to prevent the content of the page from jumping up -->
     <div class="header-fixed-placeholder"></div>
 
