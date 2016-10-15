@@ -63,6 +63,7 @@
 			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password"/>
 			                        </div>
 			                        <button type="submit" class="btn">Sign in!</button>
+                                    <small><a id="LocalLog" href="#" >Need an account? </a></small>
 			                    </form>
 		                    </div>
                         </div>
@@ -71,13 +72,13 @@
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3>Social Media Logins:</h3>
                         	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-2" href="#">
+	                        	<a class="btn btn-link-2" href="SocialMediaLogins/FbLog.aspx">
 	                        		<i class="fa fa-facebook"></i> Facebook
 	                        	</a>
-	                        	<a class="btn btn-link-2" href="#">
+	                        	<a class="btn btn-link-2" href="SocialMediaLogins/GooglePLog.asp">
 	                        		<i class="fa fa-twitter"></i> Twitter
 	                        	</a>
-	                        	<a class="btn btn-link-2" href="#">
+	                        	<a class="btn btn-link-2" href="SocialMediaLogins/TwitterLog.asp">
 	                        		<i class="fa fa-google-plus"></i> Google Plus
 	                        	</a>
                         	</div>

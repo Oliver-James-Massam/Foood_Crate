@@ -96,8 +96,11 @@
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="Images\LoginPage\1.jpg" />
+    <Content Include="Pages\SocialMediaLogins\FbLog.aspx" />
+    <Content Include="Pages\SocialMediaLogins\GooglePLog.aspx" />
+    <Content Include="Pages\SocialMediaLogins\TwitterLog.aspx" />
+    <Content Include="Styling\fonts\fontawesome-webfont.svg" />
+    <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="packages.config" />
@@ -105,11 +108,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MasterPage\Global.Master" />
-    <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Styling\fonts\FontAwesome.otf" />
+    <Content Include="Styling\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styling\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styling\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styling\fonts\fontawesome-webfont.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,7 +129,6 @@
     <Content Include="scripts\CommonScrips\jquery-1.11.1.min.js" />
     <Content Include="scripts\CommonScrips\jquery.backstretch.min.js" />
     <Content Include="scripts\LoginScripts\scripts.js" />
-    <Content Include="scripts\Googlebtn.js" />
     <Content Include="Styling\BootStrap\bootstrap.min.css" />
     <Content Include="Styling\Icons\apple-touch-icon-114-precomposed.png" />
     <Content Include="Styling\Icons\apple-touch-icon-57-precomposed.png" />
@@ -167,8 +169,30 @@
     <Compile Include="Pages\Information.aspx.designer.cs">
       <DependentUpon>Information.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SocialMediaLogins\FbLog.aspx.cs">
+      <DependentUpon>FbLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SocialMediaLogins\FbLog.aspx.designer.cs">
+      <DependentUpon>FbLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SocialMediaLogins\GooglePLog.aspx.cs">
+      <DependentUpon>GooglePLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SocialMediaLogins\GooglePLog.aspx.designer.cs">
+      <DependentUpon>GooglePLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SocialMediaLogins\TwitterLog.aspx.cs">
+      <DependentUpon>TwitterLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SocialMediaLogins\TwitterLog.aspx.designer.cs">
+      <DependentUpon>TwitterLog.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

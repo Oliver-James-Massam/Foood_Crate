@@ -6,7 +6,6 @@
 <head runat="server">
     <title>Food Crate</title>
     <link href="../Styling/Master.css" rel="stylesheet" />
-    <script src="../scripts/Googlebtn.js"></script>
     <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
