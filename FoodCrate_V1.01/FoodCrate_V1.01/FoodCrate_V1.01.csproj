@@ -94,6 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Images\LoginPage\1.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="packages.config" />
@@ -101,6 +105,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MasterPage\Global.Master" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,7 +122,19 @@
     <Content Include="Pages\Information.aspx" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="scripts\CommonScrips\bootstrap.min.js" />
+    <Content Include="scripts\CommonScrips\jquery-1.11.1.min.js" />
+    <Content Include="scripts\CommonScrips\jquery.backstretch.min.js" />
+    <Content Include="scripts\LoginScripts\scripts.js" />
     <Content Include="scripts\Googlebtn.js" />
+    <Content Include="Styling\BootStrap\bootstrap.min.css" />
+    <Content Include="Styling\Icons\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Styling\Icons\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Styling\Icons\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Styling\LoginPage\font-awesome.min.css" />
+    <Content Include="Styling\Icons\favicon.png" />
+    <Content Include="Styling\LoginPage\form-elements.css" />
+    <Content Include="Styling\LoginPage\LoginStyling.css" />
     <Content Include="Styling\Master.css" />
     <Content Include="Web.config" />
   </ItemGroup>

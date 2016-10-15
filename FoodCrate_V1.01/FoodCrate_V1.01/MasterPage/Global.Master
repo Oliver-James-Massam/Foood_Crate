@@ -6,8 +6,6 @@
 <head runat="server">
     <title>Food Crate</title>
     <link href="../Styling/Master.css" rel="stylesheet" />
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <script src="../scripts/Googlebtn.js"></script>
     <meta name="google-signin-client_id" content="AIzaSyCaAPtpIv0C7MmaMjpM_iY50ijhw7xMKGw"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -31,9 +29,7 @@
 	    });
     </script>
 
-    <style>
 
-    </style>
 
     <header class="header-fixed">
 	    <div class="header-limiter">
@@ -42,7 +38,7 @@
 			    <a href="#">Home</a>
 			    <a href="#">Catalogue</a>
 			    <a href="#">CheckOut</a> 
-                <a><div id="gglbtn"></div></a>
+                <a href="../Pages/Login.aspx">Login</a>
 		    </nav>
             
 	    </div>
