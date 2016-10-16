@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodCrate_V1._01.Pages.SocialMediaLogins
+namespace FoodCrate_V1._01.Pages
 {
 
 
-    public partial class FbLog
+    public partial class Auth
     {
     }
 }

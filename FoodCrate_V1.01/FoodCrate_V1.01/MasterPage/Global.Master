@@ -41,9 +41,9 @@
                 <a href="../Pages/Login.aspx">Login</a>
 		    </nav>
 	    </div>
-
+       
     </header>
-    
+
     <!-- You need this element to prevent the content of the page from jumping up -->
     <div class="header-fixed-placeholder"></div>
 
