@@ -72,7 +72,7 @@
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3>Social Media Logins:</h3>
                         	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-2" href="../Pages/Auth.aspx">
+	                        	<a class="btn btn-link-2" href="https://www.facebook.com/v2.4/dialog/oauth/?client_id= 1758990991018810 &redirect_uri=http://localhost:58267/Pages/Auth.aspx&response_type=code&state=1&scope=email">
 	                        		<i class="fa fa-facebook"></i> Facebook
 	                        	</a>
 	                        	<a class="btn btn-link-2" href="../Pages/Auth.aspx">
