@@ -76,9 +76,6 @@
 	                        		<i class="fa fa-facebook"></i> Facebook
 	                        	</a>
 	                        	<a class="btn btn-link-2" href="../Pages/Auth.aspx">
-	                        		<i class="fa fa-twitter"></i> Twitter
-	                        	</a>
-	                        	<a class="btn btn-link-2" href="../Pages/Auth.aspx">
 	                        		<i class="fa fa-google-plus"></i> Google Plus
 	                        	</a>
                         	</div>
