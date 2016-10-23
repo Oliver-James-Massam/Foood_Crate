@@ -19,7 +19,7 @@
 }
 
 .header-fixed .header-limiter {
-	max-width: 90%;
+	max-width: 100%;
 	text-align: center;
 	margin: 0 auto;
     color:green;
@@ -113,7 +113,7 @@ body.fixed .header-fixed .header-limiter nav {
 
 /* Making the header responsive */
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 100%) {
 
 	.header-fixed {
 		padding: 20px 0;
