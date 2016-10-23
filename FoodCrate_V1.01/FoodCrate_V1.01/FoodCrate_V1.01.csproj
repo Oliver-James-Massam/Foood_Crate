@@ -109,6 +109,19 @@
     <Content Include="bin\ASPSnippets.GoogleAPI.dll" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Images\Background\background1.png" />
+    <Content Include="Images\Background\background2.jpg" />
+    <Content Include="Images\Background\background3.jpg" />
+    <Content Include="Images\Background\background4.jpg" />
+    <Content Include="Images\Error\Error_404_Not_Found.png" />
+    <Content Include="Images\Error\Error_404_Not_Found2.png" />
+    <Content Include="Images\Error\Error_404_Not_Found3.png" />
+    <Content Include="Images\Error\Error_Image_Not_Found.png" />
+    <Content Include="Images\Error\Error_Image_Not_Found2.png" />
+    <Content Include="Images\Error\Error_Image_Not_Found3.png" />
+    <Content Include="Images\Food\onions.jpg" />
+    <Content Include="Images\Food\Razzberries Banner.jpg" />
+    <Content Include="Images\Food\strawberries.jpg" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
     <Content Include="Pages\Auth.aspx" />
@@ -236,9 +249,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Background\" />
-    <Folder Include="Images\Error\" />
-    <Folder Include="Images\Food\" />
     <Folder Include="Styling\PageFormat\" />
   </ItemGroup>
   <PropertyGroup>
