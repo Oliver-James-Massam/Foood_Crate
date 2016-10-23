@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASPSnippets.GoogleAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,11 @@ namespace FoodCrate_V1._01.MasterPage
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void GoogleAuth()
+        {
+            GoogleConnect.Authorize("profile", "email");
         }
     }
 }
