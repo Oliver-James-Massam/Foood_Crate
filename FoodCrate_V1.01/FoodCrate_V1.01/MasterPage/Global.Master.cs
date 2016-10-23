@@ -11,7 +11,7 @@ namespace FoodCrate_V1._01.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "CallMyFunction", "renderButton()", true);
+
         }
     }
 }
