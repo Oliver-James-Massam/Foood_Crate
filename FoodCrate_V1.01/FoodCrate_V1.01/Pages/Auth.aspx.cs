@@ -24,10 +24,10 @@ namespace FoodCrate_V1._01.Pages
             if (Request.QueryString["code"] != "")
             {
 
-                Uri targetUri = new Uri("https://graph.facebook.com/oauth/access_token?client_id=" + id + "&client_secret=" + app_secret + "&redirect_uri=http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + "/Pages/Auth.aspx&code=" + Request.QueryString["code"]);
-                HttpWebRequest at = (HttpWebRequest)HttpWebRequest.Create(targetUri);
-                System.IO.StreamReader str = new System.IO.StreamReader(at.GetResponse().GetResponseStream());
-                string token = str.ReadToEnd().ToString().Replace("access_token=", "");
+                Uri destuUi = new Uri("https://graph.facebook.com/oauth/access_token?client_id=" + id + "&client_secret=" + app_secret + "&redirect_uri=http://" + Request.ServerVariables["SERVER_NAME"] + ":" + Request.ServerVariables["SERVER_PORT"] + "/Pages/Auth.aspx&code=" + Request.QueryString["code"]);
+                HttpWebRequest httpReq = (HttpWebRequest)HttpWebRequest.Create(destuUi);
+                System.IO.StreamReader reader = new System.IO.StreamReader(httpReq.GetResponse().GetResponseStream());
+                string token = reader.ReadToEnd().ToString().Replace("access_token=", "");
                 string[] combined = token.Split('&');
                 string accessToken = combined[0];
                 Uri eatTargetUri = new Uri("https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=" + id + "&client_secret=" + app_secret + "&fb_exchange_token=" + accessToken); HttpWebRequest eat = (HttpWebRequest)HttpWebRequest.Create(eatTargetUri);
