@@ -10,8 +10,8 @@
         <ItemTemplate>
             <table>
                 <tr>
-                    <td>Id:</td>
-                    <td><%# Eval("id") %><br />
+                    <td>link:</td>
+                    <td><%# Eval("link") %><br />
                     </td>
                 </tr>
                 <tr>

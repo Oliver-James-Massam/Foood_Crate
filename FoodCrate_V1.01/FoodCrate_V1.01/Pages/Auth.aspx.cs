@@ -38,7 +38,7 @@ namespace FoodCrate_V1._01.Pages
                 string[] eatWords = eatToken.Split('&');
                 string extendedAccessToken = eatWords[0];
                 
-                Uri targetUserUri = new Uri("https://graph.facebook.com/me?fields=first_name,last_name,gender,link,locale,email&access_token=" + accessToken);
+                Uri targetUserUri = new Uri("https://graph.facebook.com/me?fields=first_name,last_name,link,email&access_token=" + accessToken);
                 HttpWebRequest user = (HttpWebRequest)HttpWebRequest.Create(targetUserUri);
                 
                 StreamReader userInfo = new StreamReader(user.GetResponse().GetResponseStream());
