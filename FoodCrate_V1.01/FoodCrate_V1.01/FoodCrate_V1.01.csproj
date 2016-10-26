@@ -162,10 +162,15 @@
     <Content Include="Images\Food\onions.jpg" />
     <Content Include="Images\Food\Razzberries Banner.jpg" />
     <Content Include="Images\Food\strawberries.jpg" />
+    <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
     <Content Include="Pages\Auth.aspx" />
     <Content Include="scripts\LoginScripts\FbLoginScript.js" />
+    <Content Include="Styling\AdminCss\font-awesome.min.css" />
+    <Content Include="Styling\AdminCss\metisMenu.css" />
+    <Content Include="Styling\AdminCss\metisMenu.min.css" />
+    <Content Include="Styling\AdminCss\sb-admin-2.css" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
@@ -236,6 +241,13 @@
     </Compile>
     <Compile Include="MasterPage\Global.Master.designer.cs">
       <DependentUpon>Global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
