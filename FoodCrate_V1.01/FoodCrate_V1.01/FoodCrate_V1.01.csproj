@@ -166,6 +166,13 @@
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
     <Content Include="Pages\Auth.aspx" />
+    <Content Include="scripts\AdminScripts\bootstrap.min.js" />
+    <Content Include="scripts\AdminScripts\jquery.min.js" />
+    <Content Include="scripts\AdminScripts\metisMenu.min.js" />
+    <Content Include="scripts\AdminScripts\morris-data.js" />
+    <Content Include="scripts\AdminScripts\morris.min.js" />
+    <Content Include="scripts\AdminScripts\raphael.min.js" />
+    <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="scripts\LoginScripts\FbLoginScript.js" />
     <Content Include="Styling\AdminCss\font-awesome.min.css" />
     <Content Include="Styling\AdminCss\metisMenu.css" />

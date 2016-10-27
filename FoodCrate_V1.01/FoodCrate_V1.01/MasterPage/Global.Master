@@ -12,7 +12,7 @@
 
     <script>
 	    $(document).ready(function(){
-		    var showHeaderAt = 75;
+		    var showHeaderAt = 10;
 		    var win = $(window),
 				    body = $('body');
 		    if(win.width() > 600){
