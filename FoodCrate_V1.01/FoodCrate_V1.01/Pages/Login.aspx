@@ -13,20 +13,16 @@
         <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
         <link href="../Styling/LoginPage/form-elements.css" rel="stylesheet" />
         <link href="../Styling/LoginPage/LoginStyling.css" rel="stylesheet" />
-
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="../Styling/Icons/favicon.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../Styling/Icons/apple-touch-icon-114-precomposed.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Styling/Icons/apple-touch-icon-72-precomposed.png" />
-        <link rel="apple-touch-icon-precomposed" href="../Styling/Icons/apple-touch-icon-57-precomposed.png" />      
-
+        <script src="../scripts/CommonScrips/bootstrap.min.js"></script>
+        <script src="../scripts/CommonScrips/jquery-1.11.1.min.js"></script>
+        <script src="../scripts/CommonScrips/jquery.backstretch.min.js"></script>
+        <script src="../scripts/LoginScripts/scripts.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <body>
         <!-- Top content -->
         <div class="top-content">
-        	
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
@@ -88,9 +84,6 @@
 
 
         <!-- Javascript -->
-    <script src="../scripts/CommonScrips/bootstrap.min.js"></script>
-    <script src="../scripts/CommonScrips/jquery-1.11.1.min.js"></script>
-    <script src="../scripts/CommonScrips/jquery.backstretch.min.js"></script>
-    <script src="../scripts/LoginScripts/scripts.js"></script>
+
    </body>
 </asp:Content>

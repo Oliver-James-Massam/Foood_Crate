@@ -165,19 +165,7 @@
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
-    <Content Include="Pages\Auth.aspx" />
-    <Content Include="scripts\AdminScripts\bootstrap.min.js" />
-    <Content Include="scripts\AdminScripts\jquery.min.js" />
-    <Content Include="scripts\AdminScripts\metisMenu.min.js" />
-    <Content Include="scripts\AdminScripts\morris-data.js" />
-    <Content Include="scripts\AdminScripts\morris.min.js" />
-    <Content Include="scripts\AdminScripts\raphael.min.js" />
-    <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="scripts\LoginScripts\FbLoginScript.js" />
-    <Content Include="Styling\AdminCss\font-awesome.min.css" />
-    <Content Include="Styling\AdminCss\metisMenu.css" />
-    <Content Include="Styling\AdminCss\metisMenu.min.css" />
-    <Content Include="Styling\AdminCss\sb-admin-2.css" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
@@ -226,12 +214,7 @@
     <Content Include="scripts\CommonScrips\jquery-1.11.1.min.js" />
     <Content Include="scripts\CommonScrips\jquery.backstretch.min.js" />
     <Content Include="scripts\LoginScripts\scripts.js" />
-    <Content Include="Styling\BootStrap\bootstrap.min.css" />
-    <Content Include="Styling\Icons\apple-touch-icon-114-precomposed.png" />
-    <Content Include="Styling\Icons\apple-touch-icon-57-precomposed.png" />
-    <Content Include="Styling\Icons\apple-touch-icon-72-precomposed.png" />
     <Content Include="Styling\LoginPage\font-awesome.min.css" />
-    <Content Include="Styling\Icons\favicon.png" />
     <Content Include="Styling\LoginPage\form-elements.css" />
     <Content Include="Styling\LoginPage\LoginStyling.css" />
     <Content Include="Styling\LoginPage\PreviewCard.css" />
@@ -272,13 +255,6 @@
       <DependentUpon>GoogleAuth.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\FackebookStrut.cs" />
-    <Compile Include="Pages\Auth.aspx.cs">
-      <DependentUpon>Auth.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Auth.aspx.designer.cs">
-      <DependentUpon>Auth.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,6 +284,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="scripts\AdminScripts\" />
+    <Folder Include="Styling\AdminCss\" />
+    <Folder Include="Styling\BootStrap\" />
+    <Folder Include="Styling\Icons\" />
     <Folder Include="Styling\PageFormat\" />
   </ItemGroup>
   <PropertyGroup>
