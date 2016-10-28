@@ -162,10 +162,25 @@
     <Content Include="Images\Food\onions.jpg" />
     <Content Include="Images\Food\Razzberries Banner.jpg" />
     <Content Include="Images\Food\strawberries.jpg" />
+    <Content Include="Pages\AdminAddUser.aspx" />
+    <Content Include="Pages\AdminEditUser.aspx" />
+    <Content Include="Pages\AdminDeleteUser.aspx" />
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
+    <Content Include="scripts\AdminScripts\bootstrap.min.js" />
+    <Content Include="scripts\AdminScripts\jquery.min.js" />
+    <Content Include="scripts\AdminScripts\metisMenu.js" />
+    <Content Include="scripts\AdminScripts\morris-data.js" />
+    <Content Include="scripts\AdminScripts\morris.min.js" />
+    <Content Include="scripts\AdminScripts\raphael.min.js" />
+    <Content Include="scripts\AdminScripts\sb-admin-2.js" />
+    <Content Include="Styling\AdminCss\metisMenu.min.css" />
+    <Content Include="Styling\AdminCss\morris.css" />
     <Content Include="scripts\LoginScripts\FbLoginScript.js" />
+    <Content Include="Styling\AdminCss\font-awesome.min.css" />
+    <Content Include="Styling\BootStrap\bootstrap.min.css" />
+    <Content Include="Styling\AdminCss\simple-sidebar.css" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
@@ -232,6 +247,27 @@
     <Compile Include="MasterPage\Global.Master.designer.cs">
       <DependentUpon>Global.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdminAddUser.aspx.cs">
+      <DependentUpon>AdminAddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminAddUser.aspx.designer.cs">
+      <DependentUpon>AdminAddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminEditUser.aspx.cs">
+      <DependentUpon>AdminEditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminEditUser.aspx.designer.cs">
+      <DependentUpon>AdminEditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminDeleteUser.aspx.cs">
+      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminDeleteUser.aspx.designer.cs">
+      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -284,9 +320,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="scripts\AdminScripts\" />
-    <Folder Include="Styling\AdminCss\" />
-    <Folder Include="Styling\BootStrap\" />
     <Folder Include="Styling\Icons\" />
     <Folder Include="Styling\PageFormat\" />
   </ItemGroup>
