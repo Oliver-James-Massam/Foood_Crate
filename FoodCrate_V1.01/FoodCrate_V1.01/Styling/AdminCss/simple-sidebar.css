@@ -14,13 +14,26 @@ h1{
 
  body {
     overflow-x: hidden;
-    background-color:rgba(104, 104, 104, 0.60);
+    background-color:rgb(242, 243, 243);
  }
  header{
          overflow: hidden;
  }
  #BtnAdd{
      width:101%;
+ }
+ #delete_Name{
+      margin-bottom:10px;
+ }
+ #checkDelete{
+
+ }
+
+
+  #btnDelete{
+     width:101%;
+     background-color:#2b0000;
+     border-color:#2b0000;
  }
  
  #input_name{
@@ -41,6 +54,10 @@ h1{
 
  #check{
      margin-left:10%;
+ }
+
+ #row{
+     padding:10px;
  }
 
 .row{

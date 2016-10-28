@@ -168,7 +168,9 @@
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
+    <Content Include="scripts\AdminScripts\bootstrap-checkbox.min.js" />
     <Content Include="scripts\AdminScripts\bootstrap.min.js" />
+    <Content Include="scripts\AdminScripts\ControlCheckBox.js" />
     <Content Include="scripts\AdminScripts\jquery.min.js" />
     <Content Include="scripts\AdminScripts\metisMenu.js" />
     <Content Include="scripts\AdminScripts\morris-data.js" />
@@ -177,7 +179,6 @@
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="Styling\AdminCss\metisMenu.min.css" />
     <Content Include="Styling\AdminCss\morris.css" />
-    <Content Include="scripts\LoginScripts\FbLoginScript.js" />
     <Content Include="Styling\AdminCss\font-awesome.min.css" />
     <Content Include="Styling\BootStrap\bootstrap.min.css" />
     <Content Include="Styling\AdminCss\simple-sidebar.css" />
