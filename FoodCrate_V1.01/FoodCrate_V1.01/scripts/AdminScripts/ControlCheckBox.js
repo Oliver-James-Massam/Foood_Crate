@@ -1,5 +1,0 @@
-﻿/*
-    chackbox logic
-*/
-
-

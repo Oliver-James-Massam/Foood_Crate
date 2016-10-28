@@ -168,9 +168,8 @@
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
-    <Content Include="scripts\AdminScripts\bootstrap-checkbox.min.js" />
     <Content Include="scripts\AdminScripts\bootstrap.min.js" />
-    <Content Include="scripts\AdminScripts\ControlCheckBox.js" />
+    <Content Include="scripts\AdminScripts\CheckBoxHandler.js" />
     <Content Include="scripts\AdminScripts\jquery.min.js" />
     <Content Include="scripts\AdminScripts\metisMenu.js" />
     <Content Include="scripts\AdminScripts\morris-data.js" />
