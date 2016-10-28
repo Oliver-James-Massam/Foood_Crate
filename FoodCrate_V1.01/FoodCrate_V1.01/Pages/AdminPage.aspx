@@ -53,10 +53,10 @@
                     <div class="panel-words">
                         <div class="row">
                             <div class="col-xs-3">
-                                <i class="fa fa-bank fa-5x"></i>
+                                <i class="fa fa-dollar fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">1 000 000</div>
+                                <div class="huge" id ="cashGen">1 000 000</div>
                                 <div>Total generated Cash!</div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge" id ="uniqCust">DumbVal</div>
                                     <div>Total Unique customers</div>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                     <i class="fa fa-calendar-check-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge" id ="WeeklySaleNo">DumbVal</div>
                                     <div>Weekly sales</div>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                     <i class="fa fa-bank fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge" id ="CashThisWeek">DumbVal</div>
                                     <div>Cash generated this week</div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                     <i class="fa fa-align-justify fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge" id="TotalItems">DumbVal</div>
                                     <div>Total number of items sold</div>
                                 </div>
                             </div>
