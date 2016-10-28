@@ -8,7 +8,8 @@
 h1{
     color:#332a2a;
     text-align:center;
-    font-size:70px;
+    font-size:50px;
+    font-family:'Times New Roman', Times, serif;
 }
 
  body {
@@ -18,8 +19,33 @@ h1{
  header{
          overflow: hidden;
  }
+ #BtnAdd{
+     width:101%;
+ }
+ 
+ #input_name{
+    margin-left:10%;
+ }  
 
+  #input_lastname{
+    margin-left:10%;
+ }  
 
+ #input_email{
+    margin-left:10%;
+ }  
+
+ #input_password{
+    margin-left:10%;
+ }  
+
+ #check{
+     margin-left:10%;
+ }
+
+.row{
+    padding:10px;
+}
 
 body.fixed #sidebar-wrapper{
     padding-top: 10px;
