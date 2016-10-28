@@ -26,6 +26,12 @@
                     <li>
                         <a href="../Pages/AdminEditUser.aspx" class ="active">Edit User</a>
                     </li>
+                    <li>
+                        <a href="../Pages/EditProduct.aspx">Edit Product</a>
+                    </li>
+                    <li>
+                        <a href="../Pages/AddProduct.aspx">Add Product</a>
+                    </li>
                 </ul>
             </div>
 
