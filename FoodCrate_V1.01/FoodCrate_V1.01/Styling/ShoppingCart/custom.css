@@ -1,0 +1,45 @@
+/*-----------------------------------
+	General Styles
+-----------------------------------*/
+
+body{
+	font-size : 14px;
+	background-color: #ffffff;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+
+.breadcrumb > .active a{
+	color: #046d10;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb li a{
+	color :#0b9f1c;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb>li+li:before {
+	content: "\00BB";
+}
+
+.breadcrumb{
+	margin-bottom: 100px;
+	background-color: #dbdbdb;
+}
+
+.breadcrumbBox{
+	background-color: #dbdbdb;
+	height: 100px;
+	margin-bottom: 100px;
+	padding-top: 32px;
+}

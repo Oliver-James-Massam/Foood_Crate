@@ -240,6 +240,7 @@
     <Content Include="Styling\LoginPage\PreviewCard.css" />
     <Content Include="Styling\Master.css" />
     <Content Include="Styling\PreviewCard.css" />
+    <Content Include="Styling\ShoppingCart\custom.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -252,6 +253,7 @@
     <Compile Include="MasterPage\Global.Master.designer.cs">
       <DependentUpon>Global.Master</DependentUpon>
     </Compile>
+    <Compile Include="Models\ShoppingClass.cs" />
     <Compile Include="Pages\SCartReview.aspx.cs">
       <DependentUpon>SCartReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
