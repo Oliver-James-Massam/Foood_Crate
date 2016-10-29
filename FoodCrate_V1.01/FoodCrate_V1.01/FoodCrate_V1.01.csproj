@@ -241,6 +241,7 @@
     <Content Include="Styling\Master.css" />
     <Content Include="Styling\PreviewCard.css" />
     <Content Include="Styling\ShoppingCart\custom.css" />
+    <Content Include="Styling\ShoppingCart\Table.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

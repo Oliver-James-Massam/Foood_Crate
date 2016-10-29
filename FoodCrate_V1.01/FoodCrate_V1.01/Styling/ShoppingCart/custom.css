@@ -34,12 +34,12 @@ a:hover {
 
 .breadcrumb{
 	margin-bottom: 100px;
-	background-color: #dbdbdb;
+	background-color: #ffffff;
 }
 
 .breadcrumbBox{
-	background-color: #dbdbdb;
+	background-color: #ffffff;
 	height: 100px;
-	margin-bottom: 100px;
+	margin-bottom: 0px;
 	padding-top: 32px;
 }
