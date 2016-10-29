@@ -11,7 +11,13 @@ namespace FoodCrate_V1._01.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+     
+    }
+        protected void Accept_Click(object sender, EventArgs e)
+        {
 
+
+            Response.Redirect("../Pages/ScartCheckOut.aspx");
         }
     }
 }

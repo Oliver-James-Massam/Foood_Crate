@@ -3,22 +3,18 @@
 }
 
 table {
-    border-collapse: collapse;
-    width: 90%;
-    margin-left:5%;
+    width: 80%;
+    margin-left:10%;
     border: 1px solid white;
     border-width:5px;
     border-color:white;
 }
 
-
-
 th, td {
     text-align: left;
-    padding: 8px;
+    padding: 10px;
     border: 2px solid white;
-    font-size:15px;
-    
+    font-size:20px;
 }
 
 tr:nth-child(even){background-color: #c3e5ce}
@@ -26,21 +22,19 @@ tr:nth-child(odd){background-color: #a1c4ac }
 
 th {
     background-color: #6ca767;
-    color: white;
+    color:#ce4242  white;
+    
 }
 
- .Quantity{
-    width:50%;
-}
 
- .btnacc{
-     background-color:#4e7d4a;
-     width:80%;
-     margin-left:10%;
+ .ButSub{
+     background-color:#8f3737;
+     width:70%;
+     margin-left:15%;
      margin-top:30px;
      text-align:center;
      color:white;
      font-size:200%;
-     border:solid 2px ;
+     border:solid 2px;
  }
 

@@ -3,7 +3,7 @@
     <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/form-elements.css" rel="stylesheet" />
-        <link href="../Styling/ShoppingCart/custom.css" rel="stylesheet" />
+    <link href="../Styling/ShoppingCart/custom.css" rel="stylesheet" />
     <link href="../Styling/ShoppingCart/Table.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -79,6 +79,6 @@
             </asp:TableFooterRow>
 
         </asp:Table>
-        <asp:Button ID="Accept" class="btnacc" runat="server" Text="Accept" />
+        <asp:Button ID="Accept" class="btnacc" runat="server" Text="Accept" OnClick="Accept_Click" />
     </div>
 </asp:Content>

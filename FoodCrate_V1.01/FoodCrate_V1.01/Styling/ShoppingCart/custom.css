@@ -23,7 +23,7 @@ a:hover {
 }
 
 .breadcrumb li a{
-	color :#0b9f1c;
+	color :#000000;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -33,12 +33,14 @@ a:hover {
 }
 
 .breadcrumb{
+    margin-left:20%;
 	margin-bottom: 100px;
-	background-color: #ffffff;
+	background-color:#ffffff;
+    width:60%;
 }
 
 .breadcrumbBox{
-	background-color: #ffffff;
+	background-color: #606568;
 	height: 100px;
 	margin-bottom: 0px;
 	padding-top: 32px;

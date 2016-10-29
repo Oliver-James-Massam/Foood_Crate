@@ -13,5 +13,12 @@ namespace FoodCrate_V1._01.MasterPage
         {
 
         }
+
+        protected void Accept_Click(object sender, EventArgs e)
+        {
+
+
+            Response.Redirect("../Pages/SCartReview.aspx");
+        }
     }
 }

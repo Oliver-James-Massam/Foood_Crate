@@ -182,6 +182,7 @@
     <Content Include="scripts\AdminScripts\morris.min.js" />
     <Content Include="scripts\AdminScripts\raphael.min.js" />
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
+    <Content Include="scripts\CommonScrips\ThankYouImage.js" />
     <Content Include="Styling\AdminCss\metisMenu.min.css" />
     <Content Include="Styling\AdminCss\morris.css" />
     <Content Include="Styling\AdminCss\font-awesome.min.css" />
@@ -242,7 +243,9 @@
     <Content Include="Styling\Master.css" />
     <Content Include="Styling\PreviewCard.css" />
     <Content Include="Styling\ShoppingCart\custom.css" />
+    <Content Include="Styling\ShoppingCart\TableReview.css" />
     <Content Include="Styling\ShoppingCart\Table.css" />
+    <Content Include="Styling\ShoppingCart\ThankYou.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
