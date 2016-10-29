@@ -24,35 +24,33 @@
 					    body.removeClass('fixed');
 				    }
 			    });
-
 		    }
 	    });
     </script>
 
 
-
-    <header class="header-fixed">
-	    <div class="header-limiter">
-		    <h1><a href="#">Food<span>Crate</span></a></h1>
-		    <nav>
-			    <a href="#">Home</a>
-			    <a href="#">Catalogue</a>
-			    <a href="#">CheckOut <label> </label> </a> 
-                <a href="../Pages/Login.aspx">Login</a>
-		    </nav>
-	    </div>
-       
-    </header>
-
-    <!-- You need this element to prevent the content of the page from jumping up -->
-    <div class="header-fixed-placeholder"></div>
-
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
+            <div class="header-fixed">
+	    <div class="header-limiter">
+		    <h1><a href="#">Food<span>Crate</span></a></h1>
+		    <nav>
+			    <a href="../Pages/Home.aspx">Home</a>
+			    <a href="../Pages/Catalog.aspx">Catalogue</a>
+			    <a href="../Pages/SCart.aspx">CheckOut <label> </label> </a> 
+                <a href="../Pages/Login.aspx">Login</a>
+		    </nav>
+	    </div>
+       
+    </div>
+
+    <!-- You need this element to prevent the content of the page from jumping up -->
+    <div class="header-fixed-placeholder"></div>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

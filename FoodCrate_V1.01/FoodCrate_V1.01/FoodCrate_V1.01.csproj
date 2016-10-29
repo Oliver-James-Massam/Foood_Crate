@@ -162,6 +162,9 @@
     <Content Include="Images\Food\onions.jpg" />
     <Content Include="Images\Food\Razzberries Banner.jpg" />
     <Content Include="Images\Food\strawberries.jpg" />
+    <Content Include="Pages\SCartReview.aspx" />
+    <Content Include="Pages\SCart.aspx" />
+    <Content Include="Pages\ScartCheckOut.aspx" />
     <Content Include="Pages\AddProduct.aspx" />
     <Content Include="Pages\EditProduct.aspx" />
     <Content Include="Pages\AdminAddUser.aspx" />
@@ -248,6 +251,27 @@
     </Compile>
     <Compile Include="MasterPage\Global.Master.designer.cs">
       <DependentUpon>Global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SCartReview.aspx.cs">
+      <DependentUpon>SCartReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SCartReview.aspx.designer.cs">
+      <DependentUpon>SCartReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SCart.aspx.cs">
+      <DependentUpon>SCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SCart.aspx.designer.cs">
+      <DependentUpon>SCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ScartCheckOut.aspx.cs">
+      <DependentUpon>ScartCheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ScartCheckOut.aspx.designer.cs">
+      <DependentUpon>ScartCheckOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
