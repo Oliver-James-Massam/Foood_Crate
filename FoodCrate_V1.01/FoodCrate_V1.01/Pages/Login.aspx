@@ -17,7 +17,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body>
         <!-- Top content -->
         <div class="top-content">
             <div class="inner-bg">
@@ -46,7 +45,6 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-userna    me"/>
@@ -55,9 +53,10 @@
 			                        	<label class="sr-only" for="form-password">Password</label>
 			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password"/>
 			                        </div>
+ 
+
 			                        <button type="submit" class="btn">Sign in!</button>
-                                    <small><a id="LocalLog" href="#" >Need an account? </a></small>
-			                    </form>
+                                    <small><a id="LocalLog" href="../Pages/Signup.aspx" >Need an account? </a></small>
 		                    </div>
                         </div>
                     </div>
@@ -80,6 +79,4 @@
             </div>
             
         </div>
-
-   </body>
 </asp:Content>

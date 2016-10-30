@@ -162,6 +162,7 @@
     <Content Include="Images\Food\onions.jpg" />
     <Content Include="Images\Food\Razzberries Banner.jpg" />
     <Content Include="Images\Food\strawberries.jpg" />
+    <Content Include="Pages\Signup.aspx" />
     <Content Include="Pages\Auth.aspx" />
     <Content Include="Pages\SCartReview.aspx" />
     <Content Include="Pages\SCart.aspx" />
@@ -257,6 +258,13 @@
     </Compile>
     <Compile Include="MasterPage\Global.Master.designer.cs">
       <DependentUpon>Global.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Auth.aspx.cs">
       <DependentUpon>Auth.aspx</DependentUpon>
