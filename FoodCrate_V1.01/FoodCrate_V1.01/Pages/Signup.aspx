@@ -6,10 +6,11 @@
         <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
         <link href="../Styling/LoginPage/form-elements.css" rel="stylesheet" />
         <link href="../Styling/LoginPage/LoginStyling.css" rel="stylesheet" />
+
         <script src="../scripts/CommonScrips/bootstrap.min.js"></script>
         <script src="../scripts/CommonScrips/jquery-1.11.1.min.js"></script>
         <script src="../scripts/CommonScrips/jquery.backstretch.min.js"></script>
-        <script src="../scripts/LoginScripts/scripts.js"></script>
+        <script src="../scripts/LoginScripts/scriptsSign.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
             <!-- Top content -->

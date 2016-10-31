@@ -153,6 +153,7 @@
     <Content Include="Images\Background\background2.jpg" />
     <Content Include="Images\Background\background3.jpg" />
     <Content Include="Images\Background\background4.jpg" />
+    <Content Include="Images\Background\croissant.jpg" />
     <Content Include="Images\Error\Error_404_Not_Found.png" />
     <Content Include="Images\Error\Error_404_Not_Found2.png" />
     <Content Include="Images\Error\Error_404_Not_Found3.png" />
@@ -184,6 +185,7 @@
     <Content Include="scripts\AdminScripts\raphael.min.js" />
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="scripts\CommonScrips\ThankYouImage.js" />
+    <Content Include="scripts\LoginScripts\scriptsSign.js" />
     <Content Include="Styling\AdminCss\metisMenu.min.css" />
     <Content Include="Styling\AdminCss\morris.css" />
     <Content Include="Styling\AdminCss\font-awesome.min.css" />
