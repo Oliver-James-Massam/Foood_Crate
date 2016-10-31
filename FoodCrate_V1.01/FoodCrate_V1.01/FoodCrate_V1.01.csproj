@@ -163,6 +163,7 @@
     <Content Include="Images\Food\onions.jpg" />
     <Content Include="Images\Food\Razzberries Banner.jpg" />
     <Content Include="Images\Food\strawberries.jpg" />
+    <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Pages\Signup.aspx" />
     <Content Include="Pages\Auth.aspx" />
     <Content Include="Pages\SCartReview.aspx" />
@@ -192,7 +193,6 @@
     <Content Include="Styling\BootStrap\bootstrap.min.css" />
     <Content Include="Styling\AdminCss\simple-sidebar.css" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
-    <Content Include="Images\LoginPage\VeggiBasket.jpg" />
     <Content Include="Images\Razzberries Banner.jpg" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="packages.config" />

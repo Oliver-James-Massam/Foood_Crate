@@ -109,7 +109,8 @@ body.fixed #sidebar-wrapper{
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: rgb(52, 55, 58);
+    background-color: white;
+    
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -239,19 +240,19 @@ body.fixed #sidebar-wrapper{
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: #063c13;
+    background:  #5f9b2a;
 }
 
 .sidebar-nav li a.active{
 text-decoration: none;
     color: #fff;
-    background: #2b0000;
+    background:#063c13;
 }
 
 .sidebar-nav li a:focus {
@@ -264,8 +265,8 @@ text-decoration: none;
     line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
+.sidebar-nav  .sidebar-brand a {
+    color: #F5F5F5;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {

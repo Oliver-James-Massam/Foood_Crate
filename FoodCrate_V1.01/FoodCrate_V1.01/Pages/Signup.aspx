@@ -50,15 +50,15 @@
 			                        </div>
                                      <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Re-enter Password</label>
-			                        	<input type="text" name="form-password" placeholder="Password..." class="form-password form-control" id="form-repassword"/>
+			                        	<input type="text" name="form-password" placeholder="Re-enter Password..." class="form-repassword form-control" id="form-repassword"/>
 			                        </div>
                                     <div class="form-group">
 			                        	<label class="sr-only" for="form-FirstName">First name</label>
-			                        	<input type="text" name="form-FirstName" placeholder="First name..." class="form-password form-control" id="form-FirstName"/>
+			                        	<input type="text" name="form-FirstName" placeholder="First name..." class="form-Fname form-control" id="form-FirstName"/>
 			                        </div>
                                     <div class="form-group">
 			                        	<label class="sr-only" for="form-Surname">Surname</label>
-			                        	<input type="text" name="form-Surname" placeholder="Surname..." class="form-password form-control" id="form-Surname"/>
+			                        	<input type="text" name="form-Surname" placeholder="Surname..." class="form-surname form-control" id="form-Surname"/>
 			                        </div>
 
 			                        <button type="submit" class="btn">Sign in!</button>

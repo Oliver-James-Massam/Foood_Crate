@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Global.Master" AutoEventWireup="true" CodeBehind="AdminPage.aspx.cs" Inherits="FoodCrate_V1._01.MasterPage.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+    
     <script src="../scripts/CommonScrips/bootstrap.min.js"></script>
     <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
     <link href="../Styling/AdminCss/simple-sidebar.css" rel="stylesheet" />
