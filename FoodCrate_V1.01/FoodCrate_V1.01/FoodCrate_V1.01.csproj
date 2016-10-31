@@ -222,6 +222,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Styling\Home\font\fontawesome-webfont.eot" />
+    <Content Include="Styling\Home\font\fontawesome-webfont.ttf" />
+    <Content Include="Styling\Home\font\fontawesome-webfont.woff" />
+    <Content Include="Styling\Home\font\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -239,6 +243,10 @@
     <Content Include="scripts\CommonScrips\jquery-1.11.1.min.js" />
     <Content Include="scripts\CommonScrips\jquery.backstretch.min.js" />
     <Content Include="scripts\LoginScripts\scripts.js" />
+    <Content Include="Styling\Home\css\bootstrap.css" />
+    <Content Include="Styling\Home\css\bootstrap.min.css" />
+    <Content Include="Styling\Home\css\landing-page.css" />
+    <Content Include="Styling\Home\font\fontawesome-webfont.svg" />
     <Content Include="Styling\LoginPage\font-awesome.min.css" />
     <Content Include="Styling\LoginPage\form-elements.css" />
     <Content Include="Styling\LoginPage\LoginStyling.css" />
