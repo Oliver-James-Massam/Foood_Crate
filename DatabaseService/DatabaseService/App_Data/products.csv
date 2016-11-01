@@ -1,0 +1,41 @@
+ProductID,Name,Type,Weight,Description,Picture,Price
+1,"Huletts White Sugar","White Sugar",500,"Huletts White Sugar 500g",./media/noimage.jpg,8.99
+2,"Huletts White Sugar","White Sugar",250,"Huletts White Sugar 250g",./media/noimage.jpg,5.49
+3,"Clover Full Cream Milk",Milk,200,"Clover UHT Milk Full Cream 200ml",./media/noimage.jpg,4.99
+4,"Clover Full Cream Milk",Milk,500,"Clover UHT Milk Full Cream 500ml",./media/noimage.jpg,9.29
+5,"Alzu Free Range Eggs",Eggs,6,"Alzu Eggs Extra Large Free Range Eggs 6",./media/noimage.jpg,19.49
+6,"Alzu Free Range Eggs",Eggs,15,"Alzu Eggs Free Range Extra Large Eggs 15",./media/noimage.jpg,43.99
+7,"Royal Baking Powder","Baking Powder",50,"Royal Baking Powder 50g",./media/noimage.jpg,9.99
+8,"Royal Baking Powder","Baking Powder",200,"Royal Baking Powder 200g",./media/noimage.jpg,24.99
+9,"Cerebos Table Salt",Salt,125,"Cerebos Iodated Table Salt 125g",./media/noimage.jpg,11.99
+10,"Cerebos Table Salt",Salt,500,"Cerebos Iodated Table Salt Flask 500g",./media/noimage.jpg,16.49
+11,"Kerrygold Butter",Butter,100,"Kerrygold Butter 100g",./media/noimage.jpg,25.99
+12,"Kerrygold Butter",Butter,250,"Kerrygold Butter 250g",./media/noimage.jpg,44.99
+13,"Sasko Cake Flour",Flour,1000,"Sasko Cake Flour 1kg ",./media/noimage.jpg,11.49
+14,"Sasko Cake Flour",Flour,2500,"Sasko Cake Flour 2.5kg",./media/noimage.jpg,21.9
+15,"Moir's Vanilla Essence",Essence,100,"Moir's Vanilla Essence 100 ML",./media/noimage.jpg,15.99
+16,"Moir's Caramel Essence",Essence,40,"Moir's Essence Caramel Flavour 40ml",./media/noimage.jpg,5.9
+17,"Robertsons Almond Essencel",Essence,40,"Robertsons Almond Essence 40ml",./media/noimage.jpg,7.9
+18,"Selati Golden Brown Sugar","Brown Sugar",500,"Selati Golden Brown Sugar 500g",./media/noimage.jpg,8.99
+19,"Selati Golden Brown Sugar","Brown Sugar",1000,"Selati Golden Brown Sugar 1Kg",./media/noimage.jpg,15.99
+20,"Selati Golden Brown Sugar","Brown Sugar",2000,"Selati Golden Brown Sugar 2kg ",./media/noimage.jpg,29.99
+21,"Goodhope Regular Soy Milk",Milk,250,"Goodhope Regular Soy Milk 250 ML",./media/noimage.jpg,6.49
+22,"Goodhope Regular Soya Milk",Milk,1000,"Goodhope Regular Soya Milk 1L",./media/noimage.jpg,23.49
+23,"Pasta Polana Spaghetti",Pasta,250,"Pasta Polana Spaghetti 250 Gr",./media/noimage.jpg,5.99
+24,"Pasta Polana Spaghetti",Pasta,1000,"Pasta Polana Spaghetti 1kg",./media/noimage.jpg,19.99
+25,"Pasta Grande Macaroni",Pasta,500,"Pasta Grande Maize Macaroni 500g",./media/noimage.jpg,12.99
+26,"Pasta Grande Macaroni",Pasta,1000,"Pasta Grande Macaroni 1kg",./media/noimage.jpg,23.99
+27,"Serena Lasagne",Pasta,250,"Serena Lasagne 250g",./media/noimage.jpg,26.99
+28,"Serena Lasagne",Pasta,500,"Serena Lasagne Sheets 500g",./media/noimage.jpg,39.99
+29,"Butchery Lean Beef Mince",Beef,250,"Butchery Lean Beef Mince",./media/noimage.jpg,19.99
+30,"Butchery Lean Beef Mince Bulk",Beef,1000,"Butchery Lean Beef Mince Bulk",./media/noimage.jpg,72.99
+31,"Albany Superior White Bread",Bread,700,"Albany Superior White Sliced Bread 700g",./media/noimage.jpg,13.99
+32,"Albany Superior Standard Brown Bread",Bread,700,"Albany Superior Standard Sliced Brown Bread 700g",./media/noimage.jpg,12.39
+33,"Albany Superior Brown Seed Bread",Bread,700,"Albany Superior Low Gi Sliced Brown Seed Bread 700g",./media/noimage.jpg,14.99
+34,"Rhodes Tomato Paste",Pasta,115,"Rhodes Tomato Paste Cup 115GR",./media/noimage.jpg,8.99
+35,"All Joy Napoltina Pasta Sauce",Pasta,440,"All Joy Napoltina Pasta Sauce 440g",./media/noimage.jpg,31.99
+36,"B-well Canola Oil",Oil,750,"B-well Canola Oil 750ml",./media/noimage.jpg,24.99
+37,"B-well Canola Oil",Oil,2000,"B-well Canola Oil 2 Litre ",./media/noimage.jpg,57.99
+38,"Selati Icing Snow",Icing,1000,"Selati Icing Snow 1kg",./media/noimage.jpg,49.99
+39,"Selati Icing Snow",Icing,500,"Selati Icing Snow 500g",./media/noimage.jpg,25.29
+40,"Simonsberg Mozzarella Port Cheese",Cheese,300,"Simonsberg Mozzarella Port Cheese 300g",./media/noimage.jpg,49
