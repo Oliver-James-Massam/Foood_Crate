@@ -21,8 +21,36 @@ h6 {
     font-weight: 700;
 }
 
-.topnav {
-    font-size: 14px; 
+.navbar-default .navbar-header .navbar-brand{
+    font-size:28px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 20px;
+    color:#53CE6B;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover {
+color:#B20000;
+}
+
+.navbar-default .container .navbar-nav > li > a{
+    font-size:16px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 20px;
+    color:#000000;
+}
+
+.navbar-default .container .navbar-nav > li > a:hover {
+background-color:#53CE6B;
+color:black;
+}
+
+.navbar-default .container .navbar-nav > li > a:active {
+background-color:#53CE6B;
+color:black;
 }
 
 .lead {
@@ -104,6 +132,7 @@ h6 {
     padding: 50px 0;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
+        background-color: #FFFFFF;
 }
 
 .section-heading {

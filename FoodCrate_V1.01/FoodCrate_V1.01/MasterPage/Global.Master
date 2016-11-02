@@ -5,65 +5,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Food Crate</title>
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="../Styling/Home/css/bootstrap.min.css" rel="stylesheet"/>
 
-    <!-- Custom CSS -->
-    <link href="../Styling/Home/css/landing-page.css" rel="stylesheet"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="../Styling/Home/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom Fonts -->
-    <link href="../Styling/Home/font/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../Styling/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
+    <!-- Custom CSS -->
+    <link href="../Styling/Home/css/landing-page.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
-     <!-- Navigation-->
-            <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-                <div class="container topnav">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand topnav" href="../Pages/Home.aspx">FoodCrate</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="../Pages/Home.aspx">Home</a>
-                            </li>
-                            <li>
-                                <a href="../Pages/Catalog.aspx">Catalog</a>
-                            </li>
-                            <li>
-                                <a href="../Pages/Login.aspx">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container -->
-            </nav>
 
+<body>
+    <% Session["login"] = "false"; %>
+    <!-- Navigation-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="../Pages/Home.aspx">FoodCrate</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../Pages/Home.aspx">Home</a>
+                    </li>
+                    <li>
+                        <a href="../Pages/Catalog.aspx">Catalog</a>
+                    </li>
+                    <li>
+                        <% if (Session["login"].Equals("false")) %>
+                        <%{ %>
+                        <a href="../Pages/Login.aspx"><i class="fa fa-user fa-fw"></i>Login</a>
+                        <%} %>
+                        <%else %>
+                        <%{ %>
+                        <a id="logoutNav" href="../Pages/Home.aspx"><i class="fa fa-user fa-fw"></i>Logout</a>
+                        <%} %>
+                        
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
 
-        <body>
-    
-        <form id="form1" runat="server">
-              <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           
-        </asp:ContentPlaceHolder>
-                    </div>
-            </form>
-
-    </body>
+</body>
 </html>
