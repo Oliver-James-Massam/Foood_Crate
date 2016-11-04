@@ -55,9 +55,18 @@ namespace FoodCrate_V1._01.MasterPage
 
                 List<FackebookStrut.User> currentUser = new List<FackebookStrut.User>();
                 currentUser.Add(converted);
+                InfomDatabase(currentUser);
                 ListView1.DataSource = currentUser;
                 ListView1.DataBind();
             }
         }
+
+        private void InfomDatabase(List<FackebookStrut.User> fb)
+        {
+            ServiceReference1.DBService sc;
+            bool extsts;
+            extsts = sc.UniqueUsername
+
+           }
     }
 }

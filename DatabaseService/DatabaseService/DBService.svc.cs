@@ -13,7 +13,7 @@ namespace DatabaseService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : DBService
+    public class Service1 : DataCsharp
     {
         private static readonly string connectionString = @"server=localhost;user id=admin;Password=Foodcrate1;persistsecurityinfo=True;database=foodcratedb";
         public static readonly int INVOICE_DUEDATE_MONTH_MODIFIER = 1;
