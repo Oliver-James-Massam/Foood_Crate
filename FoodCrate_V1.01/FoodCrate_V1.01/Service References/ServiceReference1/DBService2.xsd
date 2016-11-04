@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DatabaseService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DatabaseService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55731/DBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="User">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" type="xs:long" />
+      <xs:element minOccurs="0" name="userID" type="xs:long" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Product">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price" type="xs:double" />
+      <xs:element minOccurs="0" name="productID" type="xs:long" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="weight" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Product" nillable="true" type="tns:Product" />
+  <xs:complexType name="Recipe">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creator" type="xs:long" />
+      <xs:element minOccurs="0" name="fullDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ingredients" nillable="true" type="tns:ArrayOfIngredient" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recipeID" type="xs:long" />
+      <xs:element minOccurs="0" name="shortDesc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recipe" nillable="true" type="tns:Recipe" />
+  <xs:complexType name="ArrayOfIngredient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ingredient" type="tns:Ingredient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIngredient" nillable="true" type="tns:ArrayOfIngredient" />
+  <xs:complexType name="Ingredient">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="productID" type="xs:long" />
+      <xs:element minOccurs="0" name="quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="recipeID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ingredient" nillable="true" type="tns:Ingredient" />
+  <xs:complexType name="Invoice">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fullyPaidDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="invoiceID" type="xs:long" />
+      <xs:element minOccurs="0" name="invoiceItems" nillable="true" type="tns:ArrayOfInvoiceItem" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Invoice" nillable="true" type="tns:Invoice" />
+  <xs:complexType name="ArrayOfInvoiceItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvoiceItem" type="tns:InvoiceItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvoiceItem" nillable="true" type="tns:ArrayOfInvoiceItem" />
+  <xs:complexType name="InvoiceItem">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="discount" type="xs:int" />
+      <xs:element minOccurs="0" name="invoiceID" type="xs:long" />
+      <xs:element minOccurs="0" name="productID" type="xs:long" />
+      <xs:element minOccurs="0" name="quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="total" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvoiceItem" nillable="true" type="tns:InvoiceItem" />
+</xs:schema>

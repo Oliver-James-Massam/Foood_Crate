@@ -124,6 +124,8 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -187,6 +189,34 @@
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="scripts\CommonScrips\ThankYouImage.js" />
     <Content Include="scripts\LoginScripts\scriptsSign.js" />
+    <None Include="Service References\ServiceReference1\DBService.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Ingredient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Invoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.InvoiceItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Recipe.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Styling\AdminCss\metisMenu.min.css" />
     <Content Include="Styling\AdminCss\morris.css" />
     <Content Include="Styling\AdminCss\font-awesome.min.css" />
@@ -226,6 +256,19 @@
     <Content Include="Styling\Home\font\fontawesome-webfont.ttf" />
     <Content Include="Styling\Home\font\fontawesome-webfont.woff" />
     <Content Include="Styling\Home\font\FontAwesome.otf" />
+    <None Include="Service References\ServiceReference1\DBService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\DBService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\DBService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\DBService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -382,11 +425,22 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\" />
     <Folder Include="Styling\Icons\" />
     <Folder Include="Styling\PageFormat\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
