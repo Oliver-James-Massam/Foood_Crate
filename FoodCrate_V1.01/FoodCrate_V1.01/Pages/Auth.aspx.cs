@@ -73,19 +73,47 @@ namespace FoodCrate_V1._01.MasterPage
                 // login current user
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
                 // rank user
-                Page.Response.Redirect("../Pages/Catalog.aspx");
+                switch (iRank)
+                {
+                    case 1:
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                    case 2:
+                        Session["isAdmin"] = true;
+                        Page.Response.Redirect("../Pages/AdminPage.aspx");
+                        break;
+
+                    default:
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                }
+                
 
                 // rank admin
-                Page.Response.Redirect("../Pages/AdminPage.aspx");
+                
             }
 
             else
             {
-                    // create a new user
-            data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
-                Page.Response.Redirect("../Pages/Catalog.aspx");
-           }
+                // create a new user
+                data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
+                int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                // rank user
+                switch (iRank)
+                {
+                    case 1:
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                    case 2:
+                        Session["isAdmin"] = true;
+                        Page.Response.Redirect("../Pages/AdminPage.aspx");
+                        break;
 
+                    default:
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                }
+            }
         }
     }
 }

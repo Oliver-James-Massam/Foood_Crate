@@ -11,7 +11,14 @@ namespace FoodCrate_V1._01.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["isAdmin"].Equals(true))
+            {
 
+            }
+            else
+            {
+                Page.Response.Redirect("../Pages/Home.aspx");
+            }
         }
     }
 }

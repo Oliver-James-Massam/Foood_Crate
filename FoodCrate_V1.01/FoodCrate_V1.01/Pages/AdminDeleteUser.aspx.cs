@@ -11,7 +11,26 @@ namespace FoodCrate_V1._01.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CheckUser();
 
+        }
+        private void CheckUser()
+        {
+            if (Session["isAdmin"] != null)
+            {
+                if (Session["isAdmin"].Equals(true))
+                {
+
+                }
+                else
+                {
+                    Page.Response.Redirect("../Pages/Home.aspx");
+                }
+            }
+            else
+            {
+                Page.Response.Redirect("../Pages/Home.aspx");
+            }
         }
     }
 }
