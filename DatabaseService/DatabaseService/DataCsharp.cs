@@ -30,7 +30,7 @@ namespace DatabaseService
         bool ExecuteNonQuery(string sqlQuery);
 
         //requested data processing functions
-
+            
         [OperationContract]
         long TotalSales();
 

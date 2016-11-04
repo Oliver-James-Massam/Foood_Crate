@@ -8,252 +8,252 @@
       <xsd:import schemaLocation="http://localhost:55731/DBService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="DBService_GetData_InputMessage">
+  <wsdl:message name="DataCsharp_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetData_OutputMessage">
+  <wsdl:message name="DataCsharp_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetDataUsingDataContract_InputMessage">
+  <wsdl:message name="DataCsharp_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetDataUsingDataContract_OutputMessage">
+  <wsdl:message name="DataCsharp_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_TestConnection_InputMessage">
+  <wsdl:message name="DataCsharp_TestConnection_InputMessage">
     <wsdl:part name="parameters" element="tns:TestConnection" />
   </wsdl:message>
-  <wsdl:message name="DBService_TestConnection_OutputMessage">
+  <wsdl:message name="DataCsharp_TestConnection_OutputMessage">
     <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_ExecuteQuery_InputMessage">
+  <wsdl:message name="DataCsharp_ExecuteQuery_InputMessage">
     <wsdl:part name="parameters" element="tns:ExecuteQuery" />
   </wsdl:message>
-  <wsdl:message name="DBService_ExecuteQuery_OutputMessage">
+  <wsdl:message name="DataCsharp_ExecuteQuery_OutputMessage">
     <wsdl:part name="parameters" element="tns:ExecuteQueryResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_ExecuteNonQuery_InputMessage">
+  <wsdl:message name="DataCsharp_ExecuteNonQuery_InputMessage">
     <wsdl:part name="parameters" element="tns:ExecuteNonQuery" />
   </wsdl:message>
-  <wsdl:message name="DBService_ExecuteNonQuery_OutputMessage">
+  <wsdl:message name="DataCsharp_ExecuteNonQuery_OutputMessage">
     <wsdl:part name="parameters" element="tns:ExecuteNonQueryResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalSales_InputMessage">
+  <wsdl:message name="DataCsharp_TotalSales_InputMessage">
     <wsdl:part name="parameters" element="tns:TotalSales" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalSales_OutputMessage">
+  <wsdl:message name="DataCsharp_TotalSales_OutputMessage">
     <wsdl:part name="parameters" element="tns:TotalSalesResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalRegisteredUsers_InputMessage">
+  <wsdl:message name="DataCsharp_TotalRegisteredUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:TotalRegisteredUsers" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalRegisteredUsers_OutputMessage">
+  <wsdl:message name="DataCsharp_TotalRegisteredUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:TotalRegisteredUsersResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_CashGenerated_InputMessage">
+  <wsdl:message name="DataCsharp_CashGenerated_InputMessage">
     <wsdl:part name="parameters" element="tns:CashGenerated" />
   </wsdl:message>
-  <wsdl:message name="DBService_CashGenerated_OutputMessage">
+  <wsdl:message name="DataCsharp_CashGenerated_OutputMessage">
     <wsdl:part name="parameters" element="tns:CashGeneratedResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalProductsSold_InputMessage">
+  <wsdl:message name="DataCsharp_TotalProductsSold_InputMessage">
     <wsdl:part name="parameters" element="tns:TotalProductsSold" />
   </wsdl:message>
-  <wsdl:message name="DBService_TotalProductsSold_OutputMessage">
+  <wsdl:message name="DataCsharp_TotalProductsSold_OutputMessage">
     <wsdl:part name="parameters" element="tns:TotalProductsSoldResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AuthUser_InputMessage">
+  <wsdl:message name="DataCsharp_AuthUser_InputMessage">
     <wsdl:part name="parameters" element="tns:AuthUser" />
   </wsdl:message>
-  <wsdl:message name="DBService_AuthUser_OutputMessage">
+  <wsdl:message name="DataCsharp_AuthUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:AuthUserResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_UniqueUsername_InputMessage">
+  <wsdl:message name="DataCsharp_UniqueUsername_InputMessage">
     <wsdl:part name="parameters" element="tns:UniqueUsername" />
   </wsdl:message>
-  <wsdl:message name="DBService_UniqueUsername_OutputMessage">
+  <wsdl:message name="DataCsharp_UniqueUsername_OutputMessage">
     <wsdl:part name="parameters" element="tns:UniqueUsernameResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_CountProducts_InputMessage">
+  <wsdl:message name="DataCsharp_CountProducts_InputMessage">
     <wsdl:part name="parameters" element="tns:CountProducts" />
   </wsdl:message>
-  <wsdl:message name="DBService_CountProducts_OutputMessage">
+  <wsdl:message name="DataCsharp_CountProducts_OutputMessage">
     <wsdl:part name="parameters" element="tns:CountProductsResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddUser_InputMessage">
+  <wsdl:message name="DataCsharp_AddUser_InputMessage">
     <wsdl:part name="parameters" element="tns:AddUser" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddUser_OutputMessage">
+  <wsdl:message name="DataCsharp_AddUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddUserResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddProduct_InputMessage">
+  <wsdl:message name="DataCsharp_AddProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:AddProduct" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddProduct_OutputMessage">
+  <wsdl:message name="DataCsharp_AddProduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddProductResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddRecipe_InputMessage">
+  <wsdl:message name="DataCsharp_AddRecipe_InputMessage">
     <wsdl:part name="parameters" element="tns:AddRecipe" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddRecipe_OutputMessage">
+  <wsdl:message name="DataCsharp_AddRecipe_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRecipeResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddIngredient_InputMessage">
+  <wsdl:message name="DataCsharp_AddIngredient_InputMessage">
     <wsdl:part name="parameters" element="tns:AddIngredient" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddIngredient_OutputMessage">
+  <wsdl:message name="DataCsharp_AddIngredient_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddIngredientResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddInvoice_InputMessage">
+  <wsdl:message name="DataCsharp_AddInvoice_InputMessage">
     <wsdl:part name="parameters" element="tns:AddInvoice" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddInvoice_OutputMessage">
+  <wsdl:message name="DataCsharp_AddInvoice_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddInvoiceResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddInvoiceItem_InputMessage">
+  <wsdl:message name="DataCsharp_AddInvoiceItem_InputMessage">
     <wsdl:part name="parameters" element="tns:AddInvoiceItem" />
   </wsdl:message>
-  <wsdl:message name="DBService_AddInvoiceItem_OutputMessage">
+  <wsdl:message name="DataCsharp_AddInvoiceItem_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddInvoiceItemResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetUser_InputMessage">
+  <wsdl:message name="DataCsharp_GetUser_InputMessage">
     <wsdl:part name="parameters" element="tns:GetUser" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetUser_OutputMessage">
+  <wsdl:message name="DataCsharp_GetUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetProduct_InputMessage">
+  <wsdl:message name="DataCsharp_GetProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:GetProduct" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetProduct_OutputMessage">
+  <wsdl:message name="DataCsharp_GetProduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProductResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetRecipe_InputMessage">
+  <wsdl:message name="DataCsharp_GetRecipe_InputMessage">
     <wsdl:part name="parameters" element="tns:GetRecipe" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetRecipe_OutputMessage">
+  <wsdl:message name="DataCsharp_GetRecipe_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRecipeResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetIngredient_InputMessage">
+  <wsdl:message name="DataCsharp_GetIngredient_InputMessage">
     <wsdl:part name="parameters" element="tns:GetIngredient" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetIngredient_OutputMessage">
+  <wsdl:message name="DataCsharp_GetIngredient_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetIngredientResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetInvoice_InputMessage">
+  <wsdl:message name="DataCsharp_GetInvoice_InputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoice" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetInvoice_OutputMessage">
+  <wsdl:message name="DataCsharp_GetInvoice_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoiceResponse" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetInvoiceItem_InputMessage">
+  <wsdl:message name="DataCsharp_GetInvoiceItem_InputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoiceItem" />
   </wsdl:message>
-  <wsdl:message name="DBService_GetInvoiceItem_OutputMessage">
+  <wsdl:message name="DataCsharp_GetInvoiceItem_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoiceItemResponse" />
   </wsdl:message>
-  <wsdl:portType name="DBService">
+  <wsdl:portType name="DataCsharp">
     <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetData" message="tns:DBService_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetDataResponse" message="tns:DBService_GetData_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetData" message="tns:DataCsharp_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetDataResponse" message="tns:DataCsharp_GetData_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetDataUsingDataContract" message="tns:DBService_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetDataUsingDataContractResponse" message="tns:DBService_GetDataUsingDataContract_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetDataUsingDataContract" message="tns:DataCsharp_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetDataUsingDataContractResponse" message="tns:DataCsharp_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TestConnection">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/TestConnection" message="tns:DBService_TestConnection_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/TestConnectionResponse" message="tns:DBService_TestConnection_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/TestConnection" message="tns:DataCsharp_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/TestConnectionResponse" message="tns:DataCsharp_TestConnection_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ExecuteQuery">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/ExecuteQuery" message="tns:DBService_ExecuteQuery_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/ExecuteQueryResponse" message="tns:DBService_ExecuteQuery_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/ExecuteQuery" message="tns:DataCsharp_ExecuteQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/ExecuteQueryResponse" message="tns:DataCsharp_ExecuteQuery_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ExecuteNonQuery">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/ExecuteNonQuery" message="tns:DBService_ExecuteNonQuery_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/ExecuteNonQueryResponse" message="tns:DBService_ExecuteNonQuery_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/ExecuteNonQuery" message="tns:DataCsharp_ExecuteNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/ExecuteNonQueryResponse" message="tns:DataCsharp_ExecuteNonQuery_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TotalSales">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/TotalSales" message="tns:DBService_TotalSales_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/TotalSalesResponse" message="tns:DBService_TotalSales_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/TotalSales" message="tns:DataCsharp_TotalSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/TotalSalesResponse" message="tns:DataCsharp_TotalSales_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TotalRegisteredUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/TotalRegisteredUsers" message="tns:DBService_TotalRegisteredUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/TotalRegisteredUsersResponse" message="tns:DBService_TotalRegisteredUsers_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/TotalRegisteredUsers" message="tns:DataCsharp_TotalRegisteredUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/TotalRegisteredUsersResponse" message="tns:DataCsharp_TotalRegisteredUsers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CashGenerated">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/CashGenerated" message="tns:DBService_CashGenerated_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/CashGeneratedResponse" message="tns:DBService_CashGenerated_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/CashGenerated" message="tns:DataCsharp_CashGenerated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/CashGeneratedResponse" message="tns:DataCsharp_CashGenerated_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TotalProductsSold">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/TotalProductsSold" message="tns:DBService_TotalProductsSold_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/TotalProductsSoldResponse" message="tns:DBService_TotalProductsSold_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/TotalProductsSold" message="tns:DataCsharp_TotalProductsSold_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/TotalProductsSoldResponse" message="tns:DataCsharp_TotalProductsSold_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AuthUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AuthUser" message="tns:DBService_AuthUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AuthUserResponse" message="tns:DBService_AuthUser_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AuthUser" message="tns:DataCsharp_AuthUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AuthUserResponse" message="tns:DataCsharp_AuthUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UniqueUsername">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/UniqueUsername" message="tns:DBService_UniqueUsername_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/UniqueUsernameResponse" message="tns:DBService_UniqueUsername_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/UniqueUsername" message="tns:DataCsharp_UniqueUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/UniqueUsernameResponse" message="tns:DataCsharp_UniqueUsername_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CountProducts">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/CountProducts" message="tns:DBService_CountProducts_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/CountProductsResponse" message="tns:DBService_CountProducts_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/CountProducts" message="tns:DataCsharp_CountProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/CountProductsResponse" message="tns:DataCsharp_CountProducts_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddUser" message="tns:DBService_AddUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddUserResponse" message="tns:DBService_AddUser_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddUser" message="tns:DataCsharp_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddUserResponse" message="tns:DataCsharp_AddUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddProduct" message="tns:DBService_AddProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddProductResponse" message="tns:DBService_AddProduct_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddProduct" message="tns:DataCsharp_AddProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddProductResponse" message="tns:DataCsharp_AddProduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddRecipe">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddRecipe" message="tns:DBService_AddRecipe_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddRecipeResponse" message="tns:DBService_AddRecipe_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddRecipe" message="tns:DataCsharp_AddRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddRecipeResponse" message="tns:DataCsharp_AddRecipe_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddIngredient">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddIngredient" message="tns:DBService_AddIngredient_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddIngredientResponse" message="tns:DBService_AddIngredient_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddIngredient" message="tns:DataCsharp_AddIngredient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddIngredientResponse" message="tns:DataCsharp_AddIngredient_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddInvoice">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddInvoice" message="tns:DBService_AddInvoice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddInvoiceResponse" message="tns:DBService_AddInvoice_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddInvoice" message="tns:DataCsharp_AddInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddInvoiceResponse" message="tns:DataCsharp_AddInvoice_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddInvoiceItem">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddInvoiceItem" message="tns:DBService_AddInvoiceItem_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddInvoiceItemResponse" message="tns:DBService_AddInvoiceItem_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/AddInvoiceItem" message="tns:DataCsharp_AddInvoiceItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/AddInvoiceItemResponse" message="tns:DataCsharp_AddInvoiceItem_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetUser" message="tns:DBService_GetUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetUserResponse" message="tns:DBService_GetUser_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetUser" message="tns:DataCsharp_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetUserResponse" message="tns:DataCsharp_GetUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetProduct" message="tns:DBService_GetProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetProductResponse" message="tns:DBService_GetProduct_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetProduct" message="tns:DataCsharp_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetProductResponse" message="tns:DataCsharp_GetProduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetRecipe">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetRecipe" message="tns:DBService_GetRecipe_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetRecipeResponse" message="tns:DBService_GetRecipe_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetRecipe" message="tns:DataCsharp_GetRecipe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetRecipeResponse" message="tns:DataCsharp_GetRecipe_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetIngredient">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetIngredient" message="tns:DBService_GetIngredient_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetIngredientResponse" message="tns:DBService_GetIngredient_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetIngredient" message="tns:DataCsharp_GetIngredient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetIngredientResponse" message="tns:DataCsharp_GetIngredient_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetInvoice">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetInvoice" message="tns:DBService_GetInvoice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetInvoiceResponse" message="tns:DBService_GetInvoice_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetInvoice" message="tns:DataCsharp_GetInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetInvoiceResponse" message="tns:DataCsharp_GetInvoice_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetInvoiceItem">
-      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetInvoiceItem" message="tns:DBService_GetInvoiceItem_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetInvoiceItemResponse" message="tns:DBService_GetInvoiceItem_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/DataCsharp/GetInvoiceItem" message="tns:DataCsharp_GetInvoiceItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DataCsharp/GetInvoiceItemResponse" message="tns:DataCsharp_GetInvoiceItem_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_DBService" type="tns:DBService">
+  <wsdl:binding name="BasicHttpBinding_DataCsharp" type="tns:DataCsharp">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetData" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -262,7 +262,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetDataUsingDataContract" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetDataUsingDataContract" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -271,7 +271,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TestConnection">
-      <soap:operation soapAction="http://tempuri.org/DBService/TestConnection" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/TestConnection" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -280,7 +280,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ExecuteQuery">
-      <soap:operation soapAction="http://tempuri.org/DBService/ExecuteQuery" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/ExecuteQuery" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -289,7 +289,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ExecuteNonQuery">
-      <soap:operation soapAction="http://tempuri.org/DBService/ExecuteNonQuery" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/ExecuteNonQuery" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -298,7 +298,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TotalSales">
-      <soap:operation soapAction="http://tempuri.org/DBService/TotalSales" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/TotalSales" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -307,7 +307,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TotalRegisteredUsers">
-      <soap:operation soapAction="http://tempuri.org/DBService/TotalRegisteredUsers" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/TotalRegisteredUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -316,7 +316,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CashGenerated">
-      <soap:operation soapAction="http://tempuri.org/DBService/CashGenerated" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/CashGenerated" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -325,7 +325,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="TotalProductsSold">
-      <soap:operation soapAction="http://tempuri.org/DBService/TotalProductsSold" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/TotalProductsSold" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -334,7 +334,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AuthUser">
-      <soap:operation soapAction="http://tempuri.org/DBService/AuthUser" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AuthUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -343,7 +343,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UniqueUsername">
-      <soap:operation soapAction="http://tempuri.org/DBService/UniqueUsername" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/UniqueUsername" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -352,7 +352,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CountProducts">
-      <soap:operation soapAction="http://tempuri.org/DBService/CountProducts" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/CountProducts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -361,7 +361,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddUser">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddUser" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -370,7 +370,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddProduct">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddProduct" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddProduct" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -379,7 +379,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddRecipe">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddRecipe" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddRecipe" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -388,7 +388,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddIngredient">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddIngredient" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddIngredient" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -397,7 +397,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddInvoice">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddInvoice" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddInvoice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -406,7 +406,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddInvoiceItem">
-      <soap:operation soapAction="http://tempuri.org/DBService/AddInvoiceItem" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/AddInvoiceItem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -415,7 +415,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetUser">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetUser" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -424,7 +424,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetProduct">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetProduct" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetProduct" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -433,7 +433,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetRecipe">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetRecipe" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetRecipe" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -442,7 +442,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetIngredient">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetIngredient" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetIngredient" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -451,7 +451,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetInvoice">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetInvoice" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetInvoice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -460,7 +460,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetInvoiceItem">
-      <soap:operation soapAction="http://tempuri.org/DBService/GetInvoiceItem" style="document" />
+      <soap:operation soapAction="http://tempuri.org/DataCsharp/GetInvoiceItem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -470,7 +470,7 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service1">
-    <wsdl:port name="BasicHttpBinding_DBService" binding="tns:BasicHttpBinding_DBService">
+    <wsdl:port name="BasicHttpBinding_DataCsharp" binding="tns:BasicHttpBinding_DataCsharp">
       <soap:address location="http://localhost:55731/DBService.svc" />
     </wsdl:port>
   </wsdl:service>

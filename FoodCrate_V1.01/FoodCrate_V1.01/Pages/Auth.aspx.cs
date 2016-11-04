@@ -61,12 +61,28 @@ namespace FoodCrate_V1._01.MasterPage
             }
         }
 
+
+        //oliver look at this
         private void InfomDatabase(List<FackebookStrut.User> fb)
         {
-            ServiceReference1.DBService sc;
-            bool extsts;
-            extsts = sc.UniqueUsername
+           Database.DataCsharpClient data = new Database.DataCsharpClient() ;
+            Boolean check;
+            check = data.UniqueUsername(fb[0].link);
+            if (check)
+            {
+                // create a new user
+                data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
+            }
+            else
+            {
+                // login current user
+                int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                // rank user
 
+                Page.Response.Redirect("Pages/AdminPage.aspx");
+                // rank admin
+                
+            }
            }
     }
 }

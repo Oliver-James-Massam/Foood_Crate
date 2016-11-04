@@ -189,31 +189,31 @@
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
     <Content Include="scripts\CommonScrips\ThankYouImage.js" />
     <Content Include="scripts\LoginScripts\scriptsSign.js" />
-    <None Include="Service References\ServiceReference1\DBService.disco" />
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.CompositeType.datasource">
+    <None Include="Service References\Database\DBService.disco" />
+    <None Include="Service References\Database\configuration91.svcinfo" />
+    <None Include="Service References\Database\configuration.svcinfo" />
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Ingredient.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.Ingredient.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Invoice.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.Invoice.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.InvoiceItem.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.InvoiceItem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Product.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.Product.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.Recipe.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.Recipe.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference1\FoodCrate_V1._01.ServiceReference1.User.datasource">
+    <Content Include="Service References\Database\FoodCrate_V1._01.Database.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
+    <None Include="Service References\Database\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -256,19 +256,19 @@
     <Content Include="Styling\Home\font\fontawesome-webfont.ttf" />
     <Content Include="Styling\Home\font\fontawesome-webfont.woff" />
     <Content Include="Styling\Home\font\FontAwesome.otf" />
-    <None Include="Service References\ServiceReference1\DBService.xsd">
+    <None Include="Service References\Database\DBService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\DBService1.xsd">
+    <None Include="Service References\Database\DBService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\DBService2.xsd">
+    <None Include="Service References\Database\DBService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\DBService3.xsd">
+    <None Include="Service References\Database\DBService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\Database\Service1.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -425,7 +425,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
+    <Compile Include="Service References\Database\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -440,7 +440,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\Database\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
