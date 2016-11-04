@@ -67,22 +67,25 @@ namespace FoodCrate_V1._01.MasterPage
         {
            Database.DataCsharpClient data = new Database.DataCsharpClient() ;
             Boolean check;
-            check = data.UniqueUsername(fb[0].link);
+            check = data.UniqueUsername(fb[0].email);
             if (check)
-            {
-                // create a new user
-                data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
-            }
-            else
             {
                 // login current user
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
                 // rank user
+                Page.Response.Redirect("../Pages/Catalog.aspx");
 
-                Page.Response.Redirect("Pages/AdminPage.aspx");
                 // rank admin
-                
+                Page.Response.Redirect("../Pages/AdminPage.aspx");
             }
+
+            else
+            {
+                    // create a new user
+            data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
+                Page.Response.Redirect("../Pages/Catalog.aspx");
            }
+
+        }
     }
 }
