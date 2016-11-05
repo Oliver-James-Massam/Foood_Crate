@@ -175,7 +175,6 @@
     <Content Include="Pages\EditProduct.aspx" />
     <Content Include="Pages\AdminAddUser.aspx" />
     <Content Include="Pages\AdminEditUser.aspx" />
-    <Content Include="Pages\AdminDeleteUser.aspx" />
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
@@ -374,13 +373,6 @@
     </Compile>
     <Compile Include="Pages\AdminEditUser.aspx.designer.cs">
       <DependentUpon>AdminEditUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AdminDeleteUser.aspx.cs">
-      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\AdminDeleteUser.aspx.designer.cs">
-      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
