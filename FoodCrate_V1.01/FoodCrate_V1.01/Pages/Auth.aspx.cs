@@ -77,7 +77,8 @@ namespace FoodCrate_V1._01.MasterPage
                 switch (iRank)
                 {
                     case 1:
-                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        Page.Response.Redirect("../Pages/AdminPage.aspx"); // fix this backdoor
+                        Session["isAdmin"] = true;
                         break;
                     case 2:
                         Session["isAdmin"] = true;

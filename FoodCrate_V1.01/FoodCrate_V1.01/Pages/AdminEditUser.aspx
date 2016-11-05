@@ -21,13 +21,7 @@
                         <a href="../Pages/AdminAddUser.aspx">Add user</a>
                     </li>
                     <li>
-                        <a href="../Pages/AdminDeleteUser.aspx">Remove User</a>
-                    </li>
-                    <li>
                         <a href="../Pages/AdminEditUser.aspx" class ="active">Edit User</a>
-                    </li>
-                    <li>
-                        <a href="../Pages/EditProduct.aspx">Edit Product</a>
                     </li>
                     <li>
                         <a href="../Pages/AddProduct.aspx">Add Product</a>
