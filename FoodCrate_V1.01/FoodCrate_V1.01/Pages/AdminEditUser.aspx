@@ -44,10 +44,10 @@
                     <div class="col-md-12" id="Block">
                         <div class="group">
                             <div class="col-sm-2">
-                            <label class="EmailDelete">Email of user:</label>
+                            <label class="EmailEdit">Email of user:</label>
                                 </div>
                             <div class="col-md-10">
-                            <input id="delete_Email" type="email" name="Email" class="form-control" placeholder="Please enter the Email" required="required" data-error="Please enter a email."/>
+                            <input id="edit_Email" runat="server" contenteditable="true" type="email" name="Email" class="form-control" placeholder="Please enter the Email" required="required" data-error="Please enter a email."/>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                             <label class="NameEdit">New name of user:</label>
                                 </div>
                             <div class="col-md-10">
-                            <input id="ChangeName" type="email" name="Name" class="form-control" placeholder="Please enter the new name" required="required" data-error="Please enter a name."/>
+                            <input id="ChangeName" type="email" runat="server" contenteditable="true" name="Name" class="form-control" placeholder="Please enter the new name" required="required" data-error="Please enter a name."/>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                                         
         <div class="row">                                    
             <div class="col-md-12">
-                        <asp:Button ID="btnUpdate"  value="Delete user" class="btn btn-success btn-send enabled" runat="server" Text="Update User" />
+                        <asp:Button ID="btnUpdate" OnClick="btnUpdate_Click" class="btn btn-success btn-send enabled" runat="server" Text="Update User" />
                 </div>
             </div>            
                         </div>

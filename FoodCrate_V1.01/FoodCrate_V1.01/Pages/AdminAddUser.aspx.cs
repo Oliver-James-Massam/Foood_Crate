@@ -32,5 +32,20 @@ namespace FoodCrate_V1._01.MasterPage
                 Page.Response.Redirect("../Pages/Home.aspx");
             }
         }
+
+        protected void BtnAdd_Click(object sender, EventArgs e)
+        {
+            Database.DataCsharpClient data = new Database.DataCsharpClient();
+            int userPriv = 1;
+            if (CheckIsAdmin.Checked)
+            {
+                userPriv = 2;
+            }
+            else
+            {
+                userPriv = 1;
+            }
+            data.AddUser(input_email.Value, input_name.Value, input_lastname.Value, input_email.Value, userPriv, input_password.Value);
+        }
     }
 }

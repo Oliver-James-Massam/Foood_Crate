@@ -20,7 +20,7 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 if (Session["isAdmin"].Equals(true))
                 {
-
+                    // dont redirect
                 }
                 else
                 {
@@ -31,6 +31,12 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 Page.Response.Redirect("../Pages/Home.aspx");
             }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Database.DataCsharpClient data = new Database.DataCsharpClient();
+            
         }
     }
 }

@@ -49,7 +49,7 @@
                                         <div class="col-sm-1">
                                         <label class="name">Firstname:</label>
                                             </div><div class="col-md-11">
-                                        <input id="input_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname" required="required" data-error="Please enter a Firstname."/>
+                                        <input id="input_name" type="text" name="name" class="form-control" runat="server" contenteditable="true" placeholder="Please enter your firstname" required="required" data-error="Please enter a Firstname."/>
                                                 </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                         <label class="lastname">Lastname:</label>
                                             </div>
                                         <div class="col-md-11">
-                                        <input id="input_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your surname" required="required" data-error="Please enter a Lastname."/>
+                                        <input id="input_lastname" type="text" name="surname" class="form-control" runat="server" contenteditable="true" placeholder="Please enter your surname" required="required" data-error="Please enter a Lastname."/>
                                             </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                         <label class="email">Email:</label>
                                         </div>
                                     <div class="col-md-11">
-                                        <input id="input_email" type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Please enter a Valid email."/>
+                                        <input id="input_email" type="email" name="email" class="form-control" runat="server" contenteditable="true" placeholder="Please enter your email" required="required" data-error="Please enter a Valid email."/>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                                         <label class="password">Password:</label>
                                         </div>
                                     <div class="col-md-11">
-                                        <input id="input_password" type="text" name="passwrd" class="form-control" placeholder="Please enter your password" required="required" data-error="Please enter a password."/>
+                                        <input id="input_password" type="text" runat="server" contenteditable="true" name="passwrd" class="form-control" placeholder="Please enter your password" required="required" data-error="Please enter a password."/>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                 <label class="Emp">Employee:</label>
                                     </div>
                                     <div class="col-md-11" >
-                                        <asp:CheckBox ID="CheckIsAdmin" runat="server" />
+                                        <asp:CheckBox ID="CheckIsAdmin" runat="server" value="false"/>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
 
                              <div class="row">                                    
                                  <div class="col-md-12">
-                                     <asp:Button ID="BtnAdd" runat="server" Text="Add user" class="btn btn-success" />
+                                     <asp:Button ID="BtnAdd" runat="server" OnClick="BtnAdd_Click" Text="Add user" class="btn btn-success" />
                                 </div>  
                             </div>
                           </div>
