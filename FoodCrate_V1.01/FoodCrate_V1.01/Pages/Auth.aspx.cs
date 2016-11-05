@@ -71,7 +71,8 @@ namespace FoodCrate_V1._01.MasterPage
             if (check)
             {
                 // login current user
-                int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                ///int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                int iRank = data.AuthUser("StopDickingAroundWithTheGoogleAPI@gmail.com", "asdf");
                 // rank user
                 switch (iRank)
                 {
