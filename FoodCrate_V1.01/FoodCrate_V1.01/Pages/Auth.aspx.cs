@@ -68,7 +68,7 @@ namespace FoodCrate_V1._01.MasterPage
            Database.DataCsharpClient data = new Database.DataCsharpClient() ;
             Boolean check;
             check = data.UniqueUsername(fb[0].email);
-            if (check)
+            if (!check)
             {
                 // login current user
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
