@@ -68,6 +68,7 @@ namespace FoodCrate_V1._01.MasterPage
            Database.DataCsharpClient data = new Database.DataCsharpClient() ;
             Boolean check;
             check = data.UniqueUsername(fb[0].email);
+            Session["isAdmin"] = true;
             if (check)
             {
                 // login current user
