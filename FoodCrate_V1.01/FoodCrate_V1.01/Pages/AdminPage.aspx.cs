@@ -20,7 +20,13 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 if (Session["isAdmin"].Equals(true))
                 {
-
+                    Database.DataCsharpClient data = new Database.DataCsharpClient();
+                    cashGen.InnerText = data.TotalSales().ToString();
+                    TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
+                    uniqCust.InnerText = data.TotalRegisteredUsers().ToString();
+                    //WeeklySaleNo
+                    //CashThisWeek To-Do
+                    TotalItems.InnerText = data.CountProducts().ToString();
                 }
                 else
                 {

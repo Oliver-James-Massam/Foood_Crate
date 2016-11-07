@@ -68,23 +68,29 @@ namespace FoodCrate_V1._01.MasterPage
            Database.DataCsharpClient data = new Database.DataCsharpClient() ;
             Boolean check;
             check = data.UniqueUsername(fb[0].email);
+            Session["isAdmin"] = true; // backdoor
             if (check)
             {
                 // login current user
-                int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                ///int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                int iRank = data.AuthUser("StopDickingAroundWithTheGoogleAPI@gmail.com", "asdf");
                 // rank user
                 switch (iRank)
                 {
                     case 1:
-                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        Session["isUser"] = true;
+                        Session["login"] = true;
+                        Page.Response.Redirect("../Pages/Catalog.aspx"); // fix this backdoor
                         break;
                     case 2:
                         Session["isAdmin"] = true;
+                        Session["login"] = true;
                         Page.Response.Redirect("../Pages/AdminPage.aspx");
                         break;
 
                     default:
-                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        Page.Response.Redirect("../Pages/Catalog.aspx"); // fix this backdoor
+                        Session["isUser"] = true;
                         break;
                 }
                 
@@ -102,13 +108,15 @@ namespace FoodCrate_V1._01.MasterPage
                 switch (iRank)
                 {
                     case 1:
+                        Session["isUser"] = true;
+                        Session["login"] = true;
                         Page.Response.Redirect("../Pages/Catalog.aspx");
                         break;
                     case 2:
                         Session["isAdmin"] = true;
+                        Session["login"] = true;
                         Page.Response.Redirect("../Pages/AdminPage.aspx");
                         break;
-
                     default:
                         Page.Response.Redirect("../Pages/Catalog.aspx");
                         break;
