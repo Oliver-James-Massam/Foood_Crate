@@ -664,7 +664,7 @@ namespace DatabaseService
             List<Product> allProducts = new List<Product>();
 
             MySqlConnection cn = new MySqlConnection(connectionString);
-            string query = "SELECT * FROM foodcratedb.products WHERE name = '" + NameOrType + "' OR type = '" + NameOrType + "';";
+            string query = "SELECT * FROM foodcratedb.products WHERE name LIKE '%" + NameOrType + "%' OR type LIKE '%" + NameOrType + "%';";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
