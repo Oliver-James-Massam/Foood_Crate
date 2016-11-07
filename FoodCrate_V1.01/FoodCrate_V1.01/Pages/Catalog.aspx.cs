@@ -10,7 +10,8 @@ namespace FoodCrate_V1._01.MasterPage
 {
     public partial class WebForm3 : System.Web.UI.Page
     {//DataExplorer://localhost(FoodCrateDB)/Table/``.`foodcratedb`.`products`
-
+        private const String TABLE_START = "<table>";
+        private const String TABLE_END = "</table>";
         public struct Product
         {
             public long productID;
@@ -24,29 +25,30 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnSearch_Click(sender, e);
+            cardTable.InnerHtml = "<table><tr><td>THIS IS HERE</td></tr></table>";
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void searchDB (object sender, EventArgs e)
         {
+            String cardDisplay = "";
+            cardTable.InnerHtml = "";
             localhost.Service1 myService = new localhost.Service1();
 
             String InvalidQuery = "Search our Catalogue by the Name or Type of Product";
             String SearchQuery = txtSearch.Value;
-            SearchQuery = "Sugar";
 
             if (!SearchQuery.Equals(InvalidQuery))
             {
                 localhost.Product[] tempProducts = myService.GetProductByString(SearchQuery);
                 List<localhost.Product> searchedProducts = new List<localhost.Product>(tempProducts);
 
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "MyFunction()", true);
-
+                cardDisplay = TABLE_START;
+               
                 int trackProd = 0;
                 int numProd = searchedProducts.Count;
                 if (numProd == 0)
                 {
-                    cardTable.InnerHtml = "<h2>No items matching your search where found</h2>";
+                    cardDisplay = "<h2 style='text-align: center;'>No items matching your search where found</h2>";
                 }
                 else
                 {
@@ -54,7 +56,7 @@ namespace FoodCrate_V1._01.MasterPage
                     {
                         if (numProd % 3 == 1)
                         {
-                            cardTable.InnerHtml += "<tr>" +
+                            cardDisplay += "<tr>" +
                                                     "<td>" +
                                                         "<div id ='cardDisplay' class='cardDisplay'>" +
                                                             "<div class='card'>" +
@@ -74,12 +76,12 @@ namespace FoodCrate_V1._01.MasterPage
                                                         "</div>" +
                                                     "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "</tr>";
+                            cardDisplay += "</tr>";
 
                         }
                         else if (numProd % 3 == 2)
                         {
-                            cardTable.InnerHtml += "<tr>" +
+                            cardDisplay += "<tr>" +
                                                     "<td>" +
                                                         "<div id ='cardDisplay' class='cardDisplay'>" +
                                                             "<div class='card'>" +
@@ -99,7 +101,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                         "</div>" +
                                                     "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "<td>" +
+                            cardDisplay += "<td>" +
                                                         "<div id ='cardDisplay' class='cardDisplay'>" +
                                                             "<div class='card'>" +
                                                                 "<div class='card_top'>" +
@@ -118,11 +120,11 @@ namespace FoodCrate_V1._01.MasterPage
                                                         "</div>" +
                                                     "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "</tr>";
+                            cardDisplay += "</tr>";
                         }
                         else if (numProd % 3 == 0 && numProd != 0)
                         {
-                            cardTable.InnerHtml += "<tr>" +
+                            cardDisplay += "<tr>" +
                                                    "<td>" +
                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
                                                            "<div class='card'>" +
@@ -142,7 +144,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                        "</div>" +
                                                    "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "<td>" +
+                            cardDisplay += "<td>" +
                                                         "<div id ='cardDisplay' class='cardDisplay'>" +
                                                             "<div class='card'>" +
                                                                 "<div class='card_top'>" +
@@ -161,7 +163,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                         "</div>" +
                                                     "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "<td>" +
+                            cardDisplay += "<td>" +
                                                         "<div id ='cardDisplay' class='cardDisplay'>" +
                                                             "<div class='card'>" +
                                                                 "<div class='card_top'>" +
@@ -180,10 +182,12 @@ namespace FoodCrate_V1._01.MasterPage
                                                         "</div>" +
                                                     "</td>";
                             trackProd++;
-                            cardTable.InnerHtml += "</tr>";
+                            cardDisplay += "</tr>";
                         }
                     }
                 }
+                cardDisplay += TABLE_END;
+                cardTable.InnerHtml = cardDisplay;
             }
         }
     }

@@ -18,7 +18,7 @@
                 <div class="input-group col-md-12">
                     <input id="txtSearch" type="text" class="  search-query form-control" runat="server" placeholder="Search our Catalogue by the Name or Type of Product" />
                     <span class="input-group-btn">
-                        <button id="btnSearch" class="btn btn-danger" type="button" runat="server">
+                        <button id="btnSearch" class="btn btn-danger" type="button" runat="server" onserverclick="searchDB">
                             <span> <i class="fa fa-search"></i></span>
                         </button>
                     </span>
@@ -28,7 +28,7 @@
     </div>
     <!-- Card Display -->
     
-    <table id="cardTable" runat="server">
+    <div id="cardTable" runat="server" contenteditable="true">
 
-    </table>
+    </div>
 </asp:Content>
