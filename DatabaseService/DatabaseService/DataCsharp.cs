@@ -5,7 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace DatabaseService
 {
@@ -24,7 +25,7 @@ namespace DatabaseService
         string TestConnection();
 
         [OperationContract]
-        MySqlDataReader ExecuteQuery(string sqlQuery);
+        SqlDataReader ExecuteQuery(string sqlQuery);
 
         [OperationContract]
         bool ExecuteNonQuery(string sqlQuery);

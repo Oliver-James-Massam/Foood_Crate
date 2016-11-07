@@ -5,8 +5,9 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using MySql.Data.MySqlClient;
-using MySql.Data;
+using System.Data;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Data;
 
 namespace DatabaseService
@@ -22,9 +23,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO `foodcratedb`.`Users` (`UserName`, `Name`, `Surname`, `Email`, `Type`, `Password`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, username, name, surname, email, type, password));
+            SqlCommand cmd = new SqlCommand(string.Format(query, username, name, surname, email, type, password));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -32,11 +33,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -48,9 +48,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO foodcratedb.invoices(UserID,CreationDate,DueDate,Status) VALUES ('{0}', '{1}', '{2}', 'Pending')";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, userID, DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddMonths(INVOICE_DUEDATE_MONTH_MODIFIER).ToString("yyyy-MM-dd")));
+            SqlCommand cmd = new SqlCommand(string.Format(query, userID, DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.AddMonths(INVOICE_DUEDATE_MONTH_MODIFIER).ToString("yyyy-MM-dd")));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -58,11 +58,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -74,9 +73,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO foodcratedb.invoiceitems(InvoiceID,ProductID,Quantity,Discount,Total) VALUES ('{0}', '{1}', '{2}', '{3}','{4}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, invoiceID, productID, quantity, discount, total));
+            SqlCommand cmd = new SqlCommand(string.Format(query, invoiceID, productID, quantity, discount, total));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -84,11 +83,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -100,9 +98,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO `foodcratedb`.`products` (`Name`, `Type`, `Weight`, `Description`, `Picture`, `Price`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, name, type, weight, description, picture, price));
+            SqlCommand cmd = new SqlCommand(string.Format(query, name, type, weight, description, picture, price));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -110,11 +108,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -126,9 +123,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO `foodcratedb`.`recipes` (`Name`, `Creator`, `ShortDesc`, `FullDesc`, `Picture`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, name, creator, shortdesc, fulldesc, picture));
+            SqlCommand cmd = new SqlCommand(string.Format(query, name, creator, shortdesc, fulldesc, picture));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -136,11 +133,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -152,9 +148,9 @@ namespace DatabaseService
         {
             long result = -1;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "INSERT INTO `foodcratedb`.`ingredients` (`RecipeID`, `ProductID`, `Quantity`) VALUES ('{0}', '{1}', '{2}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, recipeID, productID, quantity));
+            SqlCommand cmd = new SqlCommand(string.Format(query, recipeID, productID, quantity));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -162,11 +158,10 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-                result = cmd.LastInsertedId;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -178,30 +173,30 @@ namespace DatabaseService
         {
             int result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.users;";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query));
+            SqlCommand cmd = new SqlCommand(string.Format(query));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.HasRows)
                 {
                     reader.Read();
-                    if (reader.GetString("email").Equals(email, StringComparison.Ordinal) && reader.GetString("password").Equals(password, StringComparison.Ordinal))
+                    if ((reader["email"].Equals(email)) && (reader["password"].Equals(password)))
                     {
-                        result = reader.GetInt16("type");
+                        result = (int) reader["type"];
                         goto postLoop;
                     }
                 }
                 result = 0;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             postLoop:
             cmd.Connection.Close();
@@ -214,21 +209,21 @@ namespace DatabaseService
         {
             long result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(ProductID) FROM foodcratedb.products");
+            SqlConnection cn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(ProductID) FROM foodcratedb.products");
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 reader.Read();
                 result = reader.GetInt64(0);
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -241,8 +236,8 @@ namespace DatabaseService
         {
             bool result = false;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
-            MySqlCommand cmd = new MySqlCommand(sqlQuery);
+            SqlConnection cn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sqlQuery);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -252,9 +247,9 @@ namespace DatabaseService
                 cmd.ExecuteNonQuery();
                 result = true;
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -262,12 +257,12 @@ namespace DatabaseService
             return result;
         }
 
-        public MySqlDataReader ExecuteQuery(string sqlQuery)
+        public SqlDataReader ExecuteQuery(string sqlQuery)
         {
-            MySqlDataReader result = null;
+            SqlDataReader result = null;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
-            MySqlCommand cmd = new MySqlCommand(sqlQuery);
+            SqlConnection cn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sqlQuery);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
@@ -276,9 +271,9 @@ namespace DatabaseService
                 cmd.Connection.Open();
                 result = cmd.ExecuteReader();
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -290,24 +285,24 @@ namespace DatabaseService
         {
             bool result = true;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.users WHERE username = '" + username + "';";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     result = false;
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -319,16 +314,16 @@ namespace DatabaseService
         {
             User result = new User();
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.users WHERE userID = '" + userID + "';";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
@@ -341,9 +336,9 @@ namespace DatabaseService
                     result.password = reader.GetString(6);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -355,16 +350,16 @@ namespace DatabaseService
         {
             Product result = new Product();
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.products WHERE productID = '" + productID + "';";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
@@ -377,9 +372,9 @@ namespace DatabaseService
                     result.price = reader.GetDouble(6);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -392,16 +387,16 @@ namespace DatabaseService
             Recipe result = new Recipe();
             result.ingredients = new List<Ingredient>();
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.recipes WHERE recipeID = '" + recipeID + "';";
 
             try
             {
-                using (MySqlCommand cmd = new MySqlCommand(query,cn))
+                using (SqlCommand cmd = new SqlCommand(query,cn))
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
                         reader.Read();
@@ -415,11 +410,11 @@ namespace DatabaseService
                 }
 
                 query = "SELECT * FROM foodcratedb.ingredients WHERE ingredientID = '" + result.recipeID + "';";
-                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.HasRows)
                     {
                         Ingredient i = new Ingredient();
@@ -432,9 +427,9 @@ namespace DatabaseService
                     cmd.Connection.Close();
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             return result;
         }
@@ -449,16 +444,16 @@ namespace DatabaseService
             Invoice result = new Invoice();
             result.invoiceItems = new List<InvoiceItem>();
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.invoices WHERE invoiceID = '" + invoiceID + "';";
 
             try
             {
-                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection.Open();
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
                         reader.Read();
@@ -475,10 +470,10 @@ namespace DatabaseService
                 }
 
                 query = "SELECT * FROM foodcratedb.invoiceitems WHERE invoiceID = '" + result.invoiceID + "';";
-                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                using (SqlCommand cmd = new SqlCommand(query, cn))
                 {
                     cmd.CommandType = CommandType.Text;
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                    SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.HasRows)
                     {
                         InvoiceItem i = new InvoiceItem();
@@ -493,9 +488,9 @@ namespace DatabaseService
                     cmd.Connection.Close();
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             return result;
         }
@@ -509,25 +504,25 @@ namespace DatabaseService
         {
             long result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT COUNT(InvoiceID) FROM foodcratedb.invoices;";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     result = reader.GetInt64(0);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -539,25 +534,25 @@ namespace DatabaseService
         {
             long result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT COUNT(UserID) FROM foodcratedb.users;";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     result = reader.GetInt64(0);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -569,16 +564,16 @@ namespace DatabaseService
         {
             double result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT SUM(b.Total) FROM foodcratedb.invoices a,foodcratedb.invoiceitems b WHERE a.InvoiceID = b.InvoiceID AND a.FullyPaidDate BETWEEN '{0}' AND '{1}';";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, fromHere.ToString("yyyy-MM-dd"), toHere.ToString("yyyy-MM-dd")));
+            SqlCommand cmd = new SqlCommand(string.Format(query, fromHere.ToString("yyyy-MM-dd"), toHere.ToString("yyyy-MM-dd")));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
@@ -588,9 +583,9 @@ namespace DatabaseService
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -602,25 +597,25 @@ namespace DatabaseService
         {
             long result = 0;
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT SUM(quantity) FROM foodcratedb.invoiceitems;";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     result = reader.GetInt64(0);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
@@ -650,7 +645,7 @@ namespace DatabaseService
         {
 
             string connectionString = @"server=localhost;user id=admin;Password=Foodcrate1;persistsecurityinfo=True;database=foodcratedb";
-            using (MySqlConnection cn = new MySqlConnection(connectionString))
+            using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
                 return "Connection open";
@@ -663,16 +658,16 @@ namespace DatabaseService
             Product result = new Product();
             List<Product> allProducts = new List<Product>();
 
-            MySqlConnection cn = new MySqlConnection(connectionString);
+            SqlConnection cn = new SqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.products WHERE name LIKE '%" + NameOrType + "%' OR type LIKE '%" + NameOrType + "%';";
-            MySqlCommand cmd = new MySqlCommand(query);
+            SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
             try
             {
                 cmd.Connection.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.HasRows)
                 {
                     reader.Read();
@@ -686,14 +681,19 @@ namespace DatabaseService
                     allProducts.Add(result);
                 }
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+                Console.WriteLine("Error " + ex  + " has occurred: " + ex.Message);
             }
             cmd.Connection.Close();
             cmd.Dispose();
             cn.Dispose();
             return allProducts;
+        }
+
+        MySqlDataReader DataCsharp.ExecuteQuery(string sqlQuery)
+        {
+            throw new NotImplementedException();
         }
     }
 }
