@@ -179,6 +179,7 @@
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\GoogleAuth.aspx" />
+    <Content Include="Pages\ProductDetails.aspx" />
     <Content Include="scripts\AdminScripts\bootstrap.min.js" />
     <Content Include="scripts\AdminScripts\CheckBoxHandler.js" />
     <Content Include="scripts\AdminScripts\jquery.min.js" />
@@ -458,6 +459,13 @@
     </Compile>
     <Compile Include="Pages\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -65,7 +65,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                         "<p>" +
                                                                             searchedProducts[trackProd].description +
                                                                         "</p>" +
-                                                                        "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID="+ searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                     "</div>" +
                                                                 "</div>" +
                                                             "</div>" +
@@ -90,7 +90,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                         "<p>" +
                                                                             searchedProducts[trackProd].description +
                                                                         "</p>" +
-                                                                        "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                     "</div>" +
                                                                 "</div>" +
                                                             "</div>" +
@@ -109,7 +109,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                         "<p>" +
                                                                             searchedProducts[trackProd].description +
                                                                         "</p>" +
-                                                                        "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                     "</div>" +
                                                                 "</div>" +
                                                             "</div>" +
@@ -133,7 +133,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                        "<p>" +
                                                                            searchedProducts[trackProd].description +
                                                                        "</p>" +
-                                                                       "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                       "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                    "</div>" +
                                                                "</div>" +
                                                            "</div>" +
@@ -152,7 +152,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                         "<p>" +
                                                                             searchedProducts[trackProd].description +
                                                                         "</p>" +
-                                                                        "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                     "</div>" +
                                                                 "</div>" +
                                                             "</div>" +
@@ -171,7 +171,7 @@ namespace FoodCrate_V1._01.MasterPage
                                                                         "<p>" +
                                                                             searchedProducts[trackProd].description +
                                                                         "</p>" +
-                                                                        "<a href = '../Pages/Catalog.aspx' target='_blank'>Read more</a>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[trackProd].productID + "' target='_blank'>Read more</a>" +
                                                                     "</div>" +
                                                                 "</div>" +
                                                             "</div>" +
