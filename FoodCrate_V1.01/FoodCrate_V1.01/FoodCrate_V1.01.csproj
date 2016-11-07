@@ -270,6 +270,44 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Database\Service1.wsdl" />
+    <Content Include="Web References\localhost\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\localhost\DBService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\DBService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\DBService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\localhost\DBService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web References\localhost\Ingredient.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\localhost\Invoice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\localhost\InvoiceItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\localhost\Product.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\localhost\Recipe.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\localhost\Service1.wsdl" />
+    <Content Include="Web References\localhost\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -300,6 +338,7 @@
     <Content Include="Styling\ShoppingCart\TableReview.css" />
     <Content Include="Styling\ShoppingCart\Table.css" />
     <Content Include="Styling\ShoppingCart\ThankYou.css" />
+    <None Include="Web References\localhost\DBService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -431,6 +470,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\" />
@@ -442,6 +486,22 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:55731/DBService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:55731/DBService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FoodCrate_V1_01_localhost_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

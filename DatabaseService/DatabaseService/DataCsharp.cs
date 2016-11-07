@@ -94,7 +94,7 @@ namespace DatabaseService
 
         //Added new function for Search parameters
         [OperationContract]
-        Product GetProduct(String NameOrType);
+        List<Product> GetProductByString(String NameOrType);
     }
 
     [DataContract]

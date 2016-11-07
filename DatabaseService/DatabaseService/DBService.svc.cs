@@ -658,9 +658,10 @@ namespace DatabaseService
         }
 
         //Added new Function for Search parameters
-        public Product GetProduct(string NameOrType)
+        public List<Product> GetProductByString(string NameOrType)
         {
             Product result = new Product();
+            List<Product> allProducts = new List<Product>();
 
             MySqlConnection cn = new MySqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.products WHERE name = '" + NameOrType + "' OR type = '" + NameOrType + "';";
@@ -672,7 +673,7 @@ namespace DatabaseService
             {
                 cmd.Connection.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                while (reader.HasRows)
                 {
                     reader.Read();
                     result.productID = reader.GetInt64(0);
@@ -682,6 +683,7 @@ namespace DatabaseService
                     result.description = reader.GetString(4);
                     result.picture = reader.GetString(5);
                     result.price = reader.GetDouble(6);
+                    allProducts.Add(result);
                 }
             }
             catch (MySqlException ex)
@@ -691,7 +693,7 @@ namespace DatabaseService
             cmd.Connection.Close();
             cmd.Dispose();
             cn.Dispose();
-            return result;
+            return allProducts;
         }
     }
 }

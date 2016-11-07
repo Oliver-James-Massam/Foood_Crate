@@ -27,21 +27,8 @@
         </div>
     </div>
     <!-- Card Display -->
-    <div id="cardDisplay" class="cardDisplay">
-        <div class='card'>
-            <div class='card_top'>
-                <img src="../Images/Food/onions.jpg" />
-            </div>
-            <div class='card_bottom'>
-                <h2>Test Heading Is Quite Long</h2>
-                <div class='card_bottom__description'>
-                    <p>
-                        The milk is full cream from clovers prestigious dairy farms
-                    </p>
-                    <!-- Need Dynamic Pages in the href below for each product -->
-                    <a href='../Pages/Catalog.aspx' target='_blank'>Read more</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <table id="cardTable" runat="server">
+
+    </table>
 </asp:Content>
