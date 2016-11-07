@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 namespace FoodCrate_V1._01.MasterPage
 {
     public partial class WebForm3 : System.Web.UI.Page
-    {
+    {//DataExplorer://localhost(FoodCrateDB)/Table/``.`foodcratedb`.`products`
 
         public struct Product
         {
@@ -24,7 +24,7 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            btnSearch_Click(sender, e);
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -33,13 +33,15 @@ namespace FoodCrate_V1._01.MasterPage
 
             String InvalidQuery = "Search our Catalogue by the Name or Type of Product";
             String SearchQuery = txtSearch.Value;
+            SearchQuery = "Sugar";
 
             if (!SearchQuery.Equals(InvalidQuery))
             {
                 localhost.Product[] tempProducts = myService.GetProductByString(SearchQuery);
                 List<localhost.Product> searchedProducts = new List<localhost.Product>(tempProducts);
 
-                cardTable.InnerHtml = "";
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "MyFunction()", true);
+
                 int trackProd = 0;
                 int numProd = searchedProducts.Count;
                 if (numProd == 0)
