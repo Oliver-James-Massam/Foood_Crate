@@ -16,9 +16,9 @@
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                    <input type="text" class="  search-query form-control" placeholder="Search our Catalogue by the Name or Type of Product" />
+                    <input id="txtSearch" type="text" class="  search-query form-control" runat="server" placeholder="Search our Catalogue by the Name or Type of Product" />
                     <span class="input-group-btn">
-                        <button class="btn btn-danger" type="button">
+                        <button id="btnSearch" class="btn btn-danger" type="button" runat="server">
                             <span> <i class="fa fa-search"></i></span>
                         </button>
                     </span>
