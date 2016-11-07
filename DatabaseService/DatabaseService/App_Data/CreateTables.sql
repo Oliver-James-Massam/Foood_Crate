@@ -20,7 +20,6 @@ FullyPaidDate DATE NULL,
 Status VARCHAR(20) NOT NULL,
 PRIMARY KEY (InvoiceID)
 );
-
 	
 CREATE TABLE FoodCrateDB.UserTypes(
 UserTypeID INT NOT NULL AUTO_INCREMENT,
