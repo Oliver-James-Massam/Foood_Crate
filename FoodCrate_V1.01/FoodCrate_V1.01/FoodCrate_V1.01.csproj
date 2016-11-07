@@ -148,7 +148,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\ASPSnippets.GoogleAPI.dll" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Images\Background\background1.png" />
@@ -172,13 +171,10 @@
     <Content Include="Pages\SCart.aspx" />
     <Content Include="Pages\ScartCheckOut.aspx" />
     <Content Include="Pages\AddProduct.aspx" />
-    <Content Include="Pages\EditProduct.aspx" />
     <Content Include="Pages\AdminAddUser.aspx" />
     <Content Include="Pages\AdminEditUser.aspx" />
-    <Content Include="Pages\AdminDeleteUser.aspx" />
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
-    <Content Include="Pages\GoogleAuth.aspx" />
     <Content Include="Pages\ProductDetails.aspx" />
     <Content Include="scripts\AdminScripts\bootstrap.min.js" />
     <Content Include="scripts\AdminScripts\CheckBoxHandler.js" />
@@ -396,12 +392,6 @@
     <Compile Include="Pages\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditProduct.aspx.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\EditProduct.aspx.designer.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AdminAddUser.aspx.cs">
       <DependentUpon>AdminAddUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -415,12 +405,6 @@
     </Compile>
     <Compile Include="Pages\AdminEditUser.aspx.designer.cs">
       <DependentUpon>AdminEditUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AdminDeleteUser.aspx.cs">
-      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AdminDeleteUser.aspx.designer.cs">
-      <DependentUpon>AdminDeleteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
@@ -437,12 +421,6 @@
       <DependentUpon>Catalog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\GoogleStruct.cs" />
-    <Compile Include="Pages\GoogleAuth.aspx.cs">
-      <DependentUpon>GoogleAuth.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\GoogleAuth.aspx.designer.cs">
-      <DependentUpon>GoogleAuth.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Models\FackebookStrut.cs" />
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -483,6 +461,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\" />
     <Folder Include="obj\" />
     <Folder Include="Styling\Icons\" />
     <Folder Include="Styling\PageFormat\" />
