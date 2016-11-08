@@ -22,5 +22,15 @@ namespace FoodCrate_V1._01.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55731/DBService.svc")]
+        public string FoodCrate_V1_01_localhost_Service1 {
+            get {
+                return ((string)(this["FoodCrate_V1_01_localhost_Service1"]));
+            }
+        }
     }
 }
