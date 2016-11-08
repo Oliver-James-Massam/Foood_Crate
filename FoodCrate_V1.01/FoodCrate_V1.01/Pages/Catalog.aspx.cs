@@ -30,7 +30,7 @@ namespace FoodCrate_V1._01.MasterPage
         {
             if (Session["user"] != null)
             {
-                greeting.InnerHtml = "Welcome" + Session["user"];
+                greeting.InnerHtml = "Welcome " + Session["user"];
             }
         }
 
