@@ -660,7 +660,7 @@ namespace DatabaseService
             List<Product> allProducts = new List<Product>();
 
             SqlConnection cn = new SqlConnection(connectionString);
-            string query = "SELECT * FROM foodcratedb.products WHERE name LIKE '%" + NameOrType + "%' OR type LIKE '%" + NameOrType + "%';";
+            string query = "SELECT * FROM foodcratedb.products WHERE name LIKE '%" + NameOrType + "%' OR type LIKE '%" + NameOrType + "%'; ";
             SqlCommand cmd = new SqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
