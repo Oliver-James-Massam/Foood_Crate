@@ -16,7 +16,7 @@ namespace DatabaseService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : DBService
     {
-        private static readonly string connectionString = @"server=localhost;user id=admin;Password=Foodcrate1;persistsecurityinfo=True;database=foodcratedb";
+        private static readonly string connectionString = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";
         public static readonly int INVOICE_DUEDATE_MONTH_MODIFIER = 1;
 
         public long AddUser(string username, string name, string surname, string email, int type, string password)
@@ -650,7 +650,7 @@ namespace DatabaseService
         public string TestConnection()
         {
 
-            string connectionString = @"server=localhost;user id=admin;Password=Foodcrate1;persistsecurityinfo=True;database=foodcratedb";
+            string connectionString = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";
             using (MySqlConnection cn = new MySqlConnection(connectionString))
             {
                 cn.Open();
@@ -671,22 +671,27 @@ namespace DatabaseService
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
+            
             try
             {
                 cmd.Connection.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.HasRows)
+                
+                if (reader.HasRows)
                 {
-                    reader.Read();
-                    result.productID = reader.GetInt64(0);
-                    result.name = reader.GetString(1);
-                    result.type = reader.GetString(2);
-                    result.weight = reader.GetInt32(3);
-                    result.description = reader.GetString(4);
-                    result.picture = reader.GetString(5);
-                    result.price = reader.GetDouble(6);
-                    allProducts.Add(result);
+                    while (reader.Read())
+                    {
+                        result.productID = reader.GetInt64(0);
+                        result.name = reader.GetString(1);
+                        result.type = reader.GetString(2);
+                        result.weight = reader.GetInt32(3);
+                        result.description = reader.GetString(4);
+                        result.picture = reader.GetString(5);
+                        result.price = reader.GetDouble(6);
+                        allProducts.Add(result);
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
