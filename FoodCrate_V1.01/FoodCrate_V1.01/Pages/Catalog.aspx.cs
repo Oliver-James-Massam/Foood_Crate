@@ -15,8 +15,6 @@ namespace FoodCrate_V1._01.MasterPage
         private const String TABLE_ROW_START = "<tr>";
         private const String TABLE_ROW_END = "</tr>";
 
-        private List<int> NUMBER_REF = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
-
         public struct Product
         {
             public long productID;
@@ -32,13 +30,8 @@ namespace FoodCrate_V1._01.MasterPage
         {
         }
 
-        private int returnPos()
-        {
-            return 0;
-        }
         protected void searchDB (object sender, EventArgs e)
         {
-            String cardDisplay = "";
             cardTable.InnerHtml = "";
             localhost.Service1 myService = new localhost.Service1();
 
@@ -97,6 +90,83 @@ namespace FoodCrate_V1._01.MasterPage
                 temp = new localhost.Product();
                 temp.productID = 5;
                 temp.name = "Test Name5";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 6;
+                temp.name = "Test Name6";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 7;
+                temp.name = "Test Name7";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 8;
+                temp.name = "Test Name8";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 9;
+                temp.name = "Test Name9";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 10;
+                temp.name = "Test Name10";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 11;
+                temp.name = "Test Name11";
+                temp.type = "Sugar Dammit";
+                temp.weight = 500;
+                temp.description = "This is just a temp description to see formatting";
+                temp.picture = "../Images/Food/noimage.jpg";
+                temp.price = 12.32;
+                searchedProducts.Add(temp);
+                temp = null;
+
+                temp = new localhost.Product();
+                temp.productID = 12;
+                temp.name = "Test Name12";
                 temp.type = "Sugar Dammit";
                 temp.weight = 500;
                 temp.description = "This is just a temp description to see formatting";
@@ -240,21 +310,170 @@ namespace FoodCrate_V1._01.MasterPage
                         if (4 == (numProd - 1))
                             cardTable.InnerHtml += TABLE_ROW_END + TABLE_END;
                         break;
-                    case 5:
+                    case 5://6
+                        cardTable.InnerHtml +=
+                                                "<td>" +
+                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                            "<div class='card'>" +
+                                                                "<div class='card_top'>" +
+                                                                    "<img src =" + searchedProducts[5].picture + " />" +
+                                                                "</div>" +
+                                                                "<div class='card_bottom'>" +
+                                                                    "<h2>" + searchedProducts[5].name + "</h2>" +
+                                                                    "<div class='card_bottom__description'>" +
+                                                                        "<p>" +
+                                                                            searchedProducts[5].description +
+                                                                        "</p>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[5].productID + "' target='_blank'>Read more</a>" +
+                                                                    "</div>" +
+                                                                "</div>" +
+                                                            "</div>" +
+                                                        "</div>" +
+                                                    "</td>" +
+                                                    TABLE_ROW_END;
+                        if (5 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_END;
                         break;
-                    case 6:
+                    case 6://7
+                        cardTable.InnerHtml += TABLE_ROW_START +
+                                                "<td>" +
+                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                            "<div class='card'>" +
+                                                                "<div class='card_top'>" +
+                                                                    "<img src =" + searchedProducts[6].picture + " />" +
+                                                                "</div>" +
+                                                                "<div class='card_bottom'>" +
+                                                                    "<h2>" + searchedProducts[6].name + "</h2>" +
+                                                                    "<div class='card_bottom__description'>" +
+                                                                        "<p>" +
+                                                                            searchedProducts[6].description +
+                                                                        "</p>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[6].productID + "' target='_blank'>Read more</a>" +
+                                                                    "</div>" +
+                                                                "</div>" +
+                                                            "</div>" +
+                                                        "</div>" +
+                                                    "</td>";
+                        if (6 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_ROW_END + TABLE_END;
                         break;
-                    case 7:
+                    case 7://8
+                        cardTable.InnerHtml +=
+                                               "<td>" +
+                                                       "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                           "<div class='card'>" +
+                                                               "<div class='card_top'>" +
+                                                                   "<img src =" + searchedProducts[7].picture + " />" +
+                                                               "</div>" +
+                                                               "<div class='card_bottom'>" +
+                                                                   "<h2>" + searchedProducts[7].name + "</h2>" +
+                                                                   "<div class='card_bottom__description'>" +
+                                                                       "<p>" +
+                                                                           searchedProducts[7].description +
+                                                                       "</p>" +
+                                                                       "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[7].productID + "' target='_blank'>Read more</a>" +
+                                                                   "</div>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                       "</div>" +
+                                                   "</td>";
+                        if (8 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_ROW_END + TABLE_END;
                         break;
-                    case 8:
+                    case 8://9
+                        cardTable.InnerHtml +=
+                                                "<td>" +
+                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                            "<div class='card'>" +
+                                                                "<div class='card_top'>" +
+                                                                    "<img src =" + searchedProducts[8].picture + " />" +
+                                                                "</div>" +
+                                                                "<div class='card_bottom'>" +
+                                                                    "<h2>" + searchedProducts[8].name + "</h2>" +
+                                                                    "<div class='card_bottom__description'>" +
+                                                                        "<p>" +
+                                                                            searchedProducts[8].description +
+                                                                        "</p>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[8].productID + "' target='_blank'>Read more</a>" +
+                                                                    "</div>" +
+                                                                "</div>" +
+                                                            "</div>" +
+                                                        "</div>" +
+                                                    "</td>" +
+                                                    TABLE_ROW_END;
+                        if (8 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_END;
                         break;
-                    case 9:
+                    case 9://10
+                        cardTable.InnerHtml += TABLE_ROW_START +
+                                                "<td>" +
+                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                            "<div class='card'>" +
+                                                                "<div class='card_top'>" +
+                                                                    "<img src =" + searchedProducts[9].picture + " />" +
+                                                                "</div>" +
+                                                                "<div class='card_bottom'>" +
+                                                                    "<h2>" + searchedProducts[9].name + "</h2>" +
+                                                                    "<div class='card_bottom__description'>" +
+                                                                        "<p>" +
+                                                                            searchedProducts[9].description +
+                                                                        "</p>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[9].productID + "' target='_blank'>Read more</a>" +
+                                                                    "</div>" +
+                                                                "</div>" +
+                                                            "</div>" +
+                                                        "</div>" +
+                                                    "</td>";
+                        if (9 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_ROW_END + TABLE_END;
                         break;
-                    case 10:
+                    case 10://11
+                        cardTable.InnerHtml +=
+                                               "<td>" +
+                                                       "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                           "<div class='card'>" +
+                                                               "<div class='card_top'>" +
+                                                                   "<img src =" + searchedProducts[10].picture + " />" +
+                                                               "</div>" +
+                                                               "<div class='card_bottom'>" +
+                                                                   "<h2>" + searchedProducts[10].name + "</h2>" +
+                                                                   "<div class='card_bottom__description'>" +
+                                                                       "<p>" +
+                                                                           searchedProducts[10].description +
+                                                                       "</p>" +
+                                                                       "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[10].productID + "' target='_blank'>Read more</a>" +
+                                                                   "</div>" +
+                                                               "</div>" +
+                                                           "</div>" +
+                                                       "</div>" +
+                                                   "</td>";
+                        if (10 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_ROW_END + TABLE_END;
                         break;
-                    case 11:
+                    case 11://12
+                        cardTable.InnerHtml +=
+                                                "<td>" +
+                                                        "<div id ='cardDisplay' class='cardDisplay'>" +
+                                                            "<div class='card'>" +
+                                                                "<div class='card_top'>" +
+                                                                    "<img src =" + searchedProducts[11].picture + " />" +
+                                                                "</div>" +
+                                                                "<div class='card_bottom'>" +
+                                                                    "<h2>" + searchedProducts[11].name + "</h2>" +
+                                                                    "<div class='card_bottom__description'>" +
+                                                                        "<p>" +
+                                                                            searchedProducts[11].description +
+                                                                        "</p>" +
+                                                                        "<a href = '../Pages/ProductDetails.aspx?productID=" + searchedProducts[11].productID + "' target='_blank'>Read more</a>" +
+                                                                    "</div>" +
+                                                                "</div>" +
+                                                            "</div>" +
+                                                        "</div>" +
+                                                    "</td>" +
+                                                    TABLE_ROW_END;
+                        if (11 == (numProd - 1))
+                            cardTable.InnerHtml += TABLE_END;
                         break;
-
                 }
             }
 
