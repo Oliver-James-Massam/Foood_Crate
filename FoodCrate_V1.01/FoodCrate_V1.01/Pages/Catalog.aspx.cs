@@ -51,138 +51,6 @@ namespace FoodCrate_V1._01.MasterPage
                     searchedProducts.Add(tempProduct);
                 }
 
-                //localhost.Product temp = new localhost.Product();
-                //temp.productID = 1;
-                //temp.name = "Test Name1";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 2;
-                //temp.name = "Test Name2";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 3;
-                //temp.name = "Test Name3";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 4;
-                //temp.name = "Test Name4";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 5;
-                //temp.name = "Test Name5";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 6;
-                //temp.name = "Test Name6";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 7;
-                //temp.name = "Test Name7";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 8;
-                //temp.name = "Test Name8";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 9;
-                //temp.name = "Test Name9";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 10;
-                //temp.name = "Test Name10";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 11;
-                //temp.name = "Test Name11";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
-                //temp = new localhost.Product();
-                //temp.productID = 12;
-                //temp.name = "Test Name12";
-                //temp.type = "Sugar Dammit";
-                //temp.weight = 500;
-                //temp.description = "This is just a temp description to see formatting";
-                //temp.picture = "../Images/Food/noimage.jpg";
-                //temp.price = 12.32;
-                //searchedProducts.Add(temp);
-                //temp = null;
-
                 int numProd = searchedProducts.Count;
                 if (numProd == 0)
                 {
@@ -192,12 +60,17 @@ namespace FoodCrate_V1._01.MasterPage
                 {
                     returnSearch(searchedProducts);
                 }
-            } 
+            }
         }
 
         private void returnSearch(List<localhost.Product> searchedProducts)
         {
             int numProd = searchedProducts.Count;
+            String maxSearched = "";
+            if (numProd > 12)
+            {
+                maxSearched = "<br/><br/><h2>Max of 12 Items per Search</h2>";
+            }
             for (int i = 0; i < numProd; i++)
             {
                 switch (i)
@@ -478,9 +351,13 @@ namespace FoodCrate_V1._01.MasterPage
                                                             "</div>" +
                                                         "</div>" +
                                                     "</td>" +
-                                                    TABLE_ROW_END;
-                        if (11 == (numProd - 1))
+                                                   TABLE_ROW_END;
+                        if (numProd > 12)
+                            cardTable.InnerHtml += TABLE_ROW_START + "<td></td>" + "<td>" + maxSearched + "</td>" + TABLE_ROW_END + TABLE_END;
+                        else if (11 == (numProd - 1))
                             cardTable.InnerHtml += TABLE_END;
+                        break;
+                    default:
                         break;
                 }
             }

@@ -28,6 +28,8 @@
     </div>
     <!-- Card Display -->
     <div id="cardTable" runat="server">
-
+    </div>
+    <!-- Card Max Message -->
+    <div id="cardMax" runat="server">
     </div>
 </asp:Content>
