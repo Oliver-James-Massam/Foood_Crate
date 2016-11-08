@@ -176,6 +176,7 @@
     <Content Include="Pages\AdminPage.aspx" />
     <Content Include="Pages\Catalog.aspx" />
     <Content Include="Pages\ProductDetails.aspx" />
+    <Content Include="Pages\UserInfo.aspx" />
     <Content Include="scripts\AdminScripts\bootstrap.min.js" />
     <Content Include="scripts\AdminScripts\CheckBoxHandler.js" />
     <Content Include="scripts\AdminScripts\jquery.min.js" />
@@ -221,6 +222,7 @@
     <Content Include="Styling\BootStrap\bootstrap.min.css" />
     <Content Include="Styling\AdminCss\simple-sidebar.css" />
     <Content Include="Styling\Catalog\css\SearchStyle.css" />
+    <Content Include="Styling\Catalog\shop-item.css" />
     <Content Include="Styling\fonts\fontawesome-webfont.svg" />
     <Content Include="Images\Razzberries Banner.jpg" />
     <Content Include="Pages\Login.aspx" />
@@ -442,6 +444,13 @@
     </Compile>
     <Compile Include="Pages\ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
