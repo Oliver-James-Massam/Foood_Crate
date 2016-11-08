@@ -68,12 +68,10 @@ namespace FoodCrate_V1._01.MasterPage
            Database.DataCsharpClient data = new Database.DataCsharpClient() ;
             Boolean check;
             check = data.UniqueUsername(fb[0].email);
-            Session["isAdmin"] = true; // backdoor
             if (check)
             {
                 // login current user
-                ///int iRank = data.AuthUser(fb[0].email, fb[0].link);
-                int iRank = data.AuthUser("LG@gmail.com", "asdf");
+                int iRank = data.AuthUser(fb[0].email, fb[0].link);
                 // rank user
                 switch (iRank)
                 {
