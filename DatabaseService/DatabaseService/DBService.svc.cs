@@ -174,7 +174,7 @@ namespace DatabaseService
             int result = 0;
 
             SqlConnection cn = new SqlConnection(connectionString);
-            string query = "SELECT * FROM foodcratedb.users;";
+            string query = "SELECT * FROM Users;";
             SqlCommand cmd = new SqlCommand(string.Format(query));
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
@@ -186,13 +186,14 @@ namespace DatabaseService
                 while (reader.HasRows)
                 {
                     reader.Read();
-                    if ((reader["email"].Equals(email)) && (reader["password"].Equals(password)))
+                    if ((reader["Email"].Equals(email)) && (reader["Password"].Equals(password)))
                     {
-                        result = (int) reader["type"];
+                        result = (int) reader["Type"];
                         goto postLoop;
                     }
+                    result = 0;
                 }
-                result = 0;
+                
             }
             catch (Exception ex)
             {
@@ -691,7 +692,7 @@ namespace DatabaseService
             return allProducts;
         }
 
-        MySqlDataReader DataCsharp.ExecuteQuery(string sqlQuery)
+        SqlDataReader DataCsharp.ExecuteQuery(string sqlQuery)
         {
             throw new NotImplementedException();
         }
