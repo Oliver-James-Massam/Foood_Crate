@@ -27,8 +27,7 @@
         </div>
     </div>
     <!-- Card Display -->
-    
-    <div id="cardTable" runat="server" contenteditable="true">
+    <div id="cardTable" runat="server">
 
     </div>
 </asp:Content>
