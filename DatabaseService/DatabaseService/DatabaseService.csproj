@@ -90,7 +90,7 @@
     <Compile Include="DBService.svc.cs">
       <DependentUpon>DBService.svc</DependentUpon>
     </Compile>
-    <Compile Include="DataCsharp.cs" />
+    <Compile Include="DBService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
