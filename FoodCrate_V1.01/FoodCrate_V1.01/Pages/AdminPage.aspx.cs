@@ -20,7 +20,7 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 if (Session["isAdmin"].Equals(true))
                 {
-                    Database.DataCsharpClient data = new Database.DataCsharpClient();
+                    DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
                     cashGen.InnerText = data.TotalSales().ToString();
                     TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
                     uniqCust.InnerText = data.TotalRegisteredUsers().ToString();

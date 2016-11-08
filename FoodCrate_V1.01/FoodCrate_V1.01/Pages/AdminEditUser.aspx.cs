@@ -35,7 +35,7 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            Database.DataCsharpClient data = new Database.DataCsharpClient();
+            DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
             
         }
     }
