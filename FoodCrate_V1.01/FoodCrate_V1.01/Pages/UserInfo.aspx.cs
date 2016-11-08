@@ -13,5 +13,10 @@ namespace FoodCrate_V1._01.Pages
         {
 
         }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
