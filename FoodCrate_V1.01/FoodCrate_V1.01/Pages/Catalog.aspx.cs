@@ -28,6 +28,10 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] != null)
+            {
+                greeting.InnerHtml = "Welcome" + Session["user"];
+            }
         }
 
         protected void searchDB (object sender, EventArgs e)

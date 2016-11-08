@@ -7,7 +7,7 @@
     <!-- Welcome Message -->
     <div class="page" style="padding-top:50px;">
         <div class="page_header">
-            <h1>Welcome <%Response.Write(Session["user"]); %></h1>
+            <h1 id ="greeting" contenteditable="true" runat="server">Welcome</h1>
             <hr class="style12" />
         </div>
     </div>
