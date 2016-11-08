@@ -73,6 +73,7 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 // login current user
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                Session["user"] = fb[0].first_name + " " + fb[0].last_name;
                 // rank user
                 switch (iRank)
                 {
@@ -103,6 +104,7 @@ namespace FoodCrate_V1._01.MasterPage
                 // create a new user
                 data.AddUser(fb[0].email, fb[0].first_name, fb[0].last_name, fb[0].email, 1, fb[0].link);
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
+                Session["user"] = fb[0].first_name + " " + fb[0].last_name;
                 // rank user
                 switch (iRank)
                 {
