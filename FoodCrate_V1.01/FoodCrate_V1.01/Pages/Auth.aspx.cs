@@ -65,7 +65,7 @@ namespace FoodCrate_V1._01.MasterPage
         //oliver look at this
         private void InfomDatabase(List<FackebookStrut.User> fb)
         {
-           Database.DataCsharpClient data = new Database.DataCsharpClient() ;
+           DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient() ;
             bool check;
             string email = fb[0].email;
             check = data.UniqueUsername(email);

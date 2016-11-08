@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodCrate_V1._01.Database {
+namespace FoodCrate_V1._01.DatabaseService {
     using System.Runtime.Serialization;
     using System;
     
@@ -370,7 +370,7 @@ namespace FoodCrate_V1._01.Database {
         private string fullDescField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FoodCrate_V1._01.Database.Ingredient[] ingredientsField;
+        private FoodCrate_V1._01.DatabaseService.Ingredient[] ingredientsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
@@ -420,7 +420,7 @@ namespace FoodCrate_V1._01.Database {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FoodCrate_V1._01.Database.Ingredient[] ingredients {
+        public FoodCrate_V1._01.DatabaseService.Ingredient[] ingredients {
             get {
                 return this.ingredientsField;
             }
@@ -592,7 +592,7 @@ namespace FoodCrate_V1._01.Database {
         private long invoiceIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private FoodCrate_V1._01.Database.InvoiceItem[] invoiceItemsField;
+        private FoodCrate_V1._01.DatabaseService.InvoiceItem[] invoiceItemsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string statusField;
@@ -662,7 +662,7 @@ namespace FoodCrate_V1._01.Database {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public FoodCrate_V1._01.Database.InvoiceItem[] invoiceItems {
+        public FoodCrate_V1._01.DatabaseService.InvoiceItem[] invoiceItems {
             get {
                 return this.invoiceItemsField;
             }
@@ -819,188 +819,195 @@ namespace FoodCrate_V1._01.Database {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Database.DataCsharp")]
-    public interface DataCsharp {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DatabaseService.DBService")]
+    public interface DBService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetData", ReplyAction="http://tempuri.org/DataCsharp/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetData", ReplyAction="http://tempuri.org/DBService/GetDataResponse")]
         string GetData(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetData", ReplyAction="http://tempuri.org/DataCsharp/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetData", ReplyAction="http://tempuri.org/DBService/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetDataUsingDataContract", ReplyAction="http://tempuri.org/DataCsharp/GetDataUsingDataContractResponse")]
-        FoodCrate_V1._01.Database.CompositeType GetDataUsingDataContract(FoodCrate_V1._01.Database.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/DBService/GetDataUsingDataContractResponse")]
+        FoodCrate_V1._01.DatabaseService.CompositeType GetDataUsingDataContract(FoodCrate_V1._01.DatabaseService.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetDataUsingDataContract", ReplyAction="http://tempuri.org/DataCsharp/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.CompositeType> GetDataUsingDataContractAsync(FoodCrate_V1._01.Database.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/DBService/GetDataUsingDataContractResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.CompositeType> GetDataUsingDataContractAsync(FoodCrate_V1._01.DatabaseService.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TestConnection", ReplyAction="http://tempuri.org/DataCsharp/TestConnectionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TestConnection", ReplyAction="http://tempuri.org/DBService/TestConnectionResponse")]
         string TestConnection();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TestConnection", ReplyAction="http://tempuri.org/DataCsharp/TestConnectionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TestConnection", ReplyAction="http://tempuri.org/DBService/TestConnectionResponse")]
         System.Threading.Tasks.Task<string> TestConnectionAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/ExecuteQuery", ReplyAction="http://tempuri.org/DataCsharp/ExecuteQueryResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.CompositeType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.User))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.Product))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.Recipe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.Ingredient[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.Ingredient))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.Invoice))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.InvoiceItem[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.Database.InvoiceItem))]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/ExecuteQuery", ReplyAction="http://tempuri.org/DBService/ExecuteQueryResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.CompositeType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.User))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Product))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Recipe))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Ingredient[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Ingredient))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Invoice))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.InvoiceItem[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.InvoiceItem))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Product[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         object[] ExecuteQuery(string sqlQuery);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/ExecuteQuery", ReplyAction="http://tempuri.org/DataCsharp/ExecuteQueryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/ExecuteQuery", ReplyAction="http://tempuri.org/DBService/ExecuteQueryResponse")]
         System.Threading.Tasks.Task<object[]> ExecuteQueryAsync(string sqlQuery);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/ExecuteNonQuery", ReplyAction="http://tempuri.org/DataCsharp/ExecuteNonQueryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/ExecuteNonQuery", ReplyAction="http://tempuri.org/DBService/ExecuteNonQueryResponse")]
         bool ExecuteNonQuery(string sqlQuery);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/ExecuteNonQuery", ReplyAction="http://tempuri.org/DataCsharp/ExecuteNonQueryResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/ExecuteNonQuery", ReplyAction="http://tempuri.org/DBService/ExecuteNonQueryResponse")]
         System.Threading.Tasks.Task<bool> ExecuteNonQueryAsync(string sqlQuery);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalSales", ReplyAction="http://tempuri.org/DataCsharp/TotalSalesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalSales", ReplyAction="http://tempuri.org/DBService/TotalSalesResponse")]
         long TotalSales();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalSales", ReplyAction="http://tempuri.org/DataCsharp/TotalSalesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalSales", ReplyAction="http://tempuri.org/DBService/TotalSalesResponse")]
         System.Threading.Tasks.Task<long> TotalSalesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalRegisteredUsers", ReplyAction="http://tempuri.org/DataCsharp/TotalRegisteredUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalRegisteredUsers", ReplyAction="http://tempuri.org/DBService/TotalRegisteredUsersResponse")]
         long TotalRegisteredUsers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalRegisteredUsers", ReplyAction="http://tempuri.org/DataCsharp/TotalRegisteredUsersResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalRegisteredUsers", ReplyAction="http://tempuri.org/DBService/TotalRegisteredUsersResponse")]
         System.Threading.Tasks.Task<long> TotalRegisteredUsersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/CashGenerated", ReplyAction="http://tempuri.org/DataCsharp/CashGeneratedResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CashGenerated", ReplyAction="http://tempuri.org/DBService/CashGeneratedResponse")]
         double CashGenerated(System.DateTime fromHere, System.DateTime toHere);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/CashGenerated", ReplyAction="http://tempuri.org/DataCsharp/CashGeneratedResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CashGenerated", ReplyAction="http://tempuri.org/DBService/CashGeneratedResponse")]
         System.Threading.Tasks.Task<double> CashGeneratedAsync(System.DateTime fromHere, System.DateTime toHere);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalProductsSold", ReplyAction="http://tempuri.org/DataCsharp/TotalProductsSoldResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalProductsSold", ReplyAction="http://tempuri.org/DBService/TotalProductsSoldResponse")]
         long TotalProductsSold();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/TotalProductsSold", ReplyAction="http://tempuri.org/DataCsharp/TotalProductsSoldResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/TotalProductsSold", ReplyAction="http://tempuri.org/DBService/TotalProductsSoldResponse")]
         System.Threading.Tasks.Task<long> TotalProductsSoldAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AuthUser", ReplyAction="http://tempuri.org/DataCsharp/AuthUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AuthUser", ReplyAction="http://tempuri.org/DBService/AuthUserResponse")]
         int AuthUser(string email, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AuthUser", ReplyAction="http://tempuri.org/DataCsharp/AuthUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AuthUser", ReplyAction="http://tempuri.org/DBService/AuthUserResponse")]
         System.Threading.Tasks.Task<int> AuthUserAsync(string email, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/UniqueUsername", ReplyAction="http://tempuri.org/DataCsharp/UniqueUsernameResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/UniqueUsername", ReplyAction="http://tempuri.org/DBService/UniqueUsernameResponse")]
         bool UniqueUsername(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/UniqueUsername", ReplyAction="http://tempuri.org/DataCsharp/UniqueUsernameResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/UniqueUsername", ReplyAction="http://tempuri.org/DBService/UniqueUsernameResponse")]
         System.Threading.Tasks.Task<bool> UniqueUsernameAsync(string username);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/CountProducts", ReplyAction="http://tempuri.org/DataCsharp/CountProductsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CountProducts", ReplyAction="http://tempuri.org/DBService/CountProductsResponse")]
         long CountProducts();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/CountProducts", ReplyAction="http://tempuri.org/DataCsharp/CountProductsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CountProducts", ReplyAction="http://tempuri.org/DBService/CountProductsResponse")]
         System.Threading.Tasks.Task<long> CountProductsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddUser", ReplyAction="http://tempuri.org/DataCsharp/AddUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddUser", ReplyAction="http://tempuri.org/DBService/AddUserResponse")]
         long AddUser(string username, string name, string surname, string email, int type, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddUser", ReplyAction="http://tempuri.org/DataCsharp/AddUserResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddUser", ReplyAction="http://tempuri.org/DBService/AddUserResponse")]
         System.Threading.Tasks.Task<long> AddUserAsync(string username, string name, string surname, string email, int type, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddProduct", ReplyAction="http://tempuri.org/DataCsharp/AddProductResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddProduct", ReplyAction="http://tempuri.org/DBService/AddProductResponse")]
         long AddProduct(string name, string type, int weight, string description, string picture, double price);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddProduct", ReplyAction="http://tempuri.org/DataCsharp/AddProductResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddProduct", ReplyAction="http://tempuri.org/DBService/AddProductResponse")]
         System.Threading.Tasks.Task<long> AddProductAsync(string name, string type, int weight, string description, string picture, double price);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddRecipe", ReplyAction="http://tempuri.org/DataCsharp/AddRecipeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddRecipe", ReplyAction="http://tempuri.org/DBService/AddRecipeResponse")]
         long AddRecipe(string name, long creator, string shortdesc, string fulldesc, string picture);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddRecipe", ReplyAction="http://tempuri.org/DataCsharp/AddRecipeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddRecipe", ReplyAction="http://tempuri.org/DBService/AddRecipeResponse")]
         System.Threading.Tasks.Task<long> AddRecipeAsync(string name, long creator, string shortdesc, string fulldesc, string picture);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddIngredient", ReplyAction="http://tempuri.org/DataCsharp/AddIngredientResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddIngredient", ReplyAction="http://tempuri.org/DBService/AddIngredientResponse")]
         long AddIngredient(long recipeID, long productID, int quantity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddIngredient", ReplyAction="http://tempuri.org/DataCsharp/AddIngredientResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddIngredient", ReplyAction="http://tempuri.org/DBService/AddIngredientResponse")]
         System.Threading.Tasks.Task<long> AddIngredientAsync(long recipeID, long productID, int quantity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddInvoice", ReplyAction="http://tempuri.org/DataCsharp/AddInvoiceResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddInvoice", ReplyAction="http://tempuri.org/DBService/AddInvoiceResponse")]
         long AddInvoice(long UserID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddInvoice", ReplyAction="http://tempuri.org/DataCsharp/AddInvoiceResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddInvoice", ReplyAction="http://tempuri.org/DBService/AddInvoiceResponse")]
         System.Threading.Tasks.Task<long> AddInvoiceAsync(long UserID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddInvoiceItem", ReplyAction="http://tempuri.org/DataCsharp/AddInvoiceItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddInvoiceItem", ReplyAction="http://tempuri.org/DBService/AddInvoiceItemResponse")]
         long AddInvoiceItem(long invoiceID, long productID, int quantity, int discount, double total);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/AddInvoiceItem", ReplyAction="http://tempuri.org/DataCsharp/AddInvoiceItemResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddInvoiceItem", ReplyAction="http://tempuri.org/DBService/AddInvoiceItemResponse")]
         System.Threading.Tasks.Task<long> AddInvoiceItemAsync(long invoiceID, long productID, int quantity, int discount, double total);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetUser", ReplyAction="http://tempuri.org/DataCsharp/GetUserResponse")]
-        FoodCrate_V1._01.Database.User GetUser(long userID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
+        FoodCrate_V1._01.DatabaseService.User GetUser(long userID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetUser", ReplyAction="http://tempuri.org/DataCsharp/GetUserResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.User> GetUserAsync(long userID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(long userID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetProduct", ReplyAction="http://tempuri.org/DataCsharp/GetProductResponse")]
-        FoodCrate_V1._01.Database.Product GetProduct(long productID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProduct", ReplyAction="http://tempuri.org/DBService/GetProductResponse")]
+        FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetProduct", ReplyAction="http://tempuri.org/DataCsharp/GetProductResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Product> GetProductAsync(long productID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProduct", ReplyAction="http://tempuri.org/DBService/GetProductResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Product> GetProductAsync(long productID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetRecipe", ReplyAction="http://tempuri.org/DataCsharp/GetRecipeResponse")]
-        FoodCrate_V1._01.Database.Recipe GetRecipe(long recipeID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetRecipe", ReplyAction="http://tempuri.org/DBService/GetRecipeResponse")]
+        FoodCrate_V1._01.DatabaseService.Recipe GetRecipe(long recipeID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetRecipe", ReplyAction="http://tempuri.org/DataCsharp/GetRecipeResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Recipe> GetRecipeAsync(long recipeID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetRecipe", ReplyAction="http://tempuri.org/DBService/GetRecipeResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Recipe> GetRecipeAsync(long recipeID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetIngredient", ReplyAction="http://tempuri.org/DataCsharp/GetIngredientResponse")]
-        FoodCrate_V1._01.Database.Ingredient GetIngredient(long ingredientID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetIngredient", ReplyAction="http://tempuri.org/DBService/GetIngredientResponse")]
+        FoodCrate_V1._01.DatabaseService.Ingredient GetIngredient(long ingredientID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetIngredient", ReplyAction="http://tempuri.org/DataCsharp/GetIngredientResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Ingredient> GetIngredientAsync(long ingredientID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetIngredient", ReplyAction="http://tempuri.org/DBService/GetIngredientResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Ingredient> GetIngredientAsync(long ingredientID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetInvoice", ReplyAction="http://tempuri.org/DataCsharp/GetInvoiceResponse")]
-        FoodCrate_V1._01.Database.Invoice GetInvoice(long invoiceID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetInvoice", ReplyAction="http://tempuri.org/DBService/GetInvoiceResponse")]
+        FoodCrate_V1._01.DatabaseService.Invoice GetInvoice(long invoiceID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetInvoice", ReplyAction="http://tempuri.org/DataCsharp/GetInvoiceResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Invoice> GetInvoiceAsync(long invoiceID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetInvoice", ReplyAction="http://tempuri.org/DBService/GetInvoiceResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Invoice> GetInvoiceAsync(long invoiceID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetInvoiceItem", ReplyAction="http://tempuri.org/DataCsharp/GetInvoiceItemResponse")]
-        FoodCrate_V1._01.Database.InvoiceItem GetInvoiceItem(long invoiceItemID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetInvoiceItem", ReplyAction="http://tempuri.org/DBService/GetInvoiceItemResponse")]
+        FoodCrate_V1._01.DatabaseService.InvoiceItem GetInvoiceItem(long invoiceItemID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DataCsharp/GetInvoiceItem", ReplyAction="http://tempuri.org/DataCsharp/GetInvoiceItemResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.Database.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetInvoiceItem", ReplyAction="http://tempuri.org/DBService/GetInvoiceItemResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProductByString", ReplyAction="http://tempuri.org/DBService/GetProductByStringResponse")]
+        FoodCrate_V1._01.DatabaseService.Product[] GetProductByString(string NameOrType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProductByString", ReplyAction="http://tempuri.org/DBService/GetProductByStringResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Product[]> GetProductByStringAsync(string NameOrType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface DataCsharpChannel : FoodCrate_V1._01.Database.DataCsharp, System.ServiceModel.IClientChannel {
+    public interface DBServiceChannel : FoodCrate_V1._01.DatabaseService.DBService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DataCsharpClient : System.ServiceModel.ClientBase<FoodCrate_V1._01.Database.DataCsharp>, FoodCrate_V1._01.Database.DataCsharp {
+    public partial class DBServiceClient : System.ServiceModel.ClientBase<FoodCrate_V1._01.DatabaseService.DBService>, FoodCrate_V1._01.DatabaseService.DBService {
         
-        public DataCsharpClient() {
+        public DBServiceClient() {
         }
         
-        public DataCsharpClient(string endpointConfigurationName) : 
+        public DBServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public DataCsharpClient(string endpointConfigurationName, string remoteAddress) : 
+        public DBServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DataCsharpClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public DBServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DataCsharpClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public DBServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
@@ -1012,11 +1019,11 @@ namespace FoodCrate_V1._01.Database {
             return base.Channel.GetDataAsync(value);
         }
         
-        public FoodCrate_V1._01.Database.CompositeType GetDataUsingDataContract(FoodCrate_V1._01.Database.CompositeType composite) {
+        public FoodCrate_V1._01.DatabaseService.CompositeType GetDataUsingDataContract(FoodCrate_V1._01.DatabaseService.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.CompositeType> GetDataUsingDataContractAsync(FoodCrate_V1._01.Database.CompositeType composite) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.CompositeType> GetDataUsingDataContractAsync(FoodCrate_V1._01.DatabaseService.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
@@ -1148,52 +1155,60 @@ namespace FoodCrate_V1._01.Database {
             return base.Channel.AddInvoiceItemAsync(invoiceID, productID, quantity, discount, total);
         }
         
-        public FoodCrate_V1._01.Database.User GetUser(long userID) {
+        public FoodCrate_V1._01.DatabaseService.User GetUser(long userID) {
             return base.Channel.GetUser(userID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.User> GetUserAsync(long userID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(long userID) {
             return base.Channel.GetUserAsync(userID);
         }
         
-        public FoodCrate_V1._01.Database.Product GetProduct(long productID) {
+        public FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID) {
             return base.Channel.GetProduct(productID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Product> GetProductAsync(long productID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Product> GetProductAsync(long productID) {
             return base.Channel.GetProductAsync(productID);
         }
         
-        public FoodCrate_V1._01.Database.Recipe GetRecipe(long recipeID) {
+        public FoodCrate_V1._01.DatabaseService.Recipe GetRecipe(long recipeID) {
             return base.Channel.GetRecipe(recipeID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Recipe> GetRecipeAsync(long recipeID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Recipe> GetRecipeAsync(long recipeID) {
             return base.Channel.GetRecipeAsync(recipeID);
         }
         
-        public FoodCrate_V1._01.Database.Ingredient GetIngredient(long ingredientID) {
+        public FoodCrate_V1._01.DatabaseService.Ingredient GetIngredient(long ingredientID) {
             return base.Channel.GetIngredient(ingredientID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Ingredient> GetIngredientAsync(long ingredientID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Ingredient> GetIngredientAsync(long ingredientID) {
             return base.Channel.GetIngredientAsync(ingredientID);
         }
         
-        public FoodCrate_V1._01.Database.Invoice GetInvoice(long invoiceID) {
+        public FoodCrate_V1._01.DatabaseService.Invoice GetInvoice(long invoiceID) {
             return base.Channel.GetInvoice(invoiceID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.Invoice> GetInvoiceAsync(long invoiceID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Invoice> GetInvoiceAsync(long invoiceID) {
             return base.Channel.GetInvoiceAsync(invoiceID);
         }
         
-        public FoodCrate_V1._01.Database.InvoiceItem GetInvoiceItem(long invoiceItemID) {
+        public FoodCrate_V1._01.DatabaseService.InvoiceItem GetInvoiceItem(long invoiceItemID) {
             return base.Channel.GetInvoiceItem(invoiceItemID);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.Database.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID) {
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID) {
             return base.Channel.GetInvoiceItemAsync(invoiceItemID);
+        }
+        
+        public FoodCrate_V1._01.DatabaseService.Product[] GetProductByString(string NameOrType) {
+            return base.Channel.GetProductByString(NameOrType);
+        }
+        
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Product[]> GetProductByStringAsync(string NameOrType) {
+            return base.Channel.GetProductByStringAsync(NameOrType);
         }
     }
 }
