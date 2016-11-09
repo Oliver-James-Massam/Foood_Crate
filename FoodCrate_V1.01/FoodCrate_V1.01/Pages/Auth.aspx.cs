@@ -56,8 +56,6 @@ namespace FoodCrate_V1._01.MasterPage
                 List<FackebookStrut.User> currentUser = new List<FackebookStrut.User>();
                 currentUser.Add(converted);
                 InfomDatabase(currentUser);
-                ListView1.DataSource = currentUser;
-                ListView1.DataBind();
             }
         }
 
@@ -69,7 +67,7 @@ namespace FoodCrate_V1._01.MasterPage
             bool check;
             string email = fb[0].email;
             check = data.UniqueUsername(email);
-            if (check)
+            if (!check)
             {
                 // login current user
                 int iRank = data.AuthUser(fb[0].email, fb[0].link);
@@ -89,8 +87,7 @@ namespace FoodCrate_V1._01.MasterPage
                         break;
 
                     default:
-                        Page.Response.Redirect("../Pages/Catalog.aspx"); // fix this backdoor
-                        Session["isUser"] = true;
+                        Page.Response.Redirect("../Pages/Signup.aspx"); // fix this backdoor
                         break;
                 }
                 

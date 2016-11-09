@@ -11,6 +11,12 @@ namespace FoodCrate_V1._01.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["alerUDne"] != null)
+                ClientScript.RegisterStartupScript(GetType(), "Error", "alert('User doesnt exist');", true);
+        }
+
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
 
         }
     }

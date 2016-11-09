@@ -2,8 +2,6 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"/>
         <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
@@ -47,15 +45,14 @@
                             <div class="form-bottom">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-userna    me"/>
+			                        	<input type="text" runat="server" name="form-username" placeholder="Username..." class="form-username form-control" id="username"/>
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password"/>
+			                        	<input type="password" runat="server" contenteditable="true" name="form-password" placeholder="Password..." class="form-password form-control" id="password"/>
 			                        </div>
- 
 
-			                        <button type="submit" class="btn">Sign in!</button>
+			                        <button type="submit" runat="server" onserverclick="Unnamed_ServerClick" class="btn">Sign in!</button>
                                     <small><a id="LocalLog" href="../Pages/Signup.aspx" >Need an account? </a></small>
 		                    </div>
                         </div>
