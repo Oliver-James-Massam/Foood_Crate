@@ -42,6 +42,10 @@ namespace FoodCrate_V1._01.MasterPage
         {
             DatabaseService.DBServiceClient myService = new DatabaseService.DBServiceClient();
             setValueDefault();
+
+            //name = txtName.Value;
+            //type = txtType.Value;
+            //weight = txtWeight.Value;
         
         }
     }
