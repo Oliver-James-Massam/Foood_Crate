@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -38,15 +39,51 @@ namespace FoodCrate_V1._01.MasterPage
             price = 0;
         }
 
-        protected void addProduct()
+        protected void setFieldDefault()
         {
-            DatabaseService.DBServiceClient myService = new DatabaseService.DBServiceClient();
-            setValueDefault();
+            txtName.Value = "";
+            txtType.Value = "";
+            txtWeight.Value = "500";
+            txtDescription.Value = "";
+            picture = "noimage.jpg";
+            txtPrice.Value = "49.99";
+        }
 
-            //name = txtName.Value;
-            //type = txtType.Value;
-            //weight = txtWeight.Value;
-        
+        protected void addProduct(object sender, EventArgs e)
+        {
+            try
+            {
+                DatabaseService.DBServiceClient myService = new DatabaseService.DBServiceClient();
+                setValueDefault();
+
+                name = txtName.Value;
+                type = txtType.Value;
+                weight = Convert.ToInt32(txtWeight.Value);
+                description = txtDescription.Value;
+                if (!(txtPicture.Value.Equals("")) || txtPicture.Value != null || txtPicture.Value.Equals("noimage.jpg"))
+                {
+                    picture = "../Images/Food/" + txtPicture.Value;
+                }
+                price = double.Parse(txtPrice.Value, System.Globalization.CultureInfo.InvariantCulture);
+            
+                long result = myService.AddProduct(name, type, weight, description, picture, price);
+                if (result > 0)
+                    setFieldDefault();
+                else
+                    txtName.Value = "" + result;
+            }
+            catch (FormatException fex)
+            {
+                Console.WriteLine(fex.Message);
+            }
+            catch (InvalidCastException iex)
+            {
+                Console.WriteLine(iex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

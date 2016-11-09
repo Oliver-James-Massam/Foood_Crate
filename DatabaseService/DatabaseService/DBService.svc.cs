@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 using MySql.Data;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace DatabaseService
 {
@@ -101,13 +102,18 @@ namespace DatabaseService
         public long AddProduct(string name, string type, int weight, string description, string picture, double price)
         {
             long result = -1;
-
+            
             MySqlConnection cn = new MySqlConnection(connectionString);
-            string query = "INSERT INTO `foodcratedb`.`products` (`Name`, `Type`, `Weight`, `Description`, `Picture`, `Price`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');";
-            MySqlCommand cmd = new MySqlCommand(string.Format(query, name, type, weight, description, picture, price));
+            string query = "INSERT INTO `foodcratedb`.`products` (`Name`, `Type`, `Weight`, `Description`, `Picture`, `Price`) VALUES (@Name, @Type, @Weight, @Desc, @Pic, @Price);";
+            MySqlCommand cmd = new MySqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
-
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Type", type);
+            cmd.Parameters.AddWithValue("@Weight", weight);
+            cmd.Parameters.AddWithValue("@Desc", description);
+            cmd.Parameters.AddWithValue("@Pic", picture);
+            cmd.Parameters.AddWithValue("@Price", price);
             try
             {
                 cmd.Connection.Open();
