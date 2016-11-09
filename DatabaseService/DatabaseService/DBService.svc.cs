@@ -292,7 +292,7 @@ namespace DatabaseService
             bool result = true;
 
             MySqlConnection cn = new MySqlConnection(connectionString);
-            string query = "SELECT * FROM foodcratedb.users WHERE username = '" + username + "';";
+            string query = "SELECT * FROM foodcratedb.users WHERE Email = '" + username + "';";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
