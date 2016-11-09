@@ -46,7 +46,7 @@
                     <li>
                         <a href="../Pages/Catalog.aspx">Catalog</a>
                     </li>
-                    <li>
+                    <li runat="server">
                         <% if (Session["login"].Equals("false")) %>
                         <%{ %>
                         <a href="../Pages/Login.aspx"><i class="fa fa-user fa-fw"></i>Login</a>
@@ -63,12 +63,11 @@
         </div>
         <!-- /.container -->
     </nav>
-    <form id="form1" runat="server">
         <div>
+            <form runat="server">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder></form>
         </div>
-    </form>
 
 </body>
 </html>

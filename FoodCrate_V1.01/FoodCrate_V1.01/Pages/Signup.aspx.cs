@@ -17,7 +17,33 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
+            if (Password.Value == Repassword.Value) { 
 
+                DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
+                data.AddUser(Username.Value, FirstName.Value, Surname.Value, Email.Value, 1, Password.Value);
+                int iRank = data.AuthUser(Email.Value, Password.Value);
+                DatabaseService.User userdata = new DatabaseService.User();
+                userdata = data.GetUser(Email.Value, Password.Value);
+                Session["AllUserDetails"] = userdata;
+                Session["user"] = FirstName.Value + " " + Surname.Value;
+                // rank user
+                switch (iRank)
+                {
+                    case 1:
+                        Session["isUser"] = true;
+                        Session["login"] = true;
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                    case 2:
+                        Session["isAdmin"] = true;
+                        Session["login"] = true;
+                        Page.Response.Redirect("../Pages/AdminPage.aspx");
+                        break;
+                    default:
+                        Page.Response.Redirect("../Pages/Catalog.aspx");
+                        break;
+                }
+            }
         }
     }
 }

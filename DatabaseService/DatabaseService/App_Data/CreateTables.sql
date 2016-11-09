@@ -20,6 +20,7 @@ FullyPaidDate DATE NULL,
 Status VARCHAR(20) NOT NULL,
 PRIMARY KEY (InvoiceID)
 );
+
 	
 CREATE TABLE FoodCrateDB.UserTypes(
 UserTypeID INT NOT NULL AUTO_INCREMENT,
@@ -87,6 +88,22 @@ ADD FOREIGN KEY (InvoiceID)
 REFERENCES Invoices(InvoiceID);
 
 ALTER TABLE FoodCrateDB.InvoiceItems
+ADD FOREIGN KEY (ProductID)
+REFERENCES Products(ProductID);
+
+CREATE TABLE FoodCrateDB.Carts(
+CartID INT NOT NULL AUTO_INCREMENT,
+UserID INT NOT NULL,
+ProductID INT NOT NULL,
+Quantity INT NOT NULL,
+PRIMARY KEY (CartID)
+);
+
+ALTER TABLE FoodCrateDB.Carts
+ADD FOREIGN KEY (UserID)
+REFERENCES Users(UserID);
+
+ALTER TABLE FoodCrateDB.Carts
 ADD FOREIGN KEY (ProductID)
 REFERENCES Products(ProductID);
 

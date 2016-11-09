@@ -104,12 +104,36 @@ namespace DatabaseService
         [OperationContract]
         InvoiceItem GetInvoiceItem(long invoiceItemID);
 
-        //[OperationContract]
-        //Product[] testing();
+        //Cart Functions
+
+        [OperationContract]
+        long AddCart(long userID, long productID, int quantity);
+
+        [OperationContract]
+        bool CheckForCart(long userID);
+
+        [OperationContract]
+        bool RemoveCartItem(long cartID);
+
+        [OperationContract]
+        List<Cart> GetCart(long userID);
+
+        //Delete Data Functions
+
+        [OperationContract]
+        bool RemoveProduct(long productID);
 
         //Added new function for Search parameters
         [OperationContract]
         List<Product> GetProductByString(String NameOrType);
+    }
+
+    public struct Cart
+    {
+        public long cartID;
+        public long userID;
+        public long productID;
+        public int quantity;
     }
 
     [DataContract]
