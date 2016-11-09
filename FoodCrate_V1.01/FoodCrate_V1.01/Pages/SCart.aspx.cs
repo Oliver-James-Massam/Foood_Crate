@@ -13,6 +13,8 @@ namespace FoodCrate_V1._01.MasterPage
 
         private CheckBox[] chck;
         private double[] cost;
+        private int size;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
@@ -23,6 +25,7 @@ namespace FoodCrate_V1._01.MasterPage
                     List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
                     chck = new CheckBox[ListCart.Count];
                     cost = new double[ListCart.Count];
+                    size = ListCart.Count;
                     for (int i =0; i < ListCart.Count; i++)
                     {
                         TableRow row = new TableRow();
@@ -67,12 +70,21 @@ namespace FoodCrate_V1._01.MasterPage
         protected void Accept_Click(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
+            double total = 0;
             if (Session["AllUserDetails"] != null)
             {
+                
+                for (int i = 0; i < size; i++)
+                {
+                    if (chck[i].Checked)
+                    {
+                        total+= cost[i];
+                    }
+                        
+                }
+             }
 
-            }
-
-            Response.Redirect("../Pages/SCartReview.aspx");
+            Response.Redirect("../Pages/SCartReview.aspx?Total=" + total);
         }
     }
 }
