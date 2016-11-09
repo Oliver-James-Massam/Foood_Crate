@@ -23,36 +23,6 @@ a:hover {
 }
 
 
-.breadcrumb > .active a{
-	color: #046d10;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.breadcrumb li a{
-	color :#000000;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.breadcrumb>li+li:before {
-	content: "\00BB";
-}
-
-.breadcrumb{
-    margin-left:20%;
-	margin-bottom: 100px;
-	background-color:#ffffff;
-    width:60%;
-}
-
-.breadcrumbBox{
-    width:90%;
-	background-color: white;
-	height: 100px;
-	margin-bottom: 0px;
-	padding-top: 32px;
-}
 
 
 table {
@@ -94,6 +64,36 @@ th {
      font-size:200%;
      border:solid 2px ;
  }
+ 
+.breadcrumb > .active a{
+	color: #046d10;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
+.breadcrumb li a{
+	color :#000000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb>li+li:before {
+	content: "\00BB";
+}
+
+.breadcrumb{
+    margin-left:20%;
+	margin-bottom: 100px;
+	background-color:#ffffff;
+    width:60%;
+}
+
+.breadcrumbBox{
+    width:90%;
+	background-color: white;
+	height: 100px;
+	margin-bottom: 0px;
+	padding-top: 32px;
+}
 
 
