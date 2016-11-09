@@ -57,7 +57,7 @@ namespace FoodCrate_V1._01.Pages
                                                                 "<h3><span style='color: #67BCDB;font-family: inlineHeading;'>Description: </span>" + product.description + "</h3>" +
                                                             "</div>" +
                                                         "<br/>" +
-                                                        "<a class='btn btn-success' id ='Buy'>Add to Cart</a>" +
+                                                        "<a class='btn btn-success' id ='Buy' runat='server' onServerClick='addToCart_Click'>Add to Cart</a>" +
                                                     "</div>" +
                                                 "</div>";
                     }
@@ -75,6 +75,11 @@ namespace FoodCrate_V1._01.Pages
             tempProd.picture = "";
             tempProd.price = 0;
             return tempProd;
+        }
+
+        protected void addToCart_Click(object sender, EventArgs e)
+        {
+            prodDetails.InnerHtml = "";
         }
     }
 }
