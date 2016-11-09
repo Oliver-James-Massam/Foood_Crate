@@ -3,10 +3,13 @@
     <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/form-elements.css" rel="stylesheet" />
-    <link href="../Styling/ShoppingCart/custom.css" rel="stylesheet" />
     <link href="../Styling/ShoppingCart/Table.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="wow">
+        <br />
+        <br />
+    </div>
         <div class="container-fluid breadcrumbBox text-center">
 		<ol class="breadcrumb">
 			<li class="active"><a href="../Pages/SCart.aspx">Overview</a></li>
@@ -15,7 +18,7 @@
 		</ol>
 	</div>
     <div id="Cart">
-        <asp:Table ID="table"  runat="server" CssClass="../Styling/ShoppingCart/Table.css">
+        <asp:Table ID="table"  runat="server" >
             <asp:TableHeaderRow>
                 
                 <asp:TableHeaderCell> Name of item</asp:TableHeaderCell>
@@ -72,8 +75,8 @@
 
 
             <asp:TableFooterRow>             
-                <asp:TableHeaderCell></asp:TableHeaderCell>
-                <asp:TableHeaderCell></asp:TableHeaderCell>
+                <asp:TableCell></asp:TableCell>
+                <asp:TableCell></asp:TableCell>
                 <asp:TableHeaderCell>Total:</asp:TableHeaderCell>
                 <asp:TableHeaderCell ID="TotalPrice">R 15120284</asp:TableHeaderCell>
             </asp:TableFooterRow>

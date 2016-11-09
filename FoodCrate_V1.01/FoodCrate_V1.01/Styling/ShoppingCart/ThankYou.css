@@ -21,10 +21,12 @@ ol{
 
 }
 
-body{
-        background-color:white;
+.wow{
+    margin-top:3%;
+    background-color:white;
 }
 
  head{
      background-color:wheat;
+      margin-top:75px;
  }

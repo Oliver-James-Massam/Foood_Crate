@@ -1,8 +1,14 @@
 /*-----------------------------------
 	General Styles
 -----------------------------------*/
+#wow{
+    margin-top:5%;
+    background-color:white;
+}
+
 
 body{
+    margin-top:75px;
 	font-size : 14px;
 	background-color: #ffffff;
 }
@@ -40,7 +46,8 @@ a:hover {
 }
 
 .breadcrumbBox{
-	background-color: #606568;
+    width:90%;
+	background-color: white;
 	height: 100px;
 	margin-bottom: 0px;
 	padding-top: 32px;

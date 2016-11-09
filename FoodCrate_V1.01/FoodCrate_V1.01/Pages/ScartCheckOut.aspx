@@ -4,8 +4,11 @@
     <link href="../Styling/ShoppingCart/ThankYou.css" rel="stylesheet" />
     <script src="../scripts/CommonScrips/jquery.backstretch.min.js"></script>
     <script src="../scripts/CommonScrips/ThankYouImage.js"></script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="wow">
+        </div>
     <div class="container-fluid breadcrumbBox text-center">
 		<ol class="breadcrumb">
             <li ><a href="../Pages/Home.aspx">Go back home</a></li>
@@ -18,5 +21,8 @@
         <div class="jumbotron">
             <h1>Thank your for your support</h1>
               </div>
+
                 </div>
+        
+
 </asp:Content>

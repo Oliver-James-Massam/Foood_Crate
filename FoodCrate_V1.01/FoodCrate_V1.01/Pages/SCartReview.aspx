@@ -6,6 +6,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div id="wow"> <br />
+        <br /></div>
     <div class="container-fluid breadcrumbBox text-center">
 		<ol class="breadcrumb">
 			<li><a href="../Pages/SCart.aspx">OverView</a></li>
@@ -36,7 +38,7 @@
                </asp:TableRow>
             <asp:TableRow>
                    <asp:TableCell ID ="Tb3"> <!-- shipping is 0.02 of total if price is over 300 no shipping cost -->
-                       Cost shipping! (if purchase is over R300) 
+                       Shipping Cost! (if purchase is under R300) 
                    </asp:TableCell>
                    <asp:TableCell ID ="Shipping">
                         Free!/Not
