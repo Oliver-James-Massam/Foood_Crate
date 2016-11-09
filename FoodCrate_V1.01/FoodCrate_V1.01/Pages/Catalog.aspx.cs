@@ -17,6 +17,7 @@ namespace FoodCrate_V1._01.MasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie MyCookie = new HttpCookie("cart");
             if (Session["user"] != null)
             {
                 greeting.InnerHtml = "Welcome " + Session["user"];
@@ -26,16 +27,16 @@ namespace FoodCrate_V1._01.MasterPage
         protected void searchDB (object sender, EventArgs e)
         {
             cardTable.InnerHtml = "";
-            localhost.Service1 myService = new localhost.Service1();
+            DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
 
             String InvalidQuery = "Search our Catalogue by the Name or Type of Product";
             String SearchQuery = txtSearch.Value;
 
             if (!SearchQuery.Equals(InvalidQuery))
             {
-                List<localhost.Product> searchedProducts = new List<localhost.Product>();
-                localhost.Product[] tempProducts = myService.GetProductByString(SearchQuery);
-                foreach(localhost.Product tempProduct in tempProducts)
+                List<DatabaseService.Product> searchedProducts = new List<DatabaseService.Product>();
+                DatabaseService.Product[] tempProducts = data.GetProductByString(SearchQuery);
+                foreach(DatabaseService.Product tempProduct in tempProducts)
                 {
                     searchedProducts.Add(tempProduct);
                 }
@@ -52,7 +53,7 @@ namespace FoodCrate_V1._01.MasterPage
             }
         }
 
-        private void returnSearch(List<localhost.Product> searchedProducts)
+        private void returnSearch(List<DatabaseService.Product> searchedProducts)
         {
             int numProd = searchedProducts.Count;
             String maxSearched = "";
