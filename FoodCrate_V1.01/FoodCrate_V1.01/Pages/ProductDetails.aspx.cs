@@ -79,7 +79,7 @@ namespace FoodCrate_V1._01.Pages
 
         protected void addToCart_Click(object sender, EventArgs e)
         {
-            prodDetails.InnerHtml = "";
+            prodDetails.InnerHtml = "<h1>Checking for change</h1>";
         }
     }
 }
