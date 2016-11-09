@@ -11,7 +11,17 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="prodDetails" class="col-centered" runat='server'>
-        <asp:PlaceHolder runat="server" ID="PlaceHolder1"></asp:PlaceHolder>
+    <div class="col-centered">
+        <div class='col-lg-9' style="padding-bottom:0px;min-height: 1px;box-sizing:padding-box">
+            <div id="prodDetails" class='thumbnail' runat='server'>
+            </div>
+        </div>
+    </div>
+    <div class="col-centered">
+        <div class='col-lg-9'>
+            <div id="prodDetails2" class='thumbnail' runat='server'>
+                <a class='btn btn-success' id ='Buy' runat='server' onserverclick='addToCart_Click'>Add to Cart</a>
+            </div>
+        </div>
     </div>
 </asp:Content>

@@ -46,8 +46,7 @@ namespace FoodCrate_V1._01.Pages
                 {
                     if (!product.Equals(emptyProduct))
                     {
-                        prodDetails.InnerHtml = "<div class='col-lg-9'>" +
-                                                    "<div class='thumbnail'>" +
+                        prodDetails.InnerHtml =
                                                             "<img class='img-responsive' src='" + product.picture + "' alt=''/>" +
                                                             "<div class='caption-full' >" +
                                                                 "<h3 class='pull-right' id='Price' style='color: #B20000;'>R" + (Math.Round(product.price, 2)).ToString("#.00", CultureInfo.InvariantCulture) + "</h3>" +
@@ -56,10 +55,7 @@ namespace FoodCrate_V1._01.Pages
                                                                 "<h3><span style='color: #67BCDB;font-family: inlineHeading;'>Weight: </span>" + product.weight + "g</h3>" +
                                                                 "<h3><span style='color: #67BCDB;font-family: inlineHeading;'>Description: </span>" + product.description + "</h3>" +
                                                             "</div>" +
-                                                        "<br/>" +
-                                                        "<a class='btn btn-success' id ='Buy' runat='server' onServerClick='addToCart_Click'>Add to Cart</a>" +
-                                                     "</div>" +
-                                                "</div>";
+                                                        "<br/>";                                                     
                     }
                 }
             }
@@ -79,7 +75,7 @@ namespace FoodCrate_V1._01.Pages
 
         protected void addToCart_Click(object sender, EventArgs e)
         {
-            prodDetails.InnerHtml = "<h1>Checking for change</h1>";
+            
         }
     }
 }

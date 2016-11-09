@@ -18,6 +18,12 @@
     font-size:30px;
 }
 
+#ContentPlaceHolder1_Buy{
+    width:100%;
+    font-family: inlineHeading;
+    font-size:30px;
+}
+
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     background-image: url('../../Images/Background/background3.jpg');
@@ -36,7 +42,7 @@ body {
 }
 
 .thumbnail {
-    
+    margin-bottom:0px;
 }
 
 .thumbnail .caption-full {
@@ -46,5 +52,5 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    margin: 0px 0;
 }
