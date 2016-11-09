@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Global.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="FoodCrate_V1._01.MasterPage.WebForm1" %>
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"/>
         <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
