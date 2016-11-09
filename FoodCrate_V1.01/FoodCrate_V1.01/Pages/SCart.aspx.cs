@@ -59,11 +59,12 @@ namespace FoodCrate_V1._01.MasterPage
                         table.Rows.Add(row);
                     }
                 }
-                else
-                {
-                    Response.Redirect("../Pages/Catalog.aspx");
-                }
+                
         }
+            else
+            {
+                Response.Redirect("../Pages/Login.aspx");
+            }
 
         }
 
