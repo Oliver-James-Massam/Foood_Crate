@@ -40,7 +40,7 @@ namespace FoodCrate_V1._01.Pages
                 }
                 catch(Exception ex)
                 {
-                    Console.Write(ex.Message);
+                    Console.WriteLine(ex.Message);
                 }
                 finally
                 {
