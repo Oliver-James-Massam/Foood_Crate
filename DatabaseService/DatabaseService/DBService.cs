@@ -104,6 +104,9 @@ namespace DatabaseService
         [OperationContract]
         InvoiceItem GetInvoiceItem(long invoiceItemID);
 
+        //[OperationContract]
+        //Product[] testing();
+
         //Added new function for Search parameters
         [OperationContract]
         List<Product> GetProductByString(String NameOrType);

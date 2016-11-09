@@ -698,6 +698,42 @@ namespace DatabaseService
             }
         }
 
+        //public Product[] testing()
+        //{
+        //    Product[] result;
+        //    List<Product> asdf = new List<Product>();
+
+        //    MySqlConnection cn = new MySqlConnection(connectionString);
+        //    string query = "SELECT * FROM foodcratedb.products;";
+        //    MySqlCommand cmd = new MySqlCommand(query);
+        //    cmd.Connection = cn;
+        //    cmd.CommandType = CommandType.Text;
+
+        //    try
+        //    {
+        //        cmd.Connection.Open();
+        //        MySqlDataReader reader = cmd.ExecuteReader();
+        //        while (reader.HasRows)
+        //        {
+        //            reader.Read();
+        //            result.productID = reader.GetInt64(0);
+        //            result.name = reader.GetString(1);
+        //            result.type = reader.GetString(2);
+        //            result.weight = reader.GetInt32(3);
+        //            result.description = reader.GetString(4);
+        //            result.picture = reader.GetString(5);
+        //            result.price = reader.GetDouble(6);
+        //        }
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+        //    }
+        //    cmd.Connection.Close();
+        //    cmd.Dispose();
+        //    cn.Dispose();
+        //    return result;
+        //}
 
         //Added new Function for Search parameters
         public List<Product> GetProductByString(string NameOrType)
