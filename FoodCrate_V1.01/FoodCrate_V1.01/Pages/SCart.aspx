@@ -32,7 +32,7 @@
                     <asp:Label runat="server"> This is the name boys</asp:Label>
                 </asp:TableCell>
                 <asp:TableCell >
-                    <input class="Quantity" type="number" min="0" name="NoItems" />
+                    <input class="Quantity" type="number" min="0"  name="NoItems" />
                 </asp:TableCell>
                 <asp:TableCell>
                          <asp:Label runat="server"> 1 000 000</asp:Label>
@@ -41,38 +41,6 @@
                     <asp:CheckBox ID="CheckBox1" runat="server" />
                 </asp:TableCell>
             </asp:TableRow>
-
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label runat="server"> This is the name boys</asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <input class="Quantity" type="number" min="0" name="NoItems" />
-                </asp:TableCell>
-                <asp:TableCell>
-                         <asp:Label runat="server"> 1 000 000</asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:CheckBox ID="CheckBox2" runat="server" />
-                </asp:TableCell>
-            </asp:TableRow>
-
-            <asp:TableRow>
-
-                <asp:TableCell>
-                    <asp:Label runat="server"> This is the name boys</asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <input class="Quantity" type="number" min="0" name="NoItems" />
-                </asp:TableCell>
-                <asp:TableCell>
-                         <asp:Label runat="server"> 1 000 000</asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:CheckBox ID="CheckBox3" runat="server" />
-                </asp:TableCell>
-            </asp:TableRow>
-
 
             <asp:TableFooterRow>             
                 <asp:TableCell></asp:TableCell>
