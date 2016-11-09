@@ -671,6 +671,146 @@ namespace DatabaseService
             return result;
         }
 
+        public long AddCart(long userID, long productID, int quantity)
+        {
+            long result = -1;
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "INSERT INTO `foodcratedb`.`carts` (`UserID`, `ProductID`, `Quantity`) VALUES ('{0}', '{1}', '{2}');";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, userID, productID, quantity));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                result = cmd.LastInsertedId;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
+        public bool CheckForCart(long userID)
+        {
+            bool result = false;
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "SELECT * FROM foodcratedb.carts WHERE userID = '{0}';";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, userID));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                    result = true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
+        public bool RemoveCartItem(long cartID)
+        {
+            bool result = false;
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "DELETE FROM foodcratedb.carts WHERE cartID = '{0}';";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, cartID));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
+        public List<Cart> GetCart(long userID)
+        {
+            List<Cart> result = new List<Cart>();
+            Cart c = new Cart();
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "SELECT * FROM foodcratedb.carts WHERE userID = '{0}';";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, userID));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while(reader.HasRows)
+                {
+                    c.cartID = reader.GetInt64(0);
+                    c.userID = reader.GetInt64(1);
+                    c.productID = reader.GetInt64(2);
+                    c.quantity = reader.GetInt32(3);
+                    result.Add(c);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
+        public bool RemoveProduct(long productID)
+        {
+            bool result = false;
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "DELETE FROM foodcratedb.products WHERE productID = '{0}';";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, productID));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
         //********** Don't touch anything below this line ***********
         public string GetData(int value)
         {
@@ -698,43 +838,6 @@ namespace DatabaseService
                 return "Connection open";
             }
         }
-
-        //public Product[] testing()
-        //{
-        //    Product[] result;
-        //    List<Product> asdf = new List<Product>();
-
-        //    MySqlConnection cn = new MySqlConnection(connectionString);
-        //    string query = "SELECT * FROM foodcratedb.products;";
-        //    MySqlCommand cmd = new MySqlCommand(query);
-        //    cmd.Connection = cn;
-        //    cmd.CommandType = CommandType.Text;
-
-        //    try
-        //    {
-        //        cmd.Connection.Open();
-        //        MySqlDataReader reader = cmd.ExecuteReader();
-        //        while (reader.HasRows)
-        //        {
-        //            reader.Read();
-        //            result.productID = reader.GetInt64(0);
-        //            result.name = reader.GetString(1);
-        //            result.type = reader.GetString(2);
-        //            result.weight = reader.GetInt32(3);
-        //            result.description = reader.GetString(4);
-        //            result.picture = reader.GetString(5);
-        //            result.price = reader.GetDouble(6);
-        //        }
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
-        //    }
-        //    cmd.Connection.Close();
-        //    cmd.Dispose();
-        //    cn.Dispose();
-        //    return result;
-        //}
 
         //Added new Function for Search parameters
         public List<Product> GetProductByString(string NameOrType)
