@@ -24,10 +24,9 @@ body {
 }
 
 .thumbnail img {
-    padding-top:2%;
-    width: 75%;
-    height: 50%;
-    background: transparent;
+    
+    width: 100%;
+    height: 500px;
 }
 
 .ratings {
@@ -37,11 +36,12 @@ body {
 }
 
 .thumbnail {
-    padding: 0;
+    
 }
 
 .thumbnail .caption-full {
-    padding: 9px;
+    padding-left: 1%;
+    padding-left: 1%;
     color: #333;
 }
 
