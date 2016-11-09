@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Global.Master" AutoEventWireup="true" CodeBehind="SCartReview.aspx.cs" Inherits="FoodCrate_V1._01.MasterPage.WebForm9" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Styling/ShoppingCart/custom.css" rel="stylesheet" />
-    <link href="../Styling/ShoppingCart/TableReview.css" rel="stylesheet" />
+    <link href="../Styling/ShoppingCart/ImprovedCustom.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,7 +17,10 @@
     <!-- insert the table for the review --> 
     <div>
         <div class ="Review">
+
         <asp:Table ID="Table1" runat="server">
+            <asp:TableHeaderRow  ForeColor="white" BackColor="#B20000"><asp:TableHeaderCell>Discription</asp:TableHeaderCell><asp:TableHeaderCell>Value</asp:TableHeaderCell></asp:TableHeaderRow>
+
                <asp:TableRow>
                    <asp:TableCell > <!-- This is the values with out any discounts or tax -->
                        Face Value 
@@ -46,10 +48,10 @@
                </asp:TableRow>
 
                 <asp:TableRow>
-                   <asp:TableHeaderCell BackColor="#ce4242" ForeColor="white" > <!-- shipping is 0.02 of total if price is over 300 no shipping cost -->
+                   <asp:TableHeaderCell BackColor="#B20000" ForeColor="white" > <!-- shipping is 0.02 of total if price is over 300 no shipping cost -->
                        Total Due
                    </asp:TableHeaderCell>
-                   <asp:TableCell ID ="Total" ForeColor="white" BackColor="#ea7070 ">
+                   <asp:TableCell ID ="Total" ForeColor="white" BackColor="#B20000">
                          R58008
                    </asp:TableCell>
                </asp:TableRow>

@@ -1,4 +1,4 @@
-body{
+﻿body{
     margin-top:75px;
 	font-size : 14px;
 	background-color: #ffffff;
@@ -6,7 +6,7 @@ body{
 
 
 .ButSub{
-     background-color:#ce4242;
+     background-color:#B20000;
      margin-left:5%;
      width:90%;
      margin-top:1%;
@@ -32,7 +32,7 @@ body{
 }
 
 .breadcrumb > .active a{
-	color: #046d10;
+	color: #B20000;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -46,3 +46,18 @@ body{
 .breadcrumb>li+li:before {
 	content: "\00BB";
 }
+
+table {
+    width: 90%;
+    margin-left:5%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-size:15px;
+ 
+}
+
+tr:nth-child(even){background-color: #d1d1d1}
+tr:nth-child(odd){background-color:  white}

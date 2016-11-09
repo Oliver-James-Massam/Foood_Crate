@@ -3,13 +3,13 @@
     <link href="../Styling/BootStrap/bootstrap.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/font-awesome.min.css" rel="stylesheet" />
     <link href="../Styling/LoginPage/form-elements.css" rel="stylesheet" />
-    <link href="../Styling/ShoppingCart/Table.css" rel="stylesheet" />
+    <link href="../Styling/ShoppingCart/Improved%20Table.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="wow">
-        <br />
-        <br />
+
     </div>
+        <div class="Cart">
         <div class="container-fluid breadcrumbBox text-center">
 		<ol class="breadcrumb">
 			<li class="active"><a href="../Pages/SCart.aspx">Overview</a></li>
@@ -17,7 +17,7 @@
 			<li  ><a href="../Pages/ScartCheckOut.aspx">Checkout!</a></li>
 		</ol>
 	</div>
-    <div id="Cart">
+
         <asp:Table ID="table"  runat="server" >
             <asp:TableHeaderRow>
                 
@@ -82,6 +82,6 @@
             </asp:TableFooterRow>
 
         </asp:Table>
-        <asp:Button ID="Accept" class="btnacc" runat="server" Text="Accept" OnClick="Accept_Click" />
+        <asp:Button ID="Accept" class="btnacc" runat="server" Text="Accept order and proceed to review" OnClick="Accept_Click" />
     </div>
 </asp:Content>

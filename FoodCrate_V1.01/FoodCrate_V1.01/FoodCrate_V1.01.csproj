@@ -272,6 +272,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\DatabaseService\Service1.wsdl" />
+    <Content Include="Styling\ShoppingCart\Improved Table.css" />
+    <Content Include="Styling\ShoppingCart\ImprovedCustom.css" />
     <Content Include="Web References\localhost\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
