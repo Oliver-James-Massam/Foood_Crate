@@ -16,7 +16,7 @@ namespace DatabaseService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : DBService
     {
-        private static readonly string connectionString = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";
+        private static readonly string connectionString = @"server=localhost;user id=admin;Password=Foodcrate1;persistsecurityinfo=True;database=foodcratedb";//@"Server=localhost;Database=FoodCrateDB;Uid=admin;Pwd=Foodcrate1;";
         public static readonly int INVOICE_DUEDATE_MONTH_MODIFIER = 1;
 
         public long AddUser(string username, string name, string surname, string email, int type, string password)
@@ -316,12 +316,12 @@ namespace DatabaseService
             return result;
         }
 
-        public User GetUser(long userID)
+        public User GetUser(string email, string password)
         {
             User result = new User();
 
             MySqlConnection cn = new MySqlConnection(connectionString);
-            string query = "SELECT * FROM foodcratedb.users WHERE userID = '" + userID + "';";
+            string query = "SELECT * FROM foodcratedb.users WHERE email = '" + email + "' AND password = '"+ password +"';";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
@@ -629,6 +629,48 @@ namespace DatabaseService
             return result;
         }
 
+        public bool SetUserName(long userID, string name)
+        {
+            return UpdateCheat("users","name",name,"userID",userID);
+        }
+
+        public bool SetUserSurname(long userID, string surname)
+        {
+            return UpdateCheat("users", "surname", surname, "userID", userID);
+        }
+
+        public bool SetUserUsername(long userID, string username)
+        {
+            return UpdateCheat("users", "username", username, "userID", userID);
+        }
+
+        private bool UpdateCheat(string table, string column, string value, string idTable, long id)
+        {
+            bool result = true;
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "UPDATE foodcratedb.{0} SET {1} = '{2}' WHERE {3} = '{4}';";
+            MySqlCommand cmd = new MySqlCommand(string.Format(query, table, column, value, idTable, id));
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
+        //********** Don't touch anything below this line ***********
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
@@ -649,8 +691,6 @@ namespace DatabaseService
 
         public string TestConnection()
         {
-
-            string connectionString = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";
             using (MySqlConnection cn = new MySqlConnection(connectionString))
             {
                 cn.Open();
