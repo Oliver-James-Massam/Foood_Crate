@@ -22,8 +22,6 @@
 </head>
 
 <body>
-    <% Session["login"] = "false"; %>
-    <% Session["user"] = ""; %>
     <!-- Navigation-->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -46,8 +44,14 @@
                     <li>
                         <a href="../Pages/Catalog.aspx">Catalog</a>
                     </li>
-                    <li runat="server">
-                        <% if (Session["login"].Equals("false")) %>
+                    <li>
+                        <% if (Session["isAdmin"].Equals(true)) %>
+                        <%{ %>
+                        <a href="../Pages/AdminPage.aspx"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Admin Dashboard</a>
+                        <%} %>
+                    </li>
+                    <li id="loginStatus" runat="server" onclick="checkLogout">
+                        <% if (Session["login"].Equals(false)) %>
                         <%{ %>
                         <a href="../Pages/Login.aspx"><i class="fa fa-user fa-fw"></i>Login</a>
                         <%} %>
