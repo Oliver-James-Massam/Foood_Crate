@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodCrate_V1._01.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +12,10 @@ namespace FoodCrate_V1._01.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (HttpContext.Current.Request.Cookies["cart"] != null)
-            {
+            // get if user
+        
 
-            }else
-            {
-                Response.Redirect("../Pages/Catalog.aspx");
-            }
+
         }
 
         protected void Accept_Click(object sender, EventArgs e)

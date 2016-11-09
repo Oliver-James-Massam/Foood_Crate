@@ -16,7 +16,7 @@ namespace DatabaseService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : DBService
     {
-        private const String OLIVER_CONNECTION_STRING = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";//Database name isnt case sensitive
+        private const string OLIVER_CONNECTION_STRING = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";//Database name isnt case sensitive
         private static readonly string connectionString = @"Server=localhost;Database=FoodCrateDB;Uid=root;Pwd=admin;";//;@"server=localhost;user id=root;Password=admin;persistsecurityinfo=True;database=foodcratedb"
         public static readonly int INVOICE_DUEDATE_MONTH_MODIFIER = 1;
 
