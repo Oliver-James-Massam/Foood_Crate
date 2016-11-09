@@ -213,6 +213,9 @@
     <Content Include="Service References\DatabaseService\FoodCrate_V1._01.DatabaseService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\DatabaseService\FoodCrate_V1._01.DatabaseService.Cart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\DatabaseService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

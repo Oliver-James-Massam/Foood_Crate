@@ -116,6 +116,24 @@
   <wsdl:message name="DBService_AddInvoiceItem_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddInvoiceItemResponse" />
   </wsdl:message>
+  <wsdl:message name="DBService_SetUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserName" />
+  </wsdl:message>
+  <wsdl:message name="DBService_SetUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_SetUserSurname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSurname" />
+  </wsdl:message>
+  <wsdl:message name="DBService_SetUserSurname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserSurnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_SetUserUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserUsername" />
+  </wsdl:message>
+  <wsdl:message name="DBService_SetUserUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserUsernameResponse" />
+  </wsdl:message>
   <wsdl:message name="DBService_GetUser_InputMessage">
     <wsdl:part name="parameters" element="tns:GetUser" />
   </wsdl:message>
@@ -151,6 +169,36 @@
   </wsdl:message>
   <wsdl:message name="DBService_GetInvoiceItem_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoiceItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_AddCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCart" />
+  </wsdl:message>
+  <wsdl:message name="DBService_AddCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_CheckForCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForCart" />
+  </wsdl:message>
+  <wsdl:message name="DBService_CheckForCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_RemoveCartItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCartItem" />
+  </wsdl:message>
+  <wsdl:message name="DBService_RemoveCartItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCartItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_GetCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCart" />
+  </wsdl:message>
+  <wsdl:message name="DBService_GetCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DBService_RemoveProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProduct" />
+  </wsdl:message>
+  <wsdl:message name="DBService_RemoveProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProductResponse" />
   </wsdl:message>
   <wsdl:message name="DBService_GetProductByString_InputMessage">
     <wsdl:part name="parameters" element="tns:GetProductByString" />
@@ -231,6 +279,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddInvoiceItem" message="tns:DBService_AddInvoiceItem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddInvoiceItemResponse" message="tns:DBService_AddInvoiceItem_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="SetUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/SetUserName" message="tns:DBService_SetUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/SetUserNameResponse" message="tns:DBService_SetUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSurname">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/SetUserSurname" message="tns:DBService_SetUserSurname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/SetUserSurnameResponse" message="tns:DBService_SetUserSurname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/SetUserUsername" message="tns:DBService_SetUserUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/SetUserUsernameResponse" message="tns:DBService_SetUserUsername_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetUser">
       <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetUser" message="tns:DBService_GetUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetUserResponse" message="tns:DBService_GetUser_OutputMessage" />
@@ -254,6 +314,26 @@
     <wsdl:operation name="GetInvoiceItem">
       <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetInvoiceItem" message="tns:DBService_GetInvoiceItem_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetInvoiceItemResponse" message="tns:DBService_GetInvoiceItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/AddCart" message="tns:DBService_AddCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/AddCartResponse" message="tns:DBService_AddCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckForCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/CheckForCart" message="tns:DBService_CheckForCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/CheckForCartResponse" message="tns:DBService_CheckForCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCartItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/RemoveCartItem" message="tns:DBService_RemoveCartItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/RemoveCartItemResponse" message="tns:DBService_RemoveCartItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetCart" message="tns:DBService_GetCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/GetCartResponse" message="tns:DBService_GetCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/DBService/RemoveProduct" message="tns:DBService_RemoveProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/DBService/RemoveProductResponse" message="tns:DBService_RemoveProduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetProductByString">
       <wsdl:input wsaw:Action="http://tempuri.org/DBService/GetProductByString" message="tns:DBService_GetProductByString_InputMessage" />
@@ -424,6 +504,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SetUserName">
+      <soap:operation soapAction="http://tempuri.org/DBService/SetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserSurname">
+      <soap:operation soapAction="http://tempuri.org/DBService/SetUserSurname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUsername">
+      <soap:operation soapAction="http://tempuri.org/DBService/SetUserUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetUser">
       <soap:operation soapAction="http://tempuri.org/DBService/GetUser" style="document" />
       <wsdl:input>
@@ -471,6 +578,51 @@
     </wsdl:operation>
     <wsdl:operation name="GetInvoiceItem">
       <soap:operation soapAction="http://tempuri.org/DBService/GetInvoiceItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCart">
+      <soap:operation soapAction="http://tempuri.org/DBService/AddCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForCart">
+      <soap:operation soapAction="http://tempuri.org/DBService/CheckForCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCartItem">
+      <soap:operation soapAction="http://tempuri.org/DBService/RemoveCartItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCart">
+      <soap:operation soapAction="http://tempuri.org/DBService/GetCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <soap:operation soapAction="http://tempuri.org/DBService/RemoveProduct" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -818,6 +818,98 @@ namespace FoodCrate_V1._01.DatabaseService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cart", Namespace="http://schemas.datacontract.org/2004/07/DatabaseService")]
+    [System.SerializableAttribute()]
+    public partial struct Cart : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long cartIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long productIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int quantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long userIDField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long cartID {
+            get {
+                return this.cartIDField;
+            }
+            set {
+                if ((this.cartIDField.Equals(value) != true)) {
+                    this.cartIDField = value;
+                    this.RaisePropertyChanged("cartID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long productID {
+            get {
+                return this.productIDField;
+            }
+            set {
+                if ((this.productIDField.Equals(value) != true)) {
+                    this.productIDField = value;
+                    this.RaisePropertyChanged("productID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                if ((this.quantityField.Equals(value) != true)) {
+                    this.quantityField = value;
+                    this.RaisePropertyChanged("quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                if ((this.userIDField.Equals(value) != true)) {
+                    this.userIDField = value;
+                    this.RaisePropertyChanged("userID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="DatabaseService.DBService")]
     public interface DBService {
@@ -850,6 +942,8 @@ namespace FoodCrate_V1._01.DatabaseService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Invoice))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.InvoiceItem[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.InvoiceItem))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Cart[]))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Cart))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FoodCrate_V1._01.DatabaseService.Product[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         object[] ExecuteQuery(string sqlQuery);
@@ -941,11 +1035,29 @@ namespace FoodCrate_V1._01.DatabaseService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddInvoiceItem", ReplyAction="http://tempuri.org/DBService/AddInvoiceItemResponse")]
         System.Threading.Tasks.Task<long> AddInvoiceItemAsync(long invoiceID, long productID, int quantity, int discount, double total);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
-        FoodCrate_V1._01.DatabaseService.User GetUser(long userID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserName", ReplyAction="http://tempuri.org/DBService/SetUserNameResponse")]
+        bool SetUserName(long userID, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserName", ReplyAction="http://tempuri.org/DBService/SetUserNameResponse")]
+        System.Threading.Tasks.Task<bool> SetUserNameAsync(long userID, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserSurname", ReplyAction="http://tempuri.org/DBService/SetUserSurnameResponse")]
+        bool SetUserSurname(long userID, string surname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserSurname", ReplyAction="http://tempuri.org/DBService/SetUserSurnameResponse")]
+        System.Threading.Tasks.Task<bool> SetUserSurnameAsync(long userID, string surname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserUsername", ReplyAction="http://tempuri.org/DBService/SetUserUsernameResponse")]
+        bool SetUserUsername(long userID, string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/SetUserUsername", ReplyAction="http://tempuri.org/DBService/SetUserUsernameResponse")]
+        System.Threading.Tasks.Task<bool> SetUserUsernameAsync(long userID, string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
-        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(long userID);
+        FoodCrate_V1._01.DatabaseService.User GetUser(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProduct", ReplyAction="http://tempuri.org/DBService/GetProductResponse")]
         FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID);
@@ -976,6 +1088,36 @@ namespace FoodCrate_V1._01.DatabaseService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetInvoiceItem", ReplyAction="http://tempuri.org/DBService/GetInvoiceItemResponse")]
         System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddCart", ReplyAction="http://tempuri.org/DBService/AddCartResponse")]
+        long AddCart(long userID, long productID, int quantity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/AddCart", ReplyAction="http://tempuri.org/DBService/AddCartResponse")]
+        System.Threading.Tasks.Task<long> AddCartAsync(long userID, long productID, int quantity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CheckForCart", ReplyAction="http://tempuri.org/DBService/CheckForCartResponse")]
+        bool CheckForCart(long userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/CheckForCart", ReplyAction="http://tempuri.org/DBService/CheckForCartResponse")]
+        System.Threading.Tasks.Task<bool> CheckForCartAsync(long userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/RemoveCartItem", ReplyAction="http://tempuri.org/DBService/RemoveCartItemResponse")]
+        bool RemoveCartItem(long cartID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/RemoveCartItem", ReplyAction="http://tempuri.org/DBService/RemoveCartItemResponse")]
+        System.Threading.Tasks.Task<bool> RemoveCartItemAsync(long cartID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetCart", ReplyAction="http://tempuri.org/DBService/GetCartResponse")]
+        FoodCrate_V1._01.DatabaseService.Cart[] GetCart(long userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetCart", ReplyAction="http://tempuri.org/DBService/GetCartResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Cart[]> GetCartAsync(long userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/RemoveProduct", ReplyAction="http://tempuri.org/DBService/RemoveProductResponse")]
+        bool RemoveProduct(long productID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/RemoveProduct", ReplyAction="http://tempuri.org/DBService/RemoveProductResponse")]
+        System.Threading.Tasks.Task<bool> RemoveProductAsync(long productID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProductByString", ReplyAction="http://tempuri.org/DBService/GetProductByStringResponse")]
         FoodCrate_V1._01.DatabaseService.Product[] GetProductByString(string NameOrType);
@@ -1155,12 +1297,36 @@ namespace FoodCrate_V1._01.DatabaseService {
             return base.Channel.AddInvoiceItemAsync(invoiceID, productID, quantity, discount, total);
         }
         
-        public FoodCrate_V1._01.DatabaseService.User GetUser(long userID) {
-            return base.Channel.GetUser(userID);
+        public bool SetUserName(long userID, string name) {
+            return base.Channel.SetUserName(userID, name);
         }
         
-        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(long userID) {
-            return base.Channel.GetUserAsync(userID);
+        public System.Threading.Tasks.Task<bool> SetUserNameAsync(long userID, string name) {
+            return base.Channel.SetUserNameAsync(userID, name);
+        }
+        
+        public bool SetUserSurname(long userID, string surname) {
+            return base.Channel.SetUserSurname(userID, surname);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SetUserSurnameAsync(long userID, string surname) {
+            return base.Channel.SetUserSurnameAsync(userID, surname);
+        }
+        
+        public bool SetUserUsername(long userID, string username) {
+            return base.Channel.SetUserUsername(userID, username);
+        }
+        
+        public System.Threading.Tasks.Task<bool> SetUserUsernameAsync(long userID, string username) {
+            return base.Channel.SetUserUsernameAsync(userID, username);
+        }
+        
+        public FoodCrate_V1._01.DatabaseService.User GetUser(string email, string password) {
+            return base.Channel.GetUser(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(string email, string password) {
+            return base.Channel.GetUserAsync(email, password);
         }
         
         public FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID) {
@@ -1201,6 +1367,46 @@ namespace FoodCrate_V1._01.DatabaseService {
         
         public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.InvoiceItem> GetInvoiceItemAsync(long invoiceItemID) {
             return base.Channel.GetInvoiceItemAsync(invoiceItemID);
+        }
+        
+        public long AddCart(long userID, long productID, int quantity) {
+            return base.Channel.AddCart(userID, productID, quantity);
+        }
+        
+        public System.Threading.Tasks.Task<long> AddCartAsync(long userID, long productID, int quantity) {
+            return base.Channel.AddCartAsync(userID, productID, quantity);
+        }
+        
+        public bool CheckForCart(long userID) {
+            return base.Channel.CheckForCart(userID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckForCartAsync(long userID) {
+            return base.Channel.CheckForCartAsync(userID);
+        }
+        
+        public bool RemoveCartItem(long cartID) {
+            return base.Channel.RemoveCartItem(cartID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RemoveCartItemAsync(long cartID) {
+            return base.Channel.RemoveCartItemAsync(cartID);
+        }
+        
+        public FoodCrate_V1._01.DatabaseService.Cart[] GetCart(long userID) {
+            return base.Channel.GetCart(userID);
+        }
+        
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.Cart[]> GetCartAsync(long userID) {
+            return base.Channel.GetCartAsync(userID);
+        }
+        
+        public bool RemoveProduct(long productID) {
+            return base.Channel.RemoveProduct(productID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RemoveProductAsync(long productID) {
+            return base.Channel.RemoveProductAsync(productID);
         }
         
         public FoodCrate_V1._01.DatabaseService.Product[] GetProductByString(string NameOrType) {

@@ -26,7 +26,9 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 // login current user
                 int iRank = data.AuthUser(email, password);
-
+                DatabaseService.User userdata = new DatabaseService.User();
+                 userdata = data.GetUser(email, password);
+                Session["AllUserDetails"] = userdata;
                 /// get username and user surname Session["user"] = fb[0].first_name + " " + fb[0].last_name;
                 // rank user
                 switch (iRank)
