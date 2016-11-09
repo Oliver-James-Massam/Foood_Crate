@@ -22,8 +22,8 @@ namespace FoodCrate_V1._01.MasterPage
                 {
                     DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
                     cashGen.InnerText = data.TotalSales().ToString();
-                    TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
-                    uniqCust.InnerText = data.TotalRegisteredUsers().ToString();
+                    //TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
+                    //uniqCust.InnerText = data.TotalRegisteredUsers().ToString();
                     //WeeklySaleNo
                     //CashThisWeek To-Do
                     TotalItems.InnerText = data.CountProducts().ToString();
