@@ -65,6 +65,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CreateTables.sql" />
     <Content Include="App_Data\MSdatabase.mdf" />
     <Content Include="App_Data\MSdatabase_log.ldf">
       <DependentUpon>MSdatabase.mdf</DependentUpon>
