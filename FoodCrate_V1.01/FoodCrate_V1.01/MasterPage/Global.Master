@@ -49,15 +49,19 @@
                         <%{ %>
                         <a href="../Pages/AdminPage.aspx"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Admin Dashboard</a>
                         <%} %>
+                        <%else if (Session["isUser"].Equals(true))%>
+                        <%{ %>
+                        <a href="../Pages/UserInfo.aspx"><i class="fa fa-users fa-fw"></i>User Information</a>
+                        <%} %>
                     </li>
-                    <li id="loginStatus" runat="server" onclick="checkLogout">
+                    <li id="loginStatus">
                         <% if (Session["login"].Equals(false)) %>
                         <%{ %>
-                        <a href="../Pages/Login.aspx"><i class="fa fa-user fa-fw"></i>Login</a>
+                        <a href="../Pages/Login.aspx" runat="server" onserverclick="checkLogout"><i class="fa fa-user fa-fw"></i>Login</a>
                         <%} %>
                         <%else %>
                         <%{ %>
-                        <a id="logoutNav" href="../Pages/Home.aspx"><i class="fa fa-user fa-fw"></i>Logout</a>
+                        <a href="../Pages/Home.aspx" runat="server" onserverclick="checkLogout"><i class="fa fa-user fa-fw"></i>Logout</a>
                         <%} %>
                         
                     </li>

@@ -11,11 +11,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-centered" runat="server">
-        <div class='col-lg-9'>
-            <div id="prodDetails" class='thumbnail' runat="server">
-                
-            </div>
-        </div>
+    <div id="prodDetails" class="col-centered" runat='server'>
+        <asp:PlaceHolder runat="server" ID="PlaceHolder1"></asp:PlaceHolder>
     </div>
 </asp:Content>
