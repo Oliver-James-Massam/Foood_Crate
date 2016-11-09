@@ -187,6 +187,7 @@
     <Content Include="scripts\AdminScripts\morris.min.js" />
     <Content Include="scripts\AdminScripts\raphael.min.js" />
     <Content Include="scripts\AdminScripts\sb-admin-2.js" />
+    <Content Include="scripts\Catalog\ClearCatalogueTable.js" />
     <Content Include="scripts\CommonScrips\ThankYouImage.js" />
     <Content Include="scripts\LoginScripts\scriptsSign.js" />
     <None Include="Service References\DatabaseService\DBService.disco" />
