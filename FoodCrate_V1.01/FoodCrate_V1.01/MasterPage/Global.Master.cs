@@ -9,9 +9,29 @@ namespace FoodCrate_V1._01.MasterPage
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        private static bool hasBootUp = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (hasBootUp == false)
+            {
+                Session["login"] = false;
+                Session["isUser"] = false;
+                Session["isAdmin"] = false;
+                hasBootUp = true;
+            }
 
+        }
+
+        protected void checkLogout(object sender, EventArgs e)
+        {
+            if (Session["login"].Equals(true))
+            {
+                Session["login"] = false;
+                Session["isUser"] = false;
+                Session["isAdmin"] = false;
+                
+            }
         }
     }
 }

@@ -23,14 +23,14 @@
                             <li>
                                 <a href="Catalog.aspx" class="btn btn-default btn-lg"><i class="fa fa-th-list fa-fw"></i> <span class="page-name">Product Catalogue</span></a>
                             </li>
-                            <li>
-                                <% if (Session["login"].Equals("false")) %>
+                            <li runat="server" onserverclick="checkLogout">
+                                <% if (Session["login"].Equals(false)) %>
                                 <%{ %>
                                     <a href="Login.aspx" class="btn btn-default btn-lg"><i class="fa fa-user fa-fw"></i> <span class="page-name">Login</span></a>
                                 <%} %>
                                 <%else %>
                                 <%{ %>
-                                    <a id="logoutHome" href="Home.aspx" class="btn btn-default btn-lg"><i class="fa fa-user fa-fw"></i> <span class="page-name">Logout</span></a>
+                                    <a id="logoutHome" href="Login.aspx" class="btn btn-default btn-lg"><i class="fa fa-user fa-fw"></i> <span class="page-name">Logout</span></a>
                                 <%} %>
                             </li>
                         </ul>
