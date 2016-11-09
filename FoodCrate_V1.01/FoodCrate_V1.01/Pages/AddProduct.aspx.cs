@@ -20,5 +20,10 @@ namespace FoodCrate_V1._01.MasterPage
                 Page.Response.Redirect("../Pages/Home.aspx");
             }
         }
+
+        protected void addProduct()
+        {
+
+        }
     }
 }
