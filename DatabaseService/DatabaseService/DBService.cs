@@ -73,10 +73,21 @@ namespace DatabaseService
         [OperationContract]
         long AddInvoiceItem(long invoiceID, long productID, int quantity, int discount, double total);
 
+        //update data functions
+
+        [OperationContract]
+        bool SetUserName(long userID, string name);
+
+        [OperationContract]
+        bool SetUserSurname(long userID, string surname);
+
+        [OperationContract]
+        bool SetUserUsername(long userID, string username);
+
         //get data functions
 
         [OperationContract]
-        User GetUser(long userID);
+        User GetUser(string email, string password);
 
         [OperationContract]
         Product GetProduct(long productID);
@@ -92,6 +103,9 @@ namespace DatabaseService
 
         [OperationContract]
         InvoiceItem GetInvoiceItem(long invoiceItemID);
+
+        //[OperationContract]
+        //Product[] testing();
 
         //Added new function for Search parameters
         [OperationContract]
