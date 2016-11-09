@@ -42,23 +42,27 @@
                             <div class="form-bottom">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Email</label>
-			                        	<input type="text" name="form-username" placeholder="Email..." class="form-username form-control" id="username"/>
+			                        	<input type="text" name="form-username" runat="server" contenteditable="true" placeholder="Email..." class="form-username form-control" id="Email"/>
+			                        </div>
+                                    <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="form-username" runat="server" contenteditable="true" placeholder="Username..." class="form-username form-control" id="Username"/>
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="text" name="form-password" placeholder="Password..." class="form-password form-control" id="password"/>
+			                        	<input type="text" name="form-password" runat="server" contenteditable="true" placeholder="Password..." class="form-password form-control" id="Password"/>
 			                        </div>
                                      <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Re-enter Password</label>
-			                        	<input type="text" name="form-password" placeholder="Re-enter Password..." class="form-repassword form-control" id="repassword"/>
+			                        	<input type="text" name="form-password" runat="server" contenteditable="true" placeholder="Re-enter Password..." class="form-repassword form-control" id="Repassword"/>
 			                        </div>
                                     <div class="form-group">
 			                        	<label class="sr-only" for="form-FirstName">First name</label>
-			                        	<input type="text" name="form-FirstName" placeholder="First name..." class="form-Fname form-control" id="FirstName"/>
+			                        	<input type="text" name="form-FirstName" runat="server" contenteditable="true" placeholder="First name..." class="form-Fname form-control" id="FirstName"/>
 			                        </div>
                                     <div class="form-group">
 			                        	<label class="sr-only" for="form-Surname">Surname</label>
-			                        	<input type="text" name="form-Surname" placeholder="Surname..." class="form-surname form-control" id="Surname"/>
+			                        	<input type="text" name="form-Surname" runat="server" contenteditable="true" placeholder="Surname..." class="form-surname form-control" id="Surname"/>
 			                        </div>
 
 			                        <button type="submit"  runat="server" onserverclick="Unnamed_ServerClick" class="btn">Sign in!</button>
