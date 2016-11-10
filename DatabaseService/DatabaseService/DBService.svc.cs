@@ -359,6 +359,42 @@ namespace DatabaseService
             return result;
         }
 
+        public User GetUserByEmail(string email)
+        {
+            User result = new User();
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "SELECT * FROM foodcratedb.users WHERE email = '" + email + "';";
+            MySqlCommand cmd = new MySqlCommand(query);
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+
+            try
+            {
+                cmd.Connection.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    result.userID = reader.GetInt64(0);
+                    result.userName = reader.GetString(1);
+                    result.name = reader.GetString(2);
+                    result.surname = reader.GetString(3);
+                    result.email = reader.GetString(4);
+                    result.type = reader.GetInt64(5);
+                    result.password = reader.GetString(6);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            cmd.Connection.Close();
+            cmd.Dispose();
+            cn.Dispose();
+            return result;
+        }
+
         public Product GetProduct(long productID)
         {
             Product result = new Product();
