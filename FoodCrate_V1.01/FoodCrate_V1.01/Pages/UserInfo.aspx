@@ -13,8 +13,8 @@
 		</div>
         <div class="col-md-8  col-xs-12">
            <div class="header">
-                <h1>Name / Surname</h1>
-                <p>Email:</p> <p id="Emailaddr">LOL@LanceWhy.com</p>
+                <h1 id ="dataholder1" runat="server" contenteditable="true">Name / Surname</h1>
+                <p>Email:</p> <p id="Emailaddr" runat="server" contenteditable="true">LOL@LanceWhy.com</p>
                <br />
             <div class="row">
                 <div class="col-md-12" id="Name">
@@ -36,7 +36,7 @@
                         <label class="NameEdit">New name of user:</label>
                             </div>
                         <div class="col-md-10">
-                        <input id="SurnameChange" type="text" runat="server" contenteditable="true" name="surname" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a name."/>
+                        <input id="SurnameChange" type="text" runat="server" contenteditable="true" name="surname" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a surname."/>
                         </div>
                     </div>
                 </div>

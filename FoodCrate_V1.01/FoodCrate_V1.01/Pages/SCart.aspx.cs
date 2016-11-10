@@ -73,8 +73,6 @@ namespace FoodCrate_V1._01.MasterPage
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
             List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
             double total = 0;
-            List<long> itemsID = new List<long>();
-            List<int> Quantit = new List<int>();
 
 
             if (Session["AllUserDetails"] != null)
@@ -84,14 +82,11 @@ namespace FoodCrate_V1._01.MasterPage
                     if (chck[i].Checked)
                     {
                         total+= cost[i];
-                        itemsID.Add(ListCart[i].productID);
-                        Quantit.Add(ListCart[i].quantity);
                     }
                 }
              }
 
-            Session["itemsIdScart"] = itemsID;
-            Session["QuantitScart"] = Quantit;
+            Session["cartList"] = ListCart;
             Response.Redirect("../Pages/SCartReview.aspx?Total=" + total);
         }
     }

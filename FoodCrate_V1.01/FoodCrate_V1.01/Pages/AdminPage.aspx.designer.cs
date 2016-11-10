@@ -40,13 +40,13 @@ namespace FoodCrate_V1._01.MasterPage {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl uniqCust;
         
         /// <summary>
-        /// WeeklySaleNo control.
+        /// MonthlySales control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl WeeklySaleNo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MonthlySales;
         
         /// <summary>
         /// CashThisWeek control.

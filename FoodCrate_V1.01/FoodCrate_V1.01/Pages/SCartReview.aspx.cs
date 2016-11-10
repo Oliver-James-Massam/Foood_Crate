@@ -37,14 +37,15 @@ namespace FoodCrate_V1._01.MasterPage
             DatabaseService.User userdata = (DatabaseService.User)Session["AllUserDetails"];
             long worked = data.AddInvoice(userdata.userID);
 
-            List<long> itemsID = (List<long>)Session["itemsIdScart"];
-            List<int> Quantit = (List<int>)Session["QuantitScart"];
+            List<DatabaseService.Cart> ListCart = (List<DatabaseService.Cart>)Session["cartList"];
             //
             //Session["QuantitScart"]
             // add all items
-            for (int i = 0; i < itemsID.Count; i++)
-                data.AddInvoiceItem(worked, itemsID[i], Quantit[i], (int)discount, value);
-
+            for (int i = 0; i < ListCart.Count; i++) { 
+            data.AddInvoiceItem(worked, ListCart[i].productID, ListCart[i].quantity, (int)discount, value);
+                data.RemoveCartItem(ListCart[i].cartID);
+                }
+            
             Response.Redirect("../Pages/ScartCheckOut.aspx");
         }
     }

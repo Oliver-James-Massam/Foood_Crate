@@ -104,8 +104,8 @@
                                     <i class="fa fa-calendar-check-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge" id ="WeeklySaleNo" runat="server" contenteditable="true">DumbVal</div>
-                                    <div>Weekly sales</div>
+                                    <div class="huge" id ="MonthlySales" runat="server" contenteditable="true">DumbVal</div>
+                                    <div>Monthly sales</div>
                                 </div>
                             </div>
                         </div>

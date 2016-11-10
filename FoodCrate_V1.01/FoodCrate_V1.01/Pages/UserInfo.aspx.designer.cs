@@ -13,6 +13,24 @@ namespace FoodCrate_V1._01.Pages {
     public partial class UserInfo {
         
         /// <summary>
+        /// dataholder1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dataholder1;
+        
+        /// <summary>
+        /// Emailaddr control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Emailaddr;
+        
+        /// <summary>
         /// ChangeName control.
         /// </summary>
         /// <remarks>
