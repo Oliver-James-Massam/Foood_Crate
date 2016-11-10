@@ -50,7 +50,7 @@ namespace FoodCrate_V1._01.MasterPage
                         Quantity.Controls.Add(createDiv);
 
                         Price.Text = Math.Round(productget.price,2).ToString("#.00", CultureInfo.InvariantCulture);
-                        cost[i] = double.Parse(Price.Text);
+                        cost[i] = double.Parse(Price.Text, System.Globalization.CultureInfo.InvariantCulture);
 
 
                         chck[i] = new CheckBox();
