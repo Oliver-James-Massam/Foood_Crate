@@ -37,7 +37,8 @@ Email VARCHAR(100) NOT NULL,
 Type INT NOT NULL,
 Password VARCHAR(255) NOT NULL,
 PRIMARY KEY (UserID),
-UNIQUE (UserName)
+UNIQUE (UserName),
+UNIQUE (Email)
 );
 
 ALTER TABLE FoodCrateDB.Users
