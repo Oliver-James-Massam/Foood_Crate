@@ -45,8 +45,9 @@ namespace FoodCrate_V1._01.MasterPage
 
 
 
-                        Quantity.Text = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity +  "' name='NoItems' />";
-
+                        Label ls = new Label();
+                        ls.Text = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity + "' name='NoItems' />";
+                        Quantity.Controls.Add(ls);
 
                         Price.Text =productget.price.ToString();
                         cost[i] = productget.price;
