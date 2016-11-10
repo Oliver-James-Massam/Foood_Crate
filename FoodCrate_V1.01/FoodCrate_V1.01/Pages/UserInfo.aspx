@@ -13,8 +13,8 @@
 		</div>
         <div class="col-md-8  col-xs-12">
            <div class="header">
-                <h1 id ="dataholder1" runat="server" contenteditable="true">Name / Surname</h1>
-                <p>Email:</p> <p id="Emailaddr" runat="server" contenteditable="true">LOL@LanceWhy.com</p>
+                <h1 id ="dataholder1" runat="server" contenteditable="true">Invoices</h1>
+                <p>Email:</p> <p id="Emailaddr" runat="server" contenteditable="true"></p>
                <br />
             <div class="row">
                 <div class="col-md-12" id="Name">

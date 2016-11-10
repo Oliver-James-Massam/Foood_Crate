@@ -590,16 +590,19 @@ namespace DatabaseService
                         query = "SELECT * FROM foodcratedb.invoiceitems WHERE invoiceID = '" + i.invoiceID + "';";
                         cmd.CommandType = CommandType.Text;
                         MySqlDataReader reader = cmd.ExecuteReader();
-                        while (reader.HasRows)
+                        if (reader.HasRows)
                         {
-                            InvoiceItem it = new InvoiceItem();
-                            reader.Read();
-                            it.invoiceID = reader.GetInt64(0);
-                            it.productID = reader.GetInt64(1);
-                            it.quantity = reader.GetInt32(2);
-                            it.discount = reader.GetInt32(3);
-                            it.total = reader.GetDouble(4);
-                            i.invoiceItems.Add(it);
+                            while (reader.Read())
+                            {
+                                InvoiceItem it = new InvoiceItem();
+                                reader.Read();
+                                it.invoiceID = reader.GetInt64(0);
+                                it.productID = reader.GetInt64(1);
+                                it.quantity = reader.GetInt32(2);
+                                it.discount = reader.GetInt32(3);
+                                it.total = reader.GetDouble(4);
+                                i.invoiceItems.Add(it);
+                            }
                         }
                     }
                     cmd.Connection.Close();
