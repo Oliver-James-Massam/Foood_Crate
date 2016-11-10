@@ -52,6 +52,13 @@
                         <%else if (Session["isUser"].Equals(true))%>
                         <%{ %>
                         <a href="../Pages/UserInfo.aspx"><i class="fa fa-users fa-fw"></i>User Information</a>
+
+                        <%} %>
+                    </li>
+                    <li>
+                        <% if (Session["isUser"].Equals(true)) %> 
+                        <%{ %>
+                        <a href="../Pages/SCart.aspx">Check out</a>
                         <%} %>
                     </li>
                     <li id="loginStatus">

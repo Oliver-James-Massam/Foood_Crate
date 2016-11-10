@@ -31,7 +31,7 @@
                 <asp:TableCell></asp:TableCell>
                 <asp:TableCell></asp:TableCell>
                 <asp:TableHeaderCell>Total:</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TotalPrice">R 15120284</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TotalPrice">R 0</asp:TableHeaderCell>
             </asp:TableFooterRow>
 
         </asp:Table>

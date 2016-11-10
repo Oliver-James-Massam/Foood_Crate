@@ -68,7 +68,7 @@
                             <label class="NameEdit">New name of Surname:</label>
                                 </div>
                             <div class="col-md-10">
-                            <input id="CSurName" type="email" name="SurName" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a Surname."/>
+                            <input id="CSurName" type="email" name="SurName" runat="server" contenteditable="true" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a Surname."/>
                                     </div>
                                 </div>
                             </div>

@@ -22,7 +22,9 @@ namespace FoodCrate_V1._01.MasterPage
             DatabaseService.User userdata = (DatabaseService.User)Session["AllUserDetails"];
                 if (data.CheckForCart(userdata.userID))
                 {
-                    List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
+                    DatabaseService.Cart[] ListCartarryy =  data.GetCart(userdata.userID);
+                    int size = ListCartarryy.Length;
+                    List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>((DatabaseService.Cart[])ListCartarryy);
                     chck = new CheckBox[ListCart.Count];
                     cost = new double[ListCart.Count];
                     size = ListCart.Count;

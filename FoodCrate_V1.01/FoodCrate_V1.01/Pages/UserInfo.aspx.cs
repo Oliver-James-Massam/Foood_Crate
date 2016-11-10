@@ -20,6 +20,9 @@ namespace FoodCrate_V1._01.Pages
                 userdata = (DatabaseService.User)Session["AllUserDetails"];
                 Emailaddr.InnerHtml = userdata.email;
                 dataholder1.InnerHtml = userdata.name + " " + userdata.surname;
+
+
+
             }
             else
             {

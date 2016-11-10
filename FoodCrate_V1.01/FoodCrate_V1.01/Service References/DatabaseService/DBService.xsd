@@ -326,6 +326,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetUserByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetUserByEmailResult" type="q5:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetProduct">
     <xs:complexType>
       <xs:sequence>
@@ -336,7 +350,7 @@
   <xs:element name="GetProductResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetProductResult" type="q5:Product" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetProductResult" type="q6:Product" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -350,7 +364,7 @@
   <xs:element name="GetRecipeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetRecipeResult" type="q6:Recipe" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetRecipeResult" type="q7:Recipe" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -364,7 +378,7 @@
   <xs:element name="GetIngredientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetIngredientResult" type="q7:Ingredient" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetIngredientResult" type="q8:Ingredient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -378,7 +392,7 @@
   <xs:element name="GetInvoiceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetInvoiceResult" type="q8:Invoice" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetInvoiceResult" type="q9:Invoice" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -392,7 +406,7 @@
   <xs:element name="GetInvoiceItemResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetInvoiceItemResult" type="q9:InvoiceItem" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetInvoiceItemResult" type="q10:InvoiceItem" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -450,7 +464,7 @@
   <xs:element name="GetCartResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetCartResult" nillable="true" type="q10:ArrayOfCart" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetCartResult" nillable="true" type="q11:ArrayOfCart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -478,7 +492,7 @@
   <xs:element name="GetProductByStringResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetProductByStringResult" nillable="true" type="q11:ArrayOfProduct" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DatabaseService" minOccurs="0" name="GetProductByStringResult" nillable="true" type="q12:ArrayOfProduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

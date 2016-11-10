@@ -36,11 +36,24 @@ namespace FoodCrate_V1._01.MasterPage
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
-            if (ChangeName.Value != "")
-            {
+           if (edit_Email.Value != "")
+           {
+                DatabaseService.User id = data.GetUserByEmail(edit_Email.Value);
+                if (ChangeName.Value != "")
+                {
+                    data.SetUserName(id.userID, ChangeName.Value);
 
+                }
+
+                if (CSurName.Value != "")
+                {
+                    data.SetUserName(id.userID, ChangeName.Value);
+
+                }
             }
-           // if (SurnameChange)
+
+         
+            
         }
     }
 }

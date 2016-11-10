@@ -31,6 +31,15 @@ namespace FoodCrate_V1._01.MasterPage {
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ChangeName;
         
         /// <summary>
+        /// CSurName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl CSurName;
+        
+        /// <summary>
         /// btnUpdate control.
         /// </summary>
         /// <remarks>

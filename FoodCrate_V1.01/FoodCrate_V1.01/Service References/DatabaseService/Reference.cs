@@ -1059,6 +1059,12 @@ namespace FoodCrate_V1._01.DatabaseService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUser", ReplyAction="http://tempuri.org/DBService/GetUserResponse")]
         System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(string email, string password);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUserByEmail", ReplyAction="http://tempuri.org/DBService/GetUserByEmailResponse")]
+        FoodCrate_V1._01.DatabaseService.User GetUserByEmail(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetUserByEmail", ReplyAction="http://tempuri.org/DBService/GetUserByEmailResponse")]
+        System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserByEmailAsync(string email);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DBService/GetProduct", ReplyAction="http://tempuri.org/DBService/GetProductResponse")]
         FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID);
         
@@ -1327,6 +1333,14 @@ namespace FoodCrate_V1._01.DatabaseService {
         
         public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserAsync(string email, string password) {
             return base.Channel.GetUserAsync(email, password);
+        }
+        
+        public FoodCrate_V1._01.DatabaseService.User GetUserByEmail(string email) {
+            return base.Channel.GetUserByEmail(email);
+        }
+        
+        public System.Threading.Tasks.Task<FoodCrate_V1._01.DatabaseService.User> GetUserByEmailAsync(string email) {
+            return base.Channel.GetUserByEmailAsync(email);
         }
         
         public FoodCrate_V1._01.DatabaseService.Product GetProduct(long productID) {
