@@ -44,14 +44,13 @@ namespace FoodCrate_V1._01.MasterPage
 
                         NameOfItem.Text = productget.name;
 
-
-
-                        Label ls = new Label();
-                        ls.Text = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity + "' name='NoItems' />";
-                        Quantity.Controls.Add(ls);
+                        System.Web.UI.HtmlControls.HtmlGenericControl createDiv =  new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+                        createDiv.ID = "createDiv" +i;
+                        createDiv.InnerHtml = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity + "' name='NoItems' /> ";
+                        Quantity.Controls.Add(createDiv);
 
                         Price.Text = Math.Round(productget.price,2).ToString("#.00", CultureInfo.InvariantCulture);
-                        cost[i] = double.Parse(Price.Text, System.Globalization.CultureInfo.InvariantCulture);
+                        cost[i] = double.Parse(Price.Text);
 
 
                         chck[i] = new CheckBox();
