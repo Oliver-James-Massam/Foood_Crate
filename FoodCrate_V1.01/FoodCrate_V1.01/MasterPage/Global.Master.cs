@@ -19,6 +19,7 @@ namespace FoodCrate_V1._01.MasterPage
                 Session["login"] = false;
                 Session["isUser"] = false;
                 Session["isAdmin"] = false;
+                Session["userID"] = "0";
                 hasBootUp = true;
             }
 

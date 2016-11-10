@@ -680,7 +680,7 @@ namespace DatabaseService
         public long AddCart(long userID, long productID, int quantity)
         {
             long result = -1;
-
+           
             MySqlConnection cn = new MySqlConnection(connectionString);
             string query = "INSERT INTO `foodcratedb`.`carts` (`UserID`, `ProductID`, `Quantity`) VALUES ('{0}', '{1}', '{2}');";
             MySqlCommand cmd = new MySqlCommand(string.Format(query, userID, productID, quantity));

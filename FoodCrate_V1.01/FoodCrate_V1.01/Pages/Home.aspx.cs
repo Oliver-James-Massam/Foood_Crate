@@ -21,6 +21,7 @@ namespace FoodCrate_V1._01.Pages
                 Session["login"] = false;
                 Session["isUser"] = false;
                 Session["isAdmin"] = false;
+                Session["userID"] = "0";
                 Response.Redirect("../Pages/Home.aspx");
             }
             else

@@ -11,6 +11,8 @@ namespace FoodCrate_V1._01.Pages
     public partial class WebForm1 : System.Web.UI.Page
     {
         long prodID = 0;
+        DatabaseService.Product product = new DatabaseService.Product();
+        DatabaseService.DBServiceClient myService = new DatabaseService.DBServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -24,19 +26,50 @@ namespace FoodCrate_V1._01.Pages
             setPage();
         }
 
+        protected void addToCart_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            if (Session["login"].Equals(false))
+            {
+                Response.Redirect("../Pages/Login.aspx");
+            }
+            else
+            {//everything works here except TempID, commented out catches so that it throws error if there are any while dubugging
+                int quantity = Convert.ToInt32(txtQuantity.Value);
+                long tempID = Convert.ToInt64(Session["userID"]);//this is the value the add function crashes on - Ive tested this with dumb values
+                long result = myService.AddCart(tempID, product.productID, quantity);//if you get the correct value into tempID - Uncomment try catchs and commit
+                if (result > 0)
+                    Buy.InnerHtml = "Successfully Added to Cart";
+                else
+                    Buy.InnerHtml = "Item No Longer Exists";
+            }
+            //}
+            //catch (FormatException fex)
+            //{
+            //    Console.WriteLine(fex.Message);
+            //}
+            //catch (InvalidCastException iex)
+            //{
+            //    Console.WriteLine(iex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+        }
+
         protected void setPage()
         {
             if(prodID != 0)
             {
-                DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
                 DatabaseService.Product emptyProduct = new DatabaseService.Product();
                 emptyProduct = initProduct(emptyProduct);
 
-                DatabaseService.Product product = new DatabaseService.Product();
                 product = initProduct(product);
                 try
                 {
-                    product = data.GetProduct(prodID);
+                    product = myService.GetProduct(prodID);
                 }
                 catch(Exception ex)
                 {
@@ -73,9 +106,6 @@ namespace FoodCrate_V1._01.Pages
             return tempProd;
         }
 
-        protected void addToCart_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

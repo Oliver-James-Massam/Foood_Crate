@@ -74,6 +74,7 @@ namespace FoodCrate_V1._01.MasterPage
                 DatabaseService.User userdata = new DatabaseService.User();
                 userdata = data.GetUser(email, fb[0].link);
                 Session["AllUserDetails"] = userdata;
+                Session["userID"] = userdata.userID;
                 Session["user"] = fb[0].first_name + " " + fb[0].last_name;
                 // rank user
                 switch (iRank)
