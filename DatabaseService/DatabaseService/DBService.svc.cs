@@ -563,21 +563,23 @@ namespace DatabaseService
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection.Open();
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.HasRows)
+                    if (reader.HasRows)
                     {
-                        reader.Read();
-                        Invoice i = new Invoice();
-                        i.invoiceID = reader.GetInt64(0);
-                        i.userID = reader.GetInt64(1);
-                        i.creationDate = reader.GetDateTime(2);
-                        i.dueDate = reader.GetDateTime(3);
-                        if (!reader.IsDBNull(4))
+                        while (reader.Read())
                         {
-                            i.fullyPaidDate = reader.GetDateTime(4);
+                            Invoice i = new Invoice();
+                            i.invoiceID = reader.GetInt64(0);
+                            i.userID = reader.GetInt64(1);
+                            i.creationDate = reader.GetDateTime(2);
+                            i.dueDate = reader.GetDateTime(3);
+                            if (!reader.IsDBNull(4))
+                            {
+                                i.fullyPaidDate = reader.GetDateTime(4);
+                            }
+                            i.status = reader.GetString(5);
+                            i.invoiceItems = new List<InvoiceItem>();
+                            result.Add(i);
                         }
-                        i.status = reader.GetString(5);
-                        i.invoiceItems = new List<InvoiceItem>();
-                        result.Add(i);
                     }
                 }
 
@@ -956,7 +958,6 @@ namespace DatabaseService
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
 
-            
             try
             {
                 cmd.Connection.Open();
