@@ -620,7 +620,7 @@ namespace DatabaseService
             long result = 0;
 
             MySqlConnection cn = new MySqlConnection(connectionString);
-            string query = "SELECT COUNT(InvoiceID) FROM foodcratedb.invoices;";
+            string query = "SELECT SUM(Total) FROM foodcratedb.invoiceitems;";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.Text;
