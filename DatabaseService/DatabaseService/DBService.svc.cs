@@ -869,13 +869,16 @@ namespace DatabaseService
                 cmd.Connection.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while(reader.HasRows)
+                if (reader.HasRows)
                 {
-                    c.cartID = reader.GetInt64(0);
-                    c.userID = reader.GetInt64(1);
-                    c.productID = reader.GetInt64(2);
-                    c.quantity = reader.GetInt32(3);
-                    result.Add(c);
+                    while (reader.Read())
+                    {
+                        c.cartID = reader.GetInt64(0);
+                        c.userID = reader.GetInt64(1);
+                        c.productID = reader.GetInt64(2);
+                        c.quantity = reader.GetInt32(3);
+                        result.Add(c);
+                    }
                 }
             }
             catch (MySqlException ex)
