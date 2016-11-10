@@ -37,7 +37,8 @@ namespace FoodCrate_V1._01.Pages
             else
             {//everything works here except TempID, commented out catches so that it throws error if there are any while dubugging
                 int quantity = Convert.ToInt32(txtQuantity.Value);
-                long tempID = Convert.ToInt64(Session["userID"]);//this is the value the add function crashes on - Ive tested this with dumb values
+                DatabaseService.User userdata = (DatabaseService.User)Session["AllUserDetails"];
+                long tempID = userdata.userID; //this is the value the add function crashes on - Ive tested this with dumb values
                 long result = myService.AddCart(tempID, product.productID, quantity);//if you get the correct value into tempID - Uncomment try catchs and commit
                 if (result > 0)
                     Buy.InnerHtml = "Successfully Added to Cart";
