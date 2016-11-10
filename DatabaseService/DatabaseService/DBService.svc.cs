@@ -857,7 +857,6 @@ namespace DatabaseService
         {
             List<Cart> result = new List<Cart>();
             Cart c = new Cart();
-            userID = 5;
             MySqlConnection cn = new MySqlConnection(connectionString);
             string query = "SELECT * FROM foodcratedb.carts WHERE userID = '{0}';";
             MySqlCommand cmd = new MySqlCommand(string.Format(query, userID));
