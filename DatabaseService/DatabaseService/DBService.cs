@@ -107,6 +107,9 @@ namespace DatabaseService
         [OperationContract]
         InvoiceItem GetInvoiceItem(long invoiceItemID);
 
+        [OperationContract]
+        List<Invoice> GetInvoicesByUser(long userID);
+
         //Cart Functions
 
         [OperationContract]

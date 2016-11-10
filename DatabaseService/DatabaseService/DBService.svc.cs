@@ -549,6 +549,67 @@ namespace DatabaseService
             throw new NotImplementedException();
         }
 
+        public List<Invoice> GetInvoicesByUser(long userID)
+        {
+            List<Invoice> result = new List<Invoice>();
+
+            MySqlConnection cn = new MySqlConnection(connectionString);
+            string query = "SELECT * FROM foodcratedb.invoices WHERE UserID = '{0}'";
+
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection.Open();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.HasRows)
+                    {
+                        reader.Read();
+                        Invoice i = new Invoice();
+                        i.invoiceID = reader.GetInt64(0);
+                        i.userID = reader.GetInt64(1);
+                        i.creationDate = reader.GetDateTime(2);
+                        i.dueDate = reader.GetDateTime(3);
+                        if (!reader.IsDBNull(4))
+                        {
+                            i.fullyPaidDate = reader.GetDateTime(4);
+                        }
+                        i.status = reader.GetString(5);
+                        i.invoiceItems = new List<InvoiceItem>();
+                        result.Add(i);
+                    }
+                }
+
+                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                {
+                    foreach(Invoice i in result)
+                    {
+                        query = "SELECT * FROM foodcratedb.invoiceitems WHERE invoiceID = '" + i.invoiceID + "';";
+                        cmd.CommandType = CommandType.Text;
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.HasRows)
+                        {
+                            InvoiceItem it = new InvoiceItem();
+                            reader.Read();
+                            it.invoiceID = reader.GetInt64(0);
+                            it.productID = reader.GetInt64(1);
+                            it.quantity = reader.GetInt32(2);
+                            it.discount = reader.GetInt32(3);
+                            it.total = reader.GetDouble(4);
+                            i.invoiceItems.Add(it);
+                        }
+                    }
+                    cmd.Connection.Close();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error " + ex.Number + " has occurred: " + ex.Message);
+            }
+            return result;
+        }
+
         public long TotalSales()
         {
             long result = 0;
