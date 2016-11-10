@@ -90,6 +90,9 @@ namespace DatabaseService
         User GetUser(string email, string password);
 
         [OperationContract]
+        User GetUserByEmail(string email);
+
+        [OperationContract]
         Product GetProduct(long productID);
 
         [OperationContract]
