@@ -1,6 +1,7 @@
 ﻿using FoodCrate_V1._01.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -49,13 +50,12 @@ namespace FoodCrate_V1._01.MasterPage
                         ls.Text = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity + "' name='NoItems' />";
                         Quantity.Controls.Add(ls);
 
-                        Price.Text =productget.price.ToString();
-                        cost[i] = productget.price;
+                        Price.Text = Math.Round(productget.price,2).ToString("#.00", CultureInfo.InvariantCulture);
+                        cost[i] = double.Parse(Price.Text);
 
 
                         chck[i] = new CheckBox();
                         chck[i].ID = string.Format("chk{0}", i);
-                        chck[i].Text = chck + Convert.ToString(i);
                         remove.Controls.Add(chck[i]);
 
 
@@ -65,6 +65,28 @@ namespace FoodCrate_V1._01.MasterPage
                         row.Cells.Add(remove);
                         table.Rows.Add(row);
                     }
+                    TableRow rowend = new TableRow();
+                    TableCell Blank = new TableCell();
+                    TableCell Total = new TableCell();
+                    TableCell payment = new TableCell();
+                    Total.Text = "Total: ";
+
+                    double total = 0;
+
+
+                    if (Session["AllUserDetails"] != null)
+                    {
+                        for (int i = 0; i < size; i++)
+                        {
+                            if (chck[i].Checked)
+                            {
+                                total += cost[i];
+                            }
+                        }
+                    }
+                    payment.Text = total.ToString();
+
+
                 }
                 
         }
