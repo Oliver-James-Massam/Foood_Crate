@@ -41,13 +41,12 @@ namespace FoodCrate_V1._01.MasterPage
                 DatabaseService.User id = data.GetUserByEmail(edit_Email.Value);
                 if (ChangeName.Value != "")
                 {
-                    data.SetUserName(id.userID, ChangeName.Value);
-
+                    data.SetUserName(1, ChangeName.Value);
                 }
 
-                if (CSurName.Value != "")
+                if (ChangeSurname.Value != "")
                 {
-                    data.SetUserName(id.userID, ChangeName.Value);
+                    data.SetUserSurname(1, ChangeSurname.Value);
 
                 }
             }
