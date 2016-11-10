@@ -70,6 +70,7 @@
     <Content Include="App_Data\MSdatabase_log.ldf">
       <DependentUpon>MSdatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\UpdateProductsImageLocation.sql" />
     <Content Include="CreateMSDB\10sql.sql" />
     <Content Include="CreateMSDB\11sql.sql" />
     <Content Include="CreateMSDB\15sql.sql" />
@@ -99,6 +100,9 @@
     <Content Include="packages.config" />
     <Content Include="App_Data\invoiceitems.csv" />
     <Content Include="App_Data\invoices.csv" />
+    <Content Include="App_Data\products.csv" />
+    <Content Include="App_Data\users.csv" />
+    <Content Include="App_Data\usertypes.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
