@@ -58,7 +58,7 @@
                     <li>
                         <% if (Session["isUser"].Equals(true)) %> 
                         <%{ %>
-                        <a href="../Pages/SCart.aspx">Check out</a>
+                        <a href="../Pages/SCart.aspx"><i class="fa fa-shopping-cart fa-fw"></i>Check out</a>
                         <%} %>
                     </li>
                     <li id="loginStatus">
