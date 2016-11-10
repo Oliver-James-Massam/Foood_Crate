@@ -31,15 +31,6 @@ namespace FoodCrate_V1._01.MasterPage {
         protected global::System.Web.UI.WebControls.TableHeaderCell headNo;
         
         /// <summary>
-        /// TotalPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderCell TotalPrice;
-        
-        /// <summary>
         /// Accept control.
         /// </summary>
         /// <remarks>

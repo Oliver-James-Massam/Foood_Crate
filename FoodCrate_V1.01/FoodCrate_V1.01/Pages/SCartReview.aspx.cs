@@ -15,18 +15,18 @@ namespace FoodCrate_V1._01.MasterPage
         {
             value = double.Parse(Request.QueryString["Total"]);
             FaceVal.Text = value.ToString();
-            Tax.Text = (value * 0.14).ToString();
+            Tax.Text = Math.Round(value * 0.14,2).ToString();
             if (value < 300)
             {
-                Shipping.Text = "Not free - R " + value*0.05;
-                discount = value * 0.05;
-                Total.Text = "R: " + (value * 0.14 + value * 0.05 + value).ToString();
+                Shipping.Text = "R " + Math.Round(value *0.05);
+                discount = Math.Round(value * 0.05,2);
+                Total.Text = "R: " + Math.Round(value * 0.14 + value * 0.05 + value,2).ToString();
             }
             else
             {
                 Shipping.Text = "Free";
                 discount = 0;
-                Total.Text = "R:" + (value * 0.14 + value).ToString();
+                Total.Text = "R:" + Math.Round(value * 0.14 + value,2).ToString();
             }
 
          }

@@ -26,14 +26,6 @@
                 <asp:TableHeaderCell>Price</asp:TableHeaderCell>
                 <asp:TableHeaderCell>Remove</asp:TableHeaderCell>
             </asp:TableHeaderRow>
-
-            <asp:TableFooterRow>             
-                <asp:TableCell></asp:TableCell>
-                <asp:TableCell></asp:TableCell>
-                <asp:TableHeaderCell>Total:</asp:TableHeaderCell>
-                <asp:TableHeaderCell ID="TotalPrice">R 0</asp:TableHeaderCell>
-            </asp:TableFooterRow>
-
         </asp:Table>
         <asp:Button ID="Accept" class="btnacc" runat="server" Text="Accept order and proceed to review" OnClick="Accept_Click" />
     </div>

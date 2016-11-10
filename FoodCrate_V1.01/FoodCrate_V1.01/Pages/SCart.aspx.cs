@@ -14,8 +14,9 @@ namespace FoodCrate_V1._01.MasterPage
 
         public CheckBox[] chck;
         public double[] cost;
+        public TextBox[] tb;
         public int size;
-
+        private List<DatabaseService.Cart> ListCart;
         protected void Page_Load(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
@@ -24,7 +25,7 @@ namespace FoodCrate_V1._01.MasterPage
             DatabaseService.User userdata = (DatabaseService.User)Session["AllUserDetails"];
                 if (data.CheckForCart(userdata.userID))
                 {
-                    List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
+                    ListCart = new List<DatabaseService.Cart>();
                     DatabaseService.Cart[] tempCart = data.GetCart(userdata.userID);
                     foreach (DatabaseService.Cart tempItem in tempCart)
                     {
@@ -32,6 +33,7 @@ namespace FoodCrate_V1._01.MasterPage
                     }
                     chck = new CheckBox[ListCart.Count];
                     cost = new double[ListCart.Count];
+                    tb = new TextBox[ListCart.Count];
                     size = ListCart.Count;
                     for (int i =0; i < ListCart.Count; i++)
                     {
@@ -44,10 +46,10 @@ namespace FoodCrate_V1._01.MasterPage
 
                         NameOfItem.Text = productget.name;
 
-                        System.Web.UI.HtmlControls.HtmlGenericControl createDiv =  new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
-                        createDiv.ID = "createDiv" +i;
-                        createDiv.InnerHtml = "< input class='Quantity" + i + "' type='number' min='0'  value='" + ListCart[i].quantity + "' name='NoItems' /> ";
-                        Quantity.Controls.Add(createDiv);
+                        tb[i] = new TextBox();
+                        tb[i].ID = string.Format("txt{0}", i);
+                        tb[i].Text = "1";
+                        Quantity.Controls.Add(tb[i]);
 
                         Price.Text = Math.Round(productget.price,2).ToString("#.00", CultureInfo.InvariantCulture);
                         cost[i] = double.Parse(Price.Text, System.Globalization.CultureInfo.InvariantCulture);
@@ -77,9 +79,9 @@ namespace FoodCrate_V1._01.MasterPage
                     {
                         for (int i = 0; i < size; i++)
                         {
-                            if (chck[i].Checked)
-                            {
-                                total += cost[i];
+                            if (!chck[i].Checked)
+                            {   
+                                total += cost[i] * int.Parse(tb[i].Text);
                             }
                         }
                     }
@@ -99,7 +101,6 @@ namespace FoodCrate_V1._01.MasterPage
         protected void Accept_Click(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
-            List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
             double total = 0;
 
 
@@ -107,9 +108,9 @@ namespace FoodCrate_V1._01.MasterPage
             {
                 for (int i = 0; i < size; i++)
                 {
-                    if (chck[i].Checked)
+                    if (!chck[i].Checked)
                     {
-                        total+= cost[i];
+                        total+= cost[i] * int.Parse(tb[i].Text);
                     }
                 }
              }
