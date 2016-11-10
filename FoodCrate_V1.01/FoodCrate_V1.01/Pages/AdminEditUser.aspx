@@ -54,7 +54,7 @@
                             <label class="NameEdit">New name of user:</label>
                                 </div>
                             <div class="col-md-10">
-                            <input id="ChangeName" type="email" runat="server" contenteditable="true" name="Name" class="form-control" placeholder="Please enter the new name" required="required" data-error="Please enter a name."/>
+                            <input id="ChangeName" type="text" runat="server" contenteditable="true" name="Name" class="form-control" placeholder="Please enter the new name" required="required" data-error="Please enter a name."/>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                             <label class="NameEdit">New name of Surname:</label>
                                 </div>
                             <div class="col-md-10">
-                            <input id="CSurName" type="email" name="SurName" runat="server" contenteditable="true" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a Surname."/>
+                            <input id="CSurName" type="text" name="SurName" runat="server" contenteditable="true" class="form-control" placeholder="Please enter the new Surname" required="required" data-error="Please enter a Surname."/>
                                     </div>
                                 </div>
                             </div>

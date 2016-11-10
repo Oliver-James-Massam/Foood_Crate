@@ -38,7 +38,7 @@ namespace FoodCrate_V1._01.MasterPage
                 {
                     DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
                     cashGen.InnerText = data.TotalSales().ToString();
-                    TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
+                    //TxtTotalNoSales.InnerText = data.TotalProductsSold().ToString();
                     uniqCust.InnerText = data.TotalRegisteredUsers().ToString();
                     DateTime now = DateTime.Now;
                     var startDateMonth = new DateTime(now.Year, now.Month, 1);
