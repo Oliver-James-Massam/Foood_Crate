@@ -18,13 +18,20 @@ namespace FoodCrate_V1._01.MasterPage
         protected void Page_Load(object sender, EventArgs e)
         {
             DatabaseService.DBServiceClient data = new DatabaseService.DBServiceClient();
+
             if (Session["AllUserDetails"] != null) { 
             DatabaseService.User userdata = (DatabaseService.User)Session["AllUserDetails"];
                 if (data.CheckForCart(userdata.userID))
                 {
-                    DatabaseService.Cart[] ListCartarryy =  data.GetCart(userdata.userID);
-                    int size = ListCartarryy.Length;
-                    List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>((DatabaseService.Cart[])ListCartarryy);
+                    List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>();
+                    DatabaseService.Cart[] tempCart = data.GetCart(userdata.userID);
+                    foreach (DatabaseService.Cart tempItem in tempCart)
+                    {
+                        ListCart.Add(tempItem);
+                    }
+                    //DatabaseService.Cart[] ListCartarryy =  data.GetCart(userdata.userID);
+                    //int size = ListCartarryy.Length;
+                    //List<DatabaseService.Cart> ListCart = new List<DatabaseService.Cart>((DatabaseService.Cart[])ListCartarryy);
                     chck = new CheckBox[ListCart.Count];
                     cost = new double[ListCart.Count];
                     size = ListCart.Count;
