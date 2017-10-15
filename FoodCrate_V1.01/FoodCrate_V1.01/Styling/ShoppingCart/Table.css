@@ -1,0 +1,97 @@
+﻿
+/*-----------------------------------
+	General Styles
+-----------------------------------*/
+#wow{
+    margin-top:5%;
+    background-color:white;
+}
+
+
+body{
+    margin-top:75px;
+	font-size : 14px;
+	background-color: #ffffff;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+
+table {
+    width: 90%;
+    margin-left:5%;
+    border: 1px solid white;
+    border-width:5px;
+    border-color:white;
+}
+
+
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-size:15px;
+ 
+}
+
+tr:nth-child(even){background-color: #c1cfc5}
+tr:nth-child(odd){background-color:  white}
+
+th {
+    background-color: #307d29;
+    color: white;
+}
+
+ .Quantity{
+    width:50%;
+}
+
+ .btnacc{
+     background-color:white;
+     width:80%;
+     margin-left:10%;
+     margin-top:30px;
+     text-align:center;
+     color:white;
+     font-size:200%;
+     border:solid 2px ;
+ }
+ 
+.breadcrumb > .active a{
+	color: #046d10;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb li a{
+	color :#000000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb>li+li:before {
+	content: "\00BB";
+}
+
+.breadcrumb{
+    margin-left:20%;
+	margin-bottom: 100px;
+	background-color:#ffffff;
+    width:60%;
+}
+
+.breadcrumbBox{
+    width:90%;
+	background-color: white;
+	height: 100px;
+	margin-bottom: 0px;
+	padding-top: 32px;
+}
+
+

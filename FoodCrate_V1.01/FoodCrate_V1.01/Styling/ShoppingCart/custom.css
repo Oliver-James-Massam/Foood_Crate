@@ -1,0 +1,48 @@
+body{
+    margin-top:75px;
+	font-size : 14px;
+	background-color: #ffffff;
+}
+
+
+.ButSub{
+     background-color:#ce4242;
+     margin-left:5%;
+     width:90%;
+     margin-top:1%;
+     text-align:center;
+     color:white;
+     font-size:200%;
+     border-collapse:collapse;
+ }
+
+  .breadcrumb{
+    margin-left:20%;
+	margin-bottom: 100px;
+	background-color:#ffffff;
+    width:60%;
+}
+
+.breadcrumbBox{
+    width: 90%;
+	background-color: white;
+	height: 100px;
+	margin-bottom: 0px;
+	padding-top: 32px;
+}
+
+.breadcrumb > .active a{
+	color: #046d10;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb li a{
+	color :#000000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.breadcrumb>li+li:before {
+	content: "\00BB";
+}

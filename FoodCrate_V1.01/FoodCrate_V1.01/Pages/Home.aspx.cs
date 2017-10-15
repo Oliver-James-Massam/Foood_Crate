@@ -13,5 +13,21 @@ namespace FoodCrate_V1._01.Pages
         {
 
         }
+
+        protected void checkLogout(object sender, EventArgs e)
+        {
+            if (Session["login"].Equals(true))
+            {
+                Session["login"] = false;
+                Session["isUser"] = false;
+                Session["isAdmin"] = false;
+                Session["userID"] = "0";
+                Response.Redirect("../Pages/Home.aspx");
+            }
+            else
+            {
+                Response.Redirect("../Pages/Login.aspx");
+            }
+        }
     }
 }

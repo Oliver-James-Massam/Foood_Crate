@@ -5,67 +5,84 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Food Crate</title>
-    <link href="../Styling/Master.css" rel="stylesheet" />
-    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
 
-	$(document).ready(function(){
+    <!-- Bootstrap Core CSS -->
+    <link href="../Styling/Home/css/bootstrap.min.css" rel="stylesheet" />
 
-		var showHeaderAt = 150;
+    <!-- Custom Fonts -->
+    <link href="../Styling/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		var win = $(window),
-				body = $('body');
-
-		if(win.width() > 600){
-
-			win.on('scroll', function(e){
-
-				if(win.scrollTop() > showHeaderAt) {
-					body.addClass('fixed');
-				}
-				else {
-					body.removeClass('fixed');
-				}
-			});
-
-		}
-
-	});
-
-</script>
-
-    <header class="header-fixed">
-
-	    <div class="header-limiter">
-
-		    <h1><a href="#">Food<span>Crate</span></a></h1>
-
-		    <nav>
-			    <a href="#">Home</a>
-			    <a href="#">Catalogue</a>
-			    <a href="#">Pricing</a>
-			    <a href="#">Login</a>
-		    </nav>
-
-	    </div>
-
-    </header>
-
-    <!-- You need this element to prevent the content of the page from jumping up -->
-    <div class="header-fixed-placeholder"></div>
-
+    <!-- Custom CSS -->
+    <link href="../Styling/Home/css/landing-page.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
+    <!-- Navigation-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="../Pages/Home.aspx">FoodCrate</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../Pages/Home.aspx">Home</a>
+                    </li>
+                    <li>
+                        <a href="../Pages/Catalog.aspx">Catalog</a>
+                    </li>
+                    <li>
+                        <% if (Session["isAdmin"].Equals(true)) %>
+                        <%{ %>
+                        <a href="../Pages/AdminPage.aspx"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Admin Dashboard</a>
+                        <%} %>
+                        <%else if (Session["isUser"].Equals(true))%>
+                        <%{ %>
+                        <a href="../Pages/UserInfo.aspx"><i class="fa fa-users fa-fw"></i>User Information</a>
+
+                        <%} %>
+                    </li>
+                    <li>
+                        <% if (Session["isUser"].Equals(true)) %> 
+                        <%{ %>
+                        <a href="../Pages/SCart.aspx"><i class="fa fa-shopping-cart fa-fw"></i>Check out</a>
+                        <%} %>
+                    </li>
+                    <li id="loginStatus">
+                        <% if (Session["login"].Equals(false)) %>
+                        <%{ %>
+                        <a href="../Pages/Login.aspx" runat="server" onserverclick="checkLogout"><i class="fa fa-user fa-fw"></i>Login</a>
+                        <%} %>
+                        <%else %>
+                        <%{ %>
+                        <a href="../Pages/Home.aspx" runat="server" onserverclick="checkLogout"><i class="fa fa-user fa-fw"></i>Logout</a>
+                        <%} %>
+                        
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <div>
+            <form runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder></form>
+        </div>
+
 </body>
 </html>

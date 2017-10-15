@@ -1,0 +1,4 @@
+UserID,UserName,Name,Surname,Email,Type,Password
+1,BaronVonBaconham,Michael,Mommsen,test@gmail.com,2,test
+2,ChillerBang,Lance,Gov,StopDickingAroundWithTheGoogleAPI@gmail.com,1,asdf
+3,TestyMcTerterson,Test,Test,Test@test.com,3,asdf
